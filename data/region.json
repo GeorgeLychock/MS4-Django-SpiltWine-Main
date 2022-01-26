@@ -1,0 +1,164 @@
+[
+    {
+        "pk": 1,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "central_coast",
+            "friendly_name": "Central Coast"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "burgundy",
+            "friendly_name": "Burgundy"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "napa_valley",
+            "friendly_name": "Napa Valley"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "rhone",
+            "friendly_name": "Rhone"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "douro",
+            "friendly_name": "Douro"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "somona_county",
+            "friendly_name": "Sonoma County"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "bordeaux",
+            "friendly_name": "Bordeaux"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "mendoza",
+            "friendly_name": "Mendoza"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "western_cape",
+            "friendly_name": "Western Cape"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "lodi",
+            "friendly_name": "Lodi"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "tuscany",
+            "friendly_name": "Tuscany"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "veneto",
+            "friendly_name": "Veneto"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "abruzzo",
+            "friendly_name": "Abruzzo"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "valdadige",
+            "friendly_name": "Valdadige"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "rioja",
+            "friendly_name": "Rioja"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "la_rioja",
+            "friendly_name": "La Rioja"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "calatayud",
+            "friendly_name": "Calatayud"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.region",
+        "fields": {
+            "location": "",
+            "name": "sicily",
+            "friendly_name": "Sicily"
+        }
+    }
+]

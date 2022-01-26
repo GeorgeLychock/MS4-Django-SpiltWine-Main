@@ -1,0 +1,26 @@
+[
+    {
+        "pk": 1,
+        "model": "products.winetype",
+        "fields": {
+            "name": "full_bodied",
+            "friendly_name": "Full-bodied"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.winetype",
+        "fields": {
+            "name": "med_bodied",
+            "friendly_name": "Medium-bodied"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.winetype",
+        "fields": {
+            "name": "light_bodied",
+            "friendly_name": "Light-bodied"
+        }
+    }
+]

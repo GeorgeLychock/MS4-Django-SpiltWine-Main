@@ -1,0 +1,4 @@
+snippets.html
+*.sqlite3
+*.pyc
+__pycache__

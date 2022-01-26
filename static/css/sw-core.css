@@ -1,0 +1,216 @@
+/* george lychock MS3 stylesheet */
+/* NOTES:
+    - Except for base html elements, common colors, and Bootstrap styles, all other custom selectors names begin with "us" to make it easier to see in the markup */
+
+
+/* ######## CSS TOC - In Order of Appearance: */
+/* @imports */
+/* Bootstrap Overides */
+/* Base Elements */
+/* Common Text Colors */
+/* Common Background Colors*/
+/* Banners */
+/* Header */
+/* Home - Highest Rated */
+/* Home - Recipe Panel */
+/* Revenue Side 1 */
+/* Footer Section */
+/* @media styles */
+
+/* Common Button Colors*/
+/* Spacers */
+/* Font Styles */
+/* Common Positioning */
+/* Common Other*/
+/* Buttons */
+/* Nav */
+/* Mobile Library Dropdown */
+/* Project Form */
+/* Dashboard */
+/* Dashboard Panels */
+/* Active Projects Dashboard /*
+/* Active Widgets Dashboard */
+/* Progress Bar */
+/* Widget Library */
+
+/* Social Links */
+/* @media */
+/* Color Schemes */
+
+
+
+
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+/* Bootstrap Overides */
+button:focus {
+    outline: none;
+}
+
+.btn-outline-success {
+  margin: 5px;
+}
+
+.btn-outline-secondary {
+  border-color: beige;
+}
+
+.nav-link i {
+  font-size: 1rem;
+  margin: 0 5px;
+}
+
+.form-check label {
+  float: left;
+}
+
+.bg-light {
+  --bs-bg-opacity: .6;
+  background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
+}
+
+
+/* Reused CSS */
+/* from Code Institute Django Module */
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* Base Elements */
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/home-page-image-street-wine.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #fff;
+    height: calc(100vh - 164px);
+    color: #f80;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: 'Montserrat', 'FreeSans', sans-serif;
+}
+
+a {
+  color: #333;
+}
+
+p {
+  margin-left: 10px;
+}
+
+/* Common Text Colors */
+.sw-p-color-01 {color: #004d99;}
+.sw-p-color-02 {color: black;}
+.sw-i-color-01 {color: #ffb570} /* !important changed for lg media*/
+.sw-i-color-02 {color: whitesmoke}
+.sw-i-color-03 {color: #ffb570}
+.sw-i-color-04 {color: #004d99;}
+.sw-h-color-01 {color: #f80;}
+.sw-h-color-02 {color: whitesmoke}
+.sw-btn-color-01 {color: rgba(147, 212, 157, .25);}
+
+/* Common Background Colors*/
+.sw-b-color-01 {background-color: rgb(213, 121, 102, .75);}
+.sw-b-color-02 {background-color: rgba(0, 76, 153, .75);}
+
+/* Font Sizing */
+.sw-font-size-50 {
+  font-size: .5rem;
+}
+
+/* Common Positioning */
+.sw-text-center {
+    text-align: center;
+}
+
+.sw-text-left {
+  text-align: left;
+}
+
+.sw-padding-0 {
+  padding: 0;
+}
+
+/* Spacers */
+.sw-spacer-100p {
+  width: 100%;
+}
+
+/* Sizing */
+.sw-img-100p {
+  width: 100%;
+}
+
+/* Header */
+.sw-logo-font {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 2.5rem;
+}
+
+.sw-dt-sidebars {
+  background-color: rgba(0, 76, 153, .5);
+  min-height: 600px;
+  border: solid 1px whitesmoke;
+  border-radius: 25px;
+}
+
+.sw-delivery-banner {
+  border: solid 1px whitesmoke;
+  text-align: center;
+}
+
+/* Forms */
+.sw-form-input {
+  min-width: 20rem !important;
+}
+
+.sw-search-form {
+  width: max-content;
+}
+
+/* Products */
+
+
+
+/* @media */
+
+/* from Code Institute Django Module */
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+  
+  /* fixed top navbar only on medium and up */
+  @media (min-width: 992px) {
+      .fixed-top-desktop-only {
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: 1030;
+      }
+      .sw-logo-font {
+        font-size: 3rem;
+      }
+      .sw-cont-header {
+        padding-top: 5px;
+      }
+  }
+
+  @media (min-width: 768px) {
+    .sw-i-color-01 {color: whitesmoke}
+  }

@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <!-- Mobile Logo -->
+        <a href="{% url 'home' %}" class="d-md-none navbar-brand sw-main-logo-link">
+            <h1 class="my-0 sw-logo-font sw-h-color-01"><em>Spilt<small>Wine</small></em></h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a href="{% url 'home' %}" class="nav-link" role="button">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="mainNavDrop0" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Products
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="mainNavDrop0">
+                        <li><a href="{% url 'wines' %}" class="dropdown-item">Wines</a></li>
+                        <li><a href="{% url 'all_products' %}" class="dropdown-item">All Products</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="mainNavDrop1" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Wines
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="mainNavDrop1">
+                        <li><a href="" class="dropdown-item">By Price</a></li>
+                        <li><a href="" class="dropdown-item ">By Rating</a></li>
+                        <li><a href="" class="dropdown-item ">By Varietal</a></li>
+                        <li><a href="" class="dropdown-item ">By Region</a></li>
+                        <li><a href="{% url 'wines' %}" class="dropdown-item">All Wines</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="mainNavDrop2" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Wine Accessories
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="mainNavDrop2">
+                        <li><a href="" class="dropdown-item">Glasses</a></li>
+                        <li><a href="" class="dropdown-item ">Storage</a></li>
+                        <li><a href="" class="dropdown-item ">Openers</a></li>
+                        <li><a href="" class="dropdown-item">Books and Resources</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="mainNavDrop3" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Culinary
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="mainNavDrop3">
+                        <li><a href="" class="dropdown-item">On The Go Food</a></li>
+                        <li><a href="" class="dropdown-item">Kitchen Items</a></li>
+                        <li><a href="" class="dropdown-item ">Spices</a></li>
+                        <li><a href="" class="dropdown-item ">Recipes</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+

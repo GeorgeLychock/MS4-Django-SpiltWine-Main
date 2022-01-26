@@ -1,0 +1,138 @@
+[
+    {
+        "pk": 1,
+        "model": "products.varietal",
+        "fields": {
+            "name": "cabernet_sauvignon",
+            "friendly_name": "Cabernet Sauvignon"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.varietal",
+        "fields": {
+            "name": "pinot_noir",
+            "friendly_name": "Pinot Noir"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.varietal",
+        "fields": {
+            "name": "rhone_blend",
+            "friendly_name": "Rhone Blend"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.varietal",
+        "fields": {
+            "name": "red_blend",
+            "friendly_name": "Red Blend"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.varietal",
+        "fields": {
+            "name": "zinfandel",
+            "friendly_name": "Zinfandel"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.varietal",
+        "fields": {
+            "name": "bordeaux_blend",
+            "friendly_name": "Bordeaux Blend"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.varietal",
+        "fields": {
+            "name": "malbec",
+            "friendly_name": "Malbec"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.varietal",
+        "fields": {
+            "name": "pinotage",
+            "friendly_name": "Pinotage"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.varietal",
+        "fields": {
+            "name": "chardonnay",
+            "friendly_name": "Chardonnay"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.varietal",
+        "fields": {
+            "name": "sangiovese",
+            "friendly_name": "Sangiovese"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.varietal",
+        "fields": {
+            "name": "corvina",
+            "friendly_name": "Corvina"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.varietal",
+        "fields": {
+            "name": "montepulciano",
+            "friendly_name": "Montepulciano"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.varietal",
+        "fields": {
+            "name": "pinot_grigio",
+            "friendly_name": "Pinot Grigio/Pinot Gris"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.varietal",
+        "fields": {
+            "name": "tempranillo",
+            "friendly_name": "Tempranillo"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.varietal",
+        "fields": {
+            "name": "grenache",
+            "friendly_name": "Grenache"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.varietal",
+        "fields": {
+            "name": "merlot",
+            "friendly_name": "merlot"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.varietal",
+        "fields": {
+            "name": "carricante",
+            "friendly_name": "Carricante"
+        }
+    }
+]

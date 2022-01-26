@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Our Products Collection</h2>
+        </div>
+    </div>
+    <div class="row">
+        {% for wine in wines %}
+        <div class="col-6 col-md-4">
+            <div class="card h-100 border-0">
+                {% if wine.img_file_name %}
+                <a href="">
+                    <img class="card-img-top img-fluid mt-3" src="../media/{{ wine.img_file_name }}"
+                        alt="{{ wine.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}noimage.png" alt="{{ wine.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body pb-0">
+                    <p class="mb-0">{{ wine.name }}</p>
+                </div>
+                <div class="card-footer pt-0 border-0 text-left sw-p-color-02">
+                    <div class="row">
+                        <div class="col">
+                            <p class="lead mb-0 text-left font-weight-bold">${{ wine.price }}</p>
+                            {% if wine.country_state %}
+                            <div class="">
+                                <small class=""><i class="mr-1"></i>{{ wine.country_state.friendly_name }}</small>
+                            </div>
+                            {% endif %}
+                            {% if wine.region %}
+                            <div>
+                                <small class=""><i class="mr-1"></i>{{ wine.region.friendly_name }}</small>
+                            </div>
+                            {% endif %}
+                            {% if wine.appellation %}
+                            <div>
+                                <small class=""><i class="mr-1"></i>{{ wine.appellation.friendly_name }}</small>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="sw-font-size-50">{{ wine.description }}</p>
+                            {% if wine.varietal %}
+                            <div class="">
+                                <small class=""><i class="mr-1"></i>{{ wine.varietal.friendly_name }}</small>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

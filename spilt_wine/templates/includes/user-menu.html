@@ -1,0 +1,21 @@
+<div class="dropdown">
+    <button class="btn dropdown-toggle" type="button" id="userMenuBtn" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="material-icons-outlined sw-i-color-03 fs-1">person</span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="userMenuBtn">
+        {% if request.user.is_authenticated %}
+        <li>
+            {% if request.user.is_superuser %}
+                <a href="" class="dropdown-item">Product Management</a>
+            {% endif %}
+            <a href="" class="dropdown-item">My Profile</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+        </li>
+        {% else %}
+        <li>
+            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+        </li>
+        {% endif %}
+    </ul>
+</div>

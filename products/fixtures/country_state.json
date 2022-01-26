@@ -1,0 +1,58 @@
+[
+    {
+        "pk": 1,
+        "model": "products.countrystate",
+        "fields": {
+            "name": "california",
+            "friendly_name": "California"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.countrystate",
+        "fields": {
+            "name": "france",
+            "friendly_name": "France"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.countrystate",
+        "fields": {
+            "name": "portugal",
+            "friendly_name": "Portugal"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.countrystate",
+        "fields": {
+            "name": "argentina",
+            "friendly_name": "Argentina"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.countrystate",
+        "fields": {
+            "name": "south_africa",
+            "friendly_name": "South Africa"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.countrystate",
+        "fields": {
+            "name": "italy",
+            "friendly_name": "Italy"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.countrystate",
+        "fields": {
+            "name": "spain",
+            "friendly_name": "Spain"
+        }
+    }
+]

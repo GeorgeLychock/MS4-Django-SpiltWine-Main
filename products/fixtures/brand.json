@@ -1,0 +1,314 @@
+[
+    {
+        "pk": 1,
+        "model": "products.brand",
+        "fields": {
+            "name": "austin_hope",
+            "friendly_name": "Austin Hope"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.brand",
+        "fields": {
+            "name": "au_pied_du_mont_chauve",
+            "friendly_name": "Au Pied du Mont Chauve"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.brand",
+        "fields": {
+            "name": "verdon_estate",
+            "friendly_name": "Verdon Estate"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.brand",
+        "fields": {
+            "name": "halos_de_jupiter",
+            "friendly_name": "Halos De Jupiter"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.brand",
+        "fields": {
+            "name": "cais_da_ribeira",
+            "friendly_name": "Cais da Ribeira"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.brand",
+        "fields": {
+            "name": "layer_cake",
+            "friendly_name": "Layer Cake"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.brand",
+        "fields": {
+            "name": "the_fugitive",
+            "friendly_name": "The Fugitive"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.brand",
+        "fields": {
+            "name": "chateau_vrai_canon_bouche",
+            "friendly_name": "Chateau Vrai Canon Bouche"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.brand",
+        "fields": {
+            "name": "robert_mondavi ",
+            "friendly_name": "Robert Mondavi"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.brand",
+        "fields": {
+            "name": "moone_tsai",
+            "friendly_name": "Moone Tsai"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.brand",
+        "fields": {
+            "name": "silver_ghost",
+            "friendly_name": "Silver Ghost"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.brand",
+        "fields": {
+            "name": "thievery",
+            "friendly_name": "Thievery"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.brand",
+        "fields": {
+            "name": "torial",
+            "friendly_name": "Torial"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.brand",
+        "fields": {
+            "name": "harvester",
+            "friendly_name": "Harvester"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.brand",
+        "fields": {
+            "name": "mascota_vineyards",
+            "friendly_name": "Mascota Vineyards"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.brand",
+        "fields": {
+            "name": "neethlingshof",
+            "friendly_name": "Neethlingshof"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.brand",
+        "fields": {
+            "name": "macchia",
+            "friendly_name": "Macchia"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.brand",
+        "fields": {
+            "name": "borderline",
+            "friendly_name": "Borderline"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.brand",
+        "fields": {
+            "name": "river_road",
+            "friendly_name": "River Road"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.brand",
+        "fields": {
+            "name": "courtney_benham",
+            "friendly_name": "Courtney Benham"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.brand",
+        "fields": {
+            "name": "renieri",
+            "friendly_name": "Renieri"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.brand",
+        "fields": {
+            "name": "leone_d_oro",
+            "friendly_name": "Leone D'Oro"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.brand",
+        "fields": {
+            "name": "villa_maffei",
+            "friendly_name": "Villa Maffei"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.brand",
+        "fields": {
+            "name": "tenuta_di_renieri",
+            "friendly_name": "Tenuta di Renieri"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.brand",
+        "fields": {
+            "name": "cantina_zaccagnini",
+            "friendly_name": "Cantina Zaccagnini"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.brand",
+        "fields": {
+            "name": "barba",
+            "friendly_name": "Barba"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "products.brand",
+        "fields": {
+            "name": "albino_armani",
+            "friendly_name": "Albino Armani"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "products.brand",
+        "fields": {
+            "name": "bishops_ring",
+            "friendly_name": "Bishop's Ring"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "products.brand",
+        "fields": {
+            "name": "orin_swift",
+            "friendly_name": "Orin Swift"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "products.brand",
+        "fields": {
+            "name": "clos_labarde",
+            "friendly_name": "Clos Labarde"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "products.brand",
+        "fields": {
+            "name": "quinta_das_carvalhas",
+            "friendly_name": "Quinta das Carvalhas"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "products.brand",
+        "fields": {
+            "name": "latitud_42",
+            "friendly_name": "Latitud 42"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "products.brand",
+        "fields": {
+            "name": "belcreme_de_lys",
+            "friendly_name": "Belcreme de Lys"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "products.brand",
+        "fields": {
+            "name": "san_gregorio",
+            "friendly_name": "San Gregorio"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "products.brand",
+        "fields": {
+            "name": "domaine_luquet",
+            "friendly_name": "Domaine Luquet"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "products.brand",
+        "fields": {
+            "name": "iter",
+            "friendly_name": "Iter"
+        }
+    },
+    {
+        "pk": 37,
+        "model": "products.brand",
+        "fields": {
+            "name": "the_calling",
+            "friendly_name": "The Calling"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "products.brand",
+        "fields": {
+            "name": "scilio",
+            "friendly_name": "Scilio"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "products.brand",
+        "fields": {
+            "name": "mantellassi",
+            "friendly_name": "Mantellassi"
+        }
+    }
+]

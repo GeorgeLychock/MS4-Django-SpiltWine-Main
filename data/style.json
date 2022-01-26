@@ -1,0 +1,58 @@
+[
+    {
+        "pk": 1,
+        "model": "products.style",
+        "fields": {
+            "name": "elegant",
+            "friendly_name": "Elegant"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.style",
+        "fields": {
+            "name": "concentrated",
+            "friendly_name": "Concentrated"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.style",
+        "fields": {
+            "name": "intense",
+            "friendly_name": "Intense"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.style",
+        "fields": {
+            "name": "fresh",
+            "friendly_name": "Fresh"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.style",
+        "fields": {
+            "name": "light_perfumed",
+            "friendly_name": "Light and Perfumed"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.style",
+        "fields": {
+            "name": "oak",
+            "friendly_name": "Oak"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.style",
+        "fields": {
+            "name": "crisp",
+            "friendly_name": "Crisp"
+        }
+    }
+]

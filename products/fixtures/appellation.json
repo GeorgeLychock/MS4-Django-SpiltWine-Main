@@ -1,0 +1,114 @@
+[
+    {
+        "pk": 1,
+        "model": "products.appellation",
+        "fields": {
+            "name": "paso_robles",
+            "friendly_name": "Paso Robles"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.appellation",
+        "fields": {
+            "name": "saint_aubin",
+            "friendly_name": "Saint Aubin"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.appellation",
+        "fields": {
+            "name": "cotes_du_rhone",
+            "friendly_name": "Cotes du Rhone"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.appellation",
+        "fields": {
+            "name": "dry_creek",
+            "friendly_name": "Dry Creek Valley"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.appellation",
+        "fields": {
+            "name": "fronsac",
+            "friendly_name": "Fronsac/Canon Fronsac"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.appellation",
+        "fields": {
+            "name": "russian_river",
+            "friendly_name": "Russian River Valley"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.appellation",
+        "fields": {
+            "name": "morellino_di_scansano",
+            "friendly_name": "Morellino di Scansano"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.appellation",
+        "fields": {
+            "name": "vino_nobile_di_montepulciano",
+            "friendly_name": "Vino Nobile di Montepulciano"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.appellation",
+        "fields": {
+            "name": "valpolicella",
+            "friendly_name": "Valpolicella"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.appellation",
+        "fields": {
+            "name": "chianti_classico",
+            "friendly_name": "Chianti Classico"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.appellation",
+        "fields": {
+            "name": "montepulciano_d_abruzzo",
+            "friendly_name": "Montepulciano d'Abruzzo"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.appellation",
+        "fields": {
+            "name": "saint_emilion",
+            "friendly_name": "Saint Emilion"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.appellation",
+        "fields": {
+            "name": "macon_villages",
+            "friendly_name": "Macon Villages"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.appellation",
+        "fields": {
+            "name": "sonoma_coast",
+            "friendly_name": "Sonoma Coast"
+        }
+    }
+]
