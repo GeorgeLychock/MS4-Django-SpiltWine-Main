@@ -10,49 +10,49 @@
         </div>
     </div>
     <div class="row">
-        {% for wine in wines %}
+        {% for product in products %}
         <div class="col-6 col-md-4">
             <div class="card h-100 border-0">
-                {% if wine.img_file_name %}
+                {% if product.img_file_name %}
                 <a href="">
-                    <img class="card-img-top img-fluid mt-3" src="../media/{{ wine.img_file_name }}"
-                        alt="{{ wine.name }}">
+                    <img class="card-img-top img-fluid mt-3" src="../media/{{ product.img_file_name }}"
+                        alt="{{ product.name }}">
                 </a>
                 {% else %}
                 <a href="">
-                    <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}noimage.png" alt="{{ wine.name }}">
+                    <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                 </a>
                 {% endif %}
                 <div class="card-body pb-0">
-                    <p class="mb-0">{{ wine.name }}</p>
+                    <p class="mb-0">{{ product.name }}</p>
                 </div>
                 <div class="card-footer pt-0 border-0 text-left sw-p-color-02">
                     <div class="row">
                         <div class="col">
-                            <p class="lead mb-0 text-left font-weight-bold">${{ wine.price }}</p>
-                            {% if wine.country_state %}
+                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                            {% if product.country_state %}
                             <div class="">
-                                <small class=""><i class="mr-1"></i>{{ wine.country_state.friendly_name }}</small>
+                                <small class=""><i class="mr-1"></i>{{ product.country_state.friendly_name }}</small>
                             </div>
                             {% endif %}
-                            {% if wine.region %}
+                            {% if product.region %}
                             <div>
-                                <small class=""><i class="mr-1"></i>{{ wine.region.friendly_name }}</small>
+                                <small class=""><i class="mr-1"></i>{{ product.region.friendly_name }}</small>
                             </div>
                             {% endif %}
-                            {% if wine.appellation %}
+                            {% if product.appellation %}
                             <div>
-                                <small class=""><i class="mr-1"></i>{{ wine.appellation.friendly_name }}</small>
+                                <small class=""><i class="mr-1"></i>{{ product.appellation.friendly_name }}</small>
                             </div>
                             {% endif %}
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p class="sw-font-size-50">{{ wine.description }}</p>
-                            {% if wine.varietal %}
+                            <p class="sw-font-size-50">{{ product.description }}</p>
+                            {% if product.varietal %}
                             <div class="">
-                                <small class=""><i class="mr-1"></i>{{ wine.varietal.friendly_name }}</small>
+                                <small class=""><i class="mr-1"></i>{{ product.varietal.friendly_name }}</small>
                             </div>
                             {% endif %}
                         </div>

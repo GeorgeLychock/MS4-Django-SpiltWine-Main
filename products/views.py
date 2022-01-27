@@ -1,17 +1,37 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
+from django.db.models import Q
 from .models import Wine
 
 
 def all_products(request):
-    """ Shows all products and handles sorting and searching. """
+    # """ Shows products and handles sorting and searching. """
 
-    wines = Wine.objects.all()
+    # Add queries to fetch all categories of product data
+    products = Wine.objects.all()
+    query = None
+    # wine_accessories = WineAccessories.objects.all()
+    # culinary = Culinary.objects.all()
 
-    wine_content = {
-        'wines': wines,
+    # combine queries
+    # products = .JOIN()
+
+    if request.GET:
+        if 'q1' in request.GET:
+            query = request.GET['q1']
+            if not query:
+                messages.error(request, "Please enter some search criteria.")
+                return redirect('home')
+
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            products = products.filter(queries)
+
+    all_content = {
+        'products': products,
+        'search_term': query,
     }
 
-    return render(request, 'products/products.html', wine_content)
+    return render(request, 'products/products.html', all_content)
 
 
 def all_wines(request):
