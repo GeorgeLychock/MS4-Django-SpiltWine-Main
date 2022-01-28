@@ -17,6 +17,15 @@ def all_products(request):
     # products = .JOIN()
 
     if request.GET:
+        if 'q-products' in request.GET:
+            query = request.GET['q-products']
+            if not query:
+                messages.error(request, "Please enter some search criteria.")
+                return redirect('products')
+
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            products = products.filter(queries)
+
         if 'q1' in request.GET:
             query = request.GET['q1']
             if not query:
