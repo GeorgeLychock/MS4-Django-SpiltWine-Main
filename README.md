@@ -117,6 +117,13 @@ Primary Key Best Practices https://stackoverflow.com/questions/337503/whats-the-
 
 JSON Convertor https://www.convertcsv.com/csv-to-json.htm
 
+#   Testing
+<a name="TESTING"></a>
+-   [See Test ReadMe File](TESTRM.md)
+
+#   Known/Resolved Issues
+<a name="ISSUES"></a>
+-   [See Test ReadMe File](TESTRM.md)
 
 <a name="CREDS"></a>
 # Credits
