@@ -76,6 +76,10 @@ class Varietal(models.Model):
     name = models.CharField(max_length=30)
     friendly_name = models.CharField(max_length=50, null=True, blank=True)
     wine_type = models.ForeignKey('WineType', null=True, blank=True, on_delete=models.SET_NULL)
+    img_file_name = models.ImageField(null=True, blank=True)
+    description = models.TextField(null=True, blank=True)
+    wiki_url = models.URLField(max_length=1024, null=True, blank=True)
+
 
     def __str__(self):
         return self.name
@@ -98,7 +102,7 @@ class Style(models.Model):
 class Body(models.Model):
 
     class Meta:
-        verbose_name_plural = 'Bodies'
+        verbose_name_plural = 'Body'
 
     name = models.CharField(max_length=50)
     friendly_name = models.CharField(max_length=50, null=True, blank=True)

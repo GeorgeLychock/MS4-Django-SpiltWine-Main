@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <img class="img-fluid mt-3" src="../media/cab_grapes.jpg" alt="Grapes on a vine.">
+        </div>
+        <div class="col-10 text-center mt-3">
+            <h2 class="logo-font">Wine Grape Varietals</h2>
+        </div>
+    </div>
+    {% for varietal in varietals %}
+    <div class="row">
+        <div class="col-3">
+            <a href="">
+                {{ varietal.friendly_name }}
+            </a>
+        </div>
+        <div class="col-3">
+            {{ varietal.description }}
+        </div>
+        <div class="col-2">
+            <a href="{{ varietal.wiki_url }}">
+                Wiki URL
+            </a>
+        </div>
+        <div class="col-2">
+            <a href="">
+                See Wines
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

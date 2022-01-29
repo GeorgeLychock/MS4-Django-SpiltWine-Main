@@ -1,3 +1,4 @@
+<!-- Main Nav section for all viewports -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <!-- Mobile Logo -->
@@ -20,6 +21,8 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="mainNavDrop0">
                         <li><a href="{% url 'wines' %}" class="dropdown-item">Wines</a></li>
+                        <li><a href="" class="dropdown-item">Wine Accessories <small><strong>Soon!</strong></small></a></li>
+                        <li><a href="" class="dropdown-item">Culinary <small><strong>Soon!</strong></small></a></li>
                         <li><a href="{% url 'products' %}" class="dropdown-item">All Products</a></li>
                     </ul>
                 </li>
@@ -29,9 +32,7 @@
                         Wines
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="mainNavDrop1">
-                        <li><a href="" class="dropdown-item">By Price</a></li>
-                        <li><a href="" class="dropdown-item ">By Rating</a></li>
-                        <li><a href="" class="dropdown-item ">By Varietal</a></li>
+                        <li><a href="{% url 'varietals' %}" class="dropdown-item ">By Varietal</a></li>
                         <li><a href="" class="dropdown-item ">By Region</a></li>
                         <li><a href="{% url 'wines' %}" class="dropdown-item">All Wines</a></li>
                     </ul>
@@ -64,7 +65,3 @@
         </div>
     </div>
 </nav>
-
-
-
-
