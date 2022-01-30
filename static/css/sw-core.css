@@ -83,25 +83,6 @@ button:focus {
     width: 1.5rem;
 }
 
-
-.dropdown-menu li {
-  position: relative;
-}
-.dropdown-menu .dropdown-submenu {
-  display: none;
-  position: absolute;
-  left: 100%;
-  top: -7px;
-}
-.dropdown-menu .dropdown-submenu-left {
-  right: 100%;
-  left: auto;
-}
-.dropdown-menu > li:hover > .dropdown-submenu {
-  display: block;
-}
-
-
 /* Base Elements */
 html {
     height: 100%;
@@ -143,6 +124,7 @@ p {
 /* Common Background Colors*/
 .sw-b-color-01 {background-color: rgb(213, 121, 102, .75);}
 .sw-b-color-02 {background-color: rgba(0, 76, 153, .75);}
+.sw-b-color-03 {background-color: rgb(0, 0, 0, .75);}
 
 /* Font Sizing */
 .sw-font-size-50 {
@@ -191,6 +173,10 @@ p {
 }
 
 /* Deliver Banner */
+.sw-db-container {
+  padding-top: 120px;
+}
+
 .sw-deliver-banner {
   min-height: 60px;
 }
@@ -204,8 +190,17 @@ p {
   width: max-content;
 }
 
-/* Products */
+/* Content Areas */
 
+.sw-content-container {
+  padding-top: 5px;
+}
+
+/* Products */
+.sw-card-img {
+  max-height: 220px;
+  width: auto;
+}
 
 
 /* @media */
@@ -227,11 +222,17 @@ p {
           left: 0;
           z-index: 1030;
       }
+
       .sw-logo-font {
         font-size: 3rem;
       }
+
       .sw-cont-header {
         padding-top: 5px;
+      }
+
+      .sw-db-container {
+        padding-top: 200px;
       }
   }
 

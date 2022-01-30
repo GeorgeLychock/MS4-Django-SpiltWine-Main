@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Wine, Varietal
+from .models import Wine, Varietal, CountryState
 
 
 def all_products(request):
@@ -18,6 +18,7 @@ def all_products(request):
     # combine queries
     # products = .JOIN()
 
+    # Exucute Search query
     if request.GET:
         if 'q1' in request.GET:
             query = request.GET['q1']
@@ -39,29 +40,51 @@ def all_products(request):
 def all_wines(request):
     """ Shows all products and handles sorting and searching. """
 
+    # wines = Wine.objects.filter(country_state=1)
+    # sort_target ="California"
     wines = Wine.objects.all()
-    sort = None
+    sort = 'All Wines'
     direction = None
+    countries = None
+    country = None
 
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
+            # if sorting by name, direction. From Code Institute, https://codeinstitute.net/global/
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 wines = wines.annotate(lower_name=Lower('name'))
-
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             wines = wines.order_by(sortkey)
-
+        
+        if 'country_state' in request.GET:
+            countries = CountryState.objects.all()
+            country = request.GET['country_state']
+            # all wines, sorted by alpha country/state
+            if not country:
+                sort = "Country / State"
+                sortkey = 'country_state__name'
+            # wines sorted by specific country/state
+            if country:
+                wines = wines.filter(country_state__name=country)
+                sortkey = 'name'
+                sort = country
+                
+            wines = wines.order_by(sortkey)
+    
     current_sorting = f'{sort}_{direction}'
+    sorting = str.title(sort)
 
     wine_content = {
         'wines': wines,
         'current_sorting': current_sorting,
+        'sorting': sorting,
+        'countries': countries,
     }
 
     return render(request, 'products/wines.html', wine_content)
