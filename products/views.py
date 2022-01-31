@@ -43,7 +43,7 @@ def all_wines(request):
     # wines = Wine.objects.filter(country_state=1)
     # sort_target ="California"
     wines = Wine.objects.all()
-    varietals = Varietal.objects.all()
+    varietals = None
     sort = 'All Wines'
     direction = None
     countries = None
@@ -83,6 +83,7 @@ def all_wines(request):
             varietal = request.GET['varietal']
             # wines sorted by specific varietal
             if varietal:
+                varietals = Varietal.objects.all()
                 wines = wines.filter(varietal__name=varietal)
                 sortkey = 'name'
                 sort = varietal

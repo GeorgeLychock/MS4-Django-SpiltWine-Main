@@ -19,26 +19,26 @@
                 <span class="p-2 mt-2 badge bg-dark">{{ v.friendly_name }}</span>
             </a>
             {% endfor %}
-            <hr class="w-50 mb-1">
+            <hr class="w-100 mb-1">
         </div>
     </div>
     <!-- Product Cards -->
-    <div class="row">
+    <div class="row pt-2">
         {% for wine in wines %}
-        <div class="col-6 col-md-3">
+        <div class="col-6 col-md-3 sw-card-col">
             <div class="card h-100 border-0">
-                <div class="card-header">
+                <div class="card-header sw-card-header">
                     {% if wine.varietal %}
-                    <div class="">
+                    <div>
                         <small class=""><i class="mr-1"></i>{{ wine.varietal.friendly_name }}</small>
                     </div>
                     {% else %}
-                    <div class="">
+                    <div>
                         <small class=""><i class="mr-1"></i>Varietal not Specified</small>
                     </div>
                     {% endif %}
                 </div>
-                <div class="card-body pb-0">
+                <div class="sw-card-body">
                     {% if wine.img_file_name %}
                     <a href="{% url 'wine_detail' wine.pk %}">
                         <img class="card-img-top img-fluid mt-3 sw-card-img" src="../media/{{ wine.img_file_name }}"
@@ -49,9 +49,11 @@
                         <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}cab_grapes.jpg" alt="{{ wine.name }}">
                     </a>
                     {% endif %}
-                    <p class="mb-0">{{ wine.name }}</p>
+                    <div class="mt-4 pb-0">
+                        <a class="sw-link-text-01" href="{% url 'wine_detail' wine.pk %}">{{ wine.name }}</a>
+                    </div>
                 </div>
-                <div class="card-footer pt-0 border-0 text-left sw-p-color-blk">
+                <div class="card-footer border-0 text-left sw-card-footer sw-p-color-blk">
                     <div class="row">
                         <div class="col">
                             <p class="lead mb-0 text-left font-weight-bold">${{ wine.price }}</p>
@@ -86,70 +88,72 @@
 {% endblock %}
 
 {% block aside %}
-<!-- SpiltWine Featured Items -->
-<div class="row py-2">
-    <div class="col text-center sw-h-color-02">
-        <h5>Featured Wines</h5>
+<aside class="d-none d-md-block col col-md-3 sw-dt-sidebars sw-b-color-02 ">
+    <!-- SpiltWine Featured Items -->
+    <div class="row py-2">
+        <div class="col text-center sw-h-color-02">
+            <h5>Featured Wines</h5>
+        </div>
     </div>
-</div>
-{% for f in featured %}
-<div class="row p-4">
-    <div class="col">
-        <div class="card h-100 border-0">
-            <div class="card-header">
-                {% if f.varietal %}
-                <div class="">
-                    <small class=""><i class="mr-1"></i>{{ f.varietal.friendly_name }}</small>
-                </div>
-                {% else %}
-                <div class="">
-                    <small class=""><i class="mr-1"></i>Varietal not Specified</small>
-                </div>
-                {% endif %}
-            </div>
-            <div class="card-body pb-0">
-                {% if f.img_file_name %}
-                <a href="{% url 'wine_detail' f.pk %}">
-                    <img class="card-img-top img-fluid mt-3 sw-card-img" src="../media/{{ f.img_file_name }}"
-                        alt="{{ f.name }}">
-                </a>
-                {% else %}
-                <a href="{% url 'wine_detail' f.pk %}">
-                    <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}cab_grapes.jpg" alt="{{ f.name }}">
-                </a>
-                {% endif %}
-                <p class="mb-0">{{ f.name }}</p>
-            </div>
-            <div class="card-footer pt-0 border-0 text-left sw-p-color-blk">
-                <div class="row">
-                    <div class="col">
-                        <p class="lead mb-0 text-left font-weight-bold text-danger">${{ f.price }}</p>
-                        {% if f.country_state %}
-                        <div class="">
-                            <small class=""><i class="mr-1"></i>{{ f.country_state.friendly_name }}</small>
-                        </div>
-                        {% endif %}
-                        {% if f.region %}
-                        <div>
-                            <small class=""><i class="mr-1"></i>{{ f.region.friendly_name }}</small>
-                        </div>
-                        {% endif %}
-                        {% if f.appellation %}
-                        <div>
-                            <small class=""><i class="mr-1"></i>{{ f.appellation.friendly_name }}</small>
-                        </div>
-                        {% endif %}
+    {% for f in featured %}
+    <div class="row p-4">
+        <div class="col">
+            <div class="card h-100 border-0">
+                <div class="card-header">
+                    {% if f.varietal %}
+                    <div class="">
+                        <small class=""><i class="mr-1"></i>{{ f.varietal.friendly_name }}</small>
                     </div>
+                    {% else %}
+                    <div class="">
+                        <small class=""><i class="mr-1"></i>Varietal not Specified</small>
+                    </div>
+                    {% endif %}
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <p class="sw-font-size-50">{{ f.description }}</p>
+                <div class="card-body pb-0">
+                    {% if f.img_file_name %}
+                    <a href="{% url 'wine_detail' f.pk %}">
+                        <img class="card-img-top img-fluid mt-3 sw-card-img" src="../media/{{ f.img_file_name }}"
+                            alt="{{ f.name }}">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'wine_detail' f.pk %}">
+                        <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}cab_grapes.jpg" alt="{{ f.name }}">
+                    </a>
+                    {% endif %}
+                    <p class="mb-0">{{ f.name }}</p>
+                </div>
+                <div class="card-footer pt-0 border-0 text-left sw-p-color-blk">
+                    <div class="row">
+                        <div class="col">
+                            <p class="lead mb-0 text-left font-weight-bold text-danger">${{ f.price }}</p>
+                            {% if f.country_state %}
+                            <div class="">
+                                <small class=""><i class="mr-1"></i>{{ f.country_state.friendly_name }}</small>
+                            </div>
+                            {% endif %}
+                            {% if f.region %}
+                            <div>
+                                <small class=""><i class="mr-1"></i>{{ f.region.friendly_name }}</small>
+                            </div>
+                            {% endif %}
+                            {% if f.appellation %}
+                            <div>
+                                <small class=""><i class="mr-1"></i>{{ f.appellation.friendly_name }}</small>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="sw-font-size-50">{{ f.description }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-{% endfor %}
-</div>
+    {% endfor %}
+    </div>
+</aside>
 {% endblock %}
