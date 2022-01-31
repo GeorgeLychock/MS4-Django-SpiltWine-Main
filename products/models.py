@@ -79,6 +79,7 @@ class Varietal(models.Model):
     img_file_name = models.ImageField(null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     wiki_url = models.URLField(max_length=1024, null=True, blank=True)
+    alt_url_1 = models.URLField(max_length=1024, null=True, blank=True)
 
 
     def __str__(self):
@@ -133,6 +134,7 @@ class Wine(models.Model):
     abv = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
     taste = models.TextField(max_length=100, null=True, blank=True)
     body = models.CharField(max_length=100,null=True, blank=True)
+    featured = models.BooleanField(null=False, blank=False, default=False)
 
     def __str__(self):
         return self.name

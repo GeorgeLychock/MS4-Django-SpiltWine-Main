@@ -5,7 +5,7 @@
     "fields": {
       "name": "Austin Hope Cabernet Sauvignon Paso Robles",
       "img_file_name": "12291749609502.webp",
-      "img_url": "media/product-images/12291749609502.webp",
+      "img_url": "",
       "sku": "214765750-1",
       "vintage": null,
       "size": 750,
@@ -20,7 +20,8 @@
       "style": null,
       "abv": null,
       "taste": "",
-      "body": null
+      "body": null,
+      "featured": false
     }
   },
   {
@@ -29,7 +30,7 @@
     "fields": {
       "name": "Au Pied du Mont Chauve Saint Aubin Charmois Rouge",
       "img_file_name": "12024922177566.webp",
-      "img_url": "media/product-images/12024922177566.webp",
+      "img_url": "",
       "sku": "214146750-1",
       "vintage": 2015,
       "size": 750,
@@ -44,7 +45,8 @@
       "style": 1,
       "abv": 13.5,
       "taste": "Black Raspberry, Cherry",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -53,7 +55,7 @@
     "fields": {
       "name": "Verdon Estate Proprietary Red Blueline Vineyards Napa Valley",
       "img_file_name": "14017177354270.webp",
-      "img_url": "media/product-images/14017177354270.webp",
+      "img_url": "",
       "sku": "235186750-1",
       "vintage": 2018,
       "size": 750,
@@ -68,7 +70,8 @@
       "style": 2,
       "abv": 14.5,
       "taste": "Berry, Spice",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -77,7 +80,7 @@
     "fields": {
       "name": "Halos de Jupiter Cotes du Rhone",
       "img_file_name": "15078178783262.webp",
-      "img_url": "media/product-images/15078178783262.webp",
+      "img_url": "",
       "sku": "113394750-1",
       "vintage": 2019,
       "size": 750,
@@ -92,7 +95,8 @@
       "style": 3,
       "abv": 15.5,
       "taste": "Cherry, Spice",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -101,7 +105,7 @@
     "fields": {
       "name": "Cais da Ribeira Douro Red Reserva Port Barrel Aged",
       "img_file_name": "12071893762078.webp",
-      "img_url": "media/product-images/12071893762078.webp",
+      "img_url": "",
       "sku": "213670750-1",
       "vintage": 2015,
       "size": 750,
@@ -116,7 +120,8 @@
       "style": 1,
       "abv": 14,
       "taste": "Dark Fruit, Spice, Caramel",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -125,7 +130,7 @@
     "fields": {
       "name": "Layer Cake Pinot Noir",
       "img_file_name": "8799586123806.webp",
-      "img_url": "media/product-images/8799586123806.webp",
+      "img_url": "",
       "sku": "120957750-1",
       "vintage": 2013,
       "size": 750,
@@ -140,7 +145,8 @@
       "style": 4,
       "abv": null,
       "taste": "Black Cherry, Dried Cherry",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -149,7 +155,7 @@
     "fields": {
       "name": "The Fugitive Red Dry Creek Valley",
       "img_file_name": "8799579373598.webp",
-      "img_url": "media/product-images/8799579373598.webp",
+      "img_url": "",
       "sku": "119005750-1",
       "vintage": 2019,
       "size": 750,
@@ -164,7 +170,8 @@
       "style": 3,
       "abv": 15,
       "taste": "Blackberry, Spice, Espresso",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -173,7 +180,7 @@
     "fields": {
       "name": "Chateau Vrai Canon Bouche Canon-Fronsac",
       "img_file_name": "9465003278366.webp",
-      "img_url": "media/product-images/9465003278366.webp",
+      "img_url": "",
       "sku": "33913750-1",
       "vintage": 2014,
       "size": 750,
@@ -188,7 +195,8 @@
       "style": 1,
       "abv": 14.5,
       "taste": "Dark Berry, Dark Fruit",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -197,7 +205,7 @@
     "fields": {
       "name": "Robert Mondavi Private Selection Bourbon Barrel Aged Cabernet Red Wine",
       "img_file_name": "12510743691294.webp",
-      "img_url": "media/product-images/12510743691294.webp",
+      "img_url": "",
       "sku": "163853750-1",
       "vintage": 2017,
       "size": 750,
@@ -212,7 +220,8 @@
       "style": 3,
       "abv": null,
       "taste": "Vanilla, Black Currant, Coffee",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -221,7 +230,7 @@
     "fields": {
       "name": "Moone Tsai Cabernet Napa",
       "img_file_name": "8815583330334.webp",
-      "img_url": "media/product-images/8815583330334.webp",
+      "img_url": "",
       "sku": "117943750-1",
       "vintage": 2017,
       "size": 750,
@@ -236,7 +245,8 @@
       "style": 3,
       "abv": 15.3,
       "taste": "Berry, Coffee",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -245,7 +255,7 @@
     "fields": {
       "name": "Silver Ghost Cabernet Sauvignon Napa Valley",
       "img_file_name": "11367781892126.webp",
-      "img_url": "media/product-images/11367781892126.webp",
+      "img_url": "",
       "sku": "187808750-1",
       "vintage": 2018,
       "size": 750,
@@ -260,7 +270,8 @@
       "style": 2,
       "abv": 14.8,
       "taste": "Dark Berry, Espresso, Cassis",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -269,7 +280,7 @@
     "fields": {
       "name": "Thievery Cabernet Sauvignon",
       "img_file_name": "11931338309662.webp",
-      "img_url": "media/product-images/11931338309662.webp",
+      "img_url": "",
       "sku": "223955750-1",
       "vintage": null,
       "size": 750,
@@ -284,7 +295,8 @@
       "style": 1,
       "abv": 13.5,
       "taste": "Blueberry, Vanilla",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -293,7 +305,7 @@
     "fields": {
       "name": "Torial Cabernet Sauvignon Napa Valley",
       "img_file_name": "14091576344606.webp",
-      "img_url": "media/product-images/14091576344606.webp",
+      "img_url": "",
       "sku": "171434750-1",
       "vintage": 2017,
       "size": 750,
@@ -308,7 +320,8 @@
       "style": 3,
       "abv": 15.1,
       "taste": "Currant, Blackberry, Vanilla",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -317,7 +330,7 @@
     "fields": {
       "name": "Harvester Cabernet Sauvignon Paso Robles",
       "img_file_name": "14424748064798.webp",
-      "img_url": "media/product-images/14424748064798.webp",
+      "img_url": "",
       "sku": "134058750-1",
       "vintage": null,
       "size": 750,
@@ -332,7 +345,8 @@
       "style": 1,
       "abv": 13.5,
       "taste": "Black Cherry, Violet",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -341,7 +355,7 @@
     "fields": {
       "name": "Mascota Vineyards La Mascota Malbec",
       "img_file_name": "8806011437086.webp",
-      "img_url": "media/product-images/8806011437086.webp",
+      "img_url": "",
       "sku": "130010750-1",
       "vintage": 2018,
       "size": 750,
@@ -356,7 +370,8 @@
       "style": 1,
       "abv": 14.5,
       "taste": "Blackberry, Vanilla",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -365,7 +380,7 @@
     "fields": {
       "name": "Neethlingshof The Owl Post Pinotage",
       "img_file_name": "8796435382302.webp",
-      "img_url": "media/product-images/8796435382302.webp",
+      "img_url": "",
       "sku": "130057750-1",
       "vintage": 2018,
       "size": 750,
@@ -380,7 +395,8 @@
       "style": 1,
       "abv": 14,
       "taste": "Plum, Vanilla",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -389,7 +405,7 @@
     "fields": {
       "name": "Macchia Zinfandel Mischievous Lodi",
       "img_file_name": "15078178750494.webp",
-      "img_url": "media/product-images/15078178750494.webp",
+      "img_url": "",
       "sku": "105056750-1",
       "vintage": 2018,
       "size": 750,
@@ -404,7 +420,8 @@
       "style": 3,
       "abv": 15.5,
       "taste": "Blackberry, Raspberry, Vanilla",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -413,7 +430,7 @@
     "fields": {
       "name": "Borderline Red Blend Sonoma",
       "img_file_name": "12346315014174.webp",
-      "img_url": "media/product-images/12346315014174.webp",
+      "img_url": "",
       "sku": "223987750-1",
       "vintage": 2018,
       "size": 750,
@@ -428,7 +445,8 @@
       "style": 3,
       "abv": 14.2,
       "taste": "Black Cherry, Currant, Dark Fruit",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -437,7 +455,7 @@
     "fields": {
       "name": "River Road Pinot Noir Russian River Valley Reserve",
       "img_file_name": "14531735748638.webp",
-      "img_url": "media/product-images/14531735748638.webp",
+      "img_url": "",
       "sku": "92745750-1",
       "vintage": null,
       "size": 750,
@@ -452,7 +470,8 @@
       "style": 3,
       "abv": 14.3,
       "taste": "Cherry, Plum",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -461,7 +480,7 @@
     "fields": {
       "name": "River Road Pinot Noir",
       "img_file_name": "14536624930846.webp",
-      "img_url": "media/product-images/14536624930846.webp",
+      "img_url": "",
       "sku": "109397750-1",
       "vintage": 2018,
       "size": 750,
@@ -476,7 +495,8 @@
       "style": 1,
       "abv": 13.5,
       "taste": "Cherry, Plum",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -485,7 +505,7 @@
     "fields": {
       "name": "Belcreme de Lys Pinot Noir",
       "img_file_name": "10715753.webp",
-      "img_url": "media/product-images/10715753.webp",
+      "img_url": "",
       "sku": "sw-000001",
       "vintage": 2014,
       "size": 750,
@@ -500,7 +520,8 @@
       "style": 5,
       "abv": null,
       "taste": "",
-      "body": null
+      "body": null,
+      "featured": false
     }
   },
   {
@@ -509,7 +530,7 @@
     "fields": {
       "name": "River Road Chardonnay Russian River Valley Reserve",
       "img_file_name": "14531733684254.webp",
-      "img_url": "media/product-images/14531733684254.webp",
+      "img_url": "",
       "sku": "93152750-1",
       "vintage": 2020,
       "size": 750,
@@ -524,7 +545,8 @@
       "style": 6,
       "abv": 14.2,
       "taste": "Pear, Butter, Vanilla",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -533,7 +555,7 @@
     "fields": {
       "name": "Courtney Benham Pinot Noir Napa",
       "img_file_name": "14261355741214.webp",
-      "img_url": "media/product-images/14261355741214.webp",
+      "img_url": "",
       "sku": "117946750-1",
       "vintage": 2018,
       "size": 750,
@@ -548,7 +570,8 @@
       "style": 1,
       "abv": 13.8,
       "taste": "Blackberry, Spice, Raspberry",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -557,7 +580,7 @@
     "fields": {
       "name": "Renieri Invetro",
       "img_file_name": "14252073877534.webp",
-      "img_url": "media/product-images/14252073877534.webp",
+      "img_url": "",
       "sku": "113710750-1",
       "vintage": 2016,
       "size": 750,
@@ -572,7 +595,8 @@
       "style": 1,
       "abv": 14,
       "taste": "Cherry, Plum",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -581,7 +605,7 @@
     "fields": {
       "name": "Mantellassi Le Sentinelle Morellino di Scansano Riserva",
       "img_file_name": "3zzIhHDSQ1SB6DcGG17iRw_pb_x600.png",
-      "img_url": "media/product-images/3zzIhHDSQ1SB6DcGG17iRw_pb_x600.png",
+      "img_url": "",
       "sku": "sw-000002",
       "vintage": 2015,
       "size": 750,
@@ -596,7 +620,8 @@
       "style": null,
       "abv": null,
       "taste": "",
-      "body": null
+      "body": null,
+      "featured": false
     }
   },
   {
@@ -605,7 +630,7 @@
     "fields": {
       "name": "Leone D'Oro Vino Nobile di Montepulciano",
       "img_file_name": "14491576664094.webp",
-      "img_url": "media/product-images/14491576664094.webp",
+      "img_url": "",
       "sku": "119692750-1",
       "vintage": 2015,
       "size": 750,
@@ -620,7 +645,8 @@
       "style": 1,
       "abv": 13.5,
       "taste": "Raspberry, Red Fruit, Pepper",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -629,7 +655,7 @@
     "fields": {
       "name": "Villa Maffei Valpolicella",
       "img_file_name": "8802905456670.webp",
-      "img_url": "media/product-images/8802905456670.webp",
+      "img_url": "",
       "sku": "95556750-1",
       "vintage": 2018,
       "size": 750,
@@ -644,7 +670,8 @@
       "style": 4,
       "abv": 12.5,
       "taste": "Cherry, Berry, Earth",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -653,7 +680,7 @@
     "fields": {
       "name": "Tenuta di Renieri Chianti Classico",
       "img_file_name": "13847712333854.webp",
-      "img_url": "media/product-images/13847712333854.webp",
+      "img_url": "",
       "sku": "113709750-1",
       "vintage": 2016,
       "size": 750,
@@ -668,7 +695,8 @@
       "style": 1,
       "abv": 14,
       "taste": "Cherry, Spice",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -677,7 +705,7 @@
     "fields": {
       "name": "Zaccagnini Montepulciano D'Abruzzo",
       "img_file_name": "12291776774174.webp",
-      "img_url": "media/product-images/12291776774174.webp",
+      "img_url": "",
       "sku": "8029750-1",
       "vintage": 2014,
       "size": 750,
@@ -692,7 +720,8 @@
       "style": null,
       "abv": null,
       "taste": "",
-      "body": null
+      "body": null,
+      "featured": false
     }
   },
   {
@@ -701,7 +730,7 @@
     "fields": {
       "name": "Barba I Vasari Old Vines Montepulciano d'Abruzzo",
       "img_file_name": "11475233898526.webp",
-      "img_url": "media/product-images/11475233898526.webp",
+      "img_url": "",
       "sku": "129912750-1",
       "vintage": 2014,
       "size": 750,
@@ -716,7 +745,8 @@
       "style": 3,
       "abv": 13.5,
       "taste": "Cherry, Licorice",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -725,7 +755,7 @@
     "fields": {
       "name": "Armani Pinot Grigio Venezie",
       "img_file_name": "13409033388062.webp",
-      "img_url": "media/product-images/13409033388062.webp",
+      "img_url": "",
       "sku": "14445750-1",
       "vintage": null,
       "size": 750,
@@ -740,7 +770,8 @@
       "style": 7,
       "abv": 0.125,
       "taste": "Apple, Pear",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -749,7 +780,7 @@
     "fields": {
       "name": "Albino Armani Pinot Grigio Corvara",
       "img_file_name": "13411422076958.webp",
-      "img_url": "media/product-images/13411422076958.webp",
+      "img_url": "",
       "sku": "14442750-1",
       "vintage": 2020,
       "size": 750,
@@ -764,7 +795,8 @@
       "style": 1,
       "abv": 0.125,
       "taste": "Apple, White Flower, Mineral",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -773,7 +805,7 @@
     "fields": {
       "name": "Bishop's Ring Cabernet Napa",
       "img_file_name": "14342781534238.webp",
-      "img_url": "media/product-images/14342781534238.webp",
+      "img_url": "",
       "sku": "184733750-1",
       "vintage": 2018,
       "size": 750,
@@ -788,7 +820,8 @@
       "style": 3,
       "abv": 0.145,
       "taste": "Black Currant, Black Plum, Blackberry",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -797,7 +830,7 @@
     "fields": {
       "name": "Orin Swift Slander Pinot Noir",
       "img_file_name": "12043245387806.webp",
-      "img_url": "media/product-images/12043245387806.webp",
+      "img_url": "",
       "sku": "215790750-1",
       "vintage": 2019,
       "size": 750,
@@ -812,7 +845,8 @@
       "style": 2,
       "abv": null,
       "taste": "Strawberry, Cherry, Violet",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -821,7 +855,7 @@
     "fields": {
       "name": "Clos Labarde St. Emilion Grand Cru",
       "img_file_name": "12674929000478.webp",
-      "img_url": "media/product-images/12674929000478.webp",
+      "img_url": "",
       "sku": "217115750-1",
       "vintage": 2015,
       "size": 750,
@@ -836,7 +870,8 @@
       "style": 3,
       "abv": 0.145,
       "taste": "Raspberry, Cherry",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -845,7 +880,7 @@
     "fields": {
       "name": "Quinta das Carvalhas Tinto Douro",
       "img_file_name": "15892048969758.webp",
-      "img_url": "media/product-images/15892048969758.webp",
+      "img_url": "",
       "sku": "129992750-1",
       "vintage": 2015,
       "size": 750,
@@ -860,7 +895,8 @@
       "style": 3,
       "abv": 0.14,
       "taste": "Plum, Vanilla",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -869,7 +905,7 @@
     "fields": {
       "name": "Latitud 42 Rioja Crianza",
       "img_file_name": "10326461612062.webp",
-      "img_url": "media/product-images/10326461612062.webp",
+      "img_url": "",
       "sku": "178676750-1",
       "vintage": 2018,
       "size": 750,
@@ -884,7 +920,8 @@
       "style": 1,
       "abv": 0.145,
       "taste": "Black Cherry, Spice, Mineral",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -893,7 +930,7 @@
     "fields": {
       "name": "Mascota Vineyards Unanime Merlot",
       "img_file_name": "14486516826142.webp",
-      "img_url": "media/product-images/14486516826142.webp",
+      "img_url": "",
       "sku": "230219750-1",
       "vintage": 2018,
       "size": 750,
@@ -908,7 +945,8 @@
       "style": 3,
       "abv": 0.14,
       "taste": "Red Fruit, Spice, Oak",
-      "body": 2
+      "body": 2,
+      "featured": false
     }
   },
   {
@@ -917,7 +955,7 @@
     "fields": {
       "name": "San Gregorio Las 75 Vendimias",
       "img_file_name": "11864986648606.webp",
-      "img_url": "media/product-images/11864986648606.webp",
+      "img_url": "",
       "sku": "213629750-1",
       "vintage": 2019,
       "size": 750,
@@ -932,7 +970,8 @@
       "style": 3,
       "abv": 0.15,
       "taste": "Dark Berry, Spice, Coffee",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -941,7 +980,7 @@
     "fields": {
       "name": "Luquet Macon Villages Les Mulots",
       "img_file_name": "14084124999710.webp",
-      "img_url": "media/product-images/14084124999710.webp",
+      "img_url": "",
       "sku": "15146750-1",
       "vintage": 2018,
       "size": 750,
@@ -956,7 +995,8 @@
       "style": 1,
       "abv": 0.13,
       "taste": "Apple, Citrus",
-      "body": 3
+      "body": 3,
+      "featured": false
     }
   },
   {
@@ -965,7 +1005,7 @@
     "fields": {
       "name": "Iter Chardonnay California",
       "img_file_name": "15078179242014.webp",
-      "img_url": "media/product-images/15078179242014.webp",
+      "img_url": "",
       "sku": "164293750-1",
       "vintage": 2019,
       "size": 750,
@@ -980,7 +1020,8 @@
       "style": 6,
       "abv": 0.135,
       "taste": "Tropical, Butter, Cream",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -989,7 +1030,7 @@
     "fields": {
       "name": "The Calling Chardonnay Sonoma Coast",
       "img_file_name": "13269053505566.webp",
-      "img_url": "media/product-images/13269053505566.webp",
+      "img_url": "",
       "sku": "187768750-1",
       "vintage": 2018,
       "size": 750,
@@ -1004,7 +1045,8 @@
       "style": 1,
       "abv": null,
       "taste": "Pear, Lemon",
-      "body": 1
+      "body": 1,
+      "featured": false
     }
   },
   {
@@ -1013,7 +1055,7 @@
     "fields": {
       "name": "Scilio Valle Galfina Etna Bianco DOC",
       "img_file_name": "11443306659870.webp",
-      "img_url": "media/product-images/11443306659870.webp",
+      "img_url": "",
       "sku": "219328750-1",
       "vintage": 2019,
       "size": 750,
@@ -1028,7 +1070,8 @@
       "style": 4,
       "abv": 0.125,
       "taste": "Peach, White Fruit, White Flower",
-      "body": 3
+      "body": 3,
+      "featured": false
     }
   }
 ]

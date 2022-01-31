@@ -3,6 +3,11 @@
         "pk": 1,
         "model": "products.varietal",
         "fields": {
+            "wine_type": 1,
+            "img_file_name": "cab_grapes.jpg",
+            "description": "Cabernet Sauvignon, pronounced [cah-behr-NAY so-veen-YAHN], is almost always made as a dry (unsweet) style of red wine. In winemaking during the fermentation process, the yeast consumes all the sugar from the Cabernet grapes resulting in a dry-style wine.\nCabernet Sauvignon wines also have high levels of tannin that produce a mouth-drying sensation and medium levels of acidity that cause your mouth to water. These characteristics make Cabernet Sauvignon perfect for pairing with rich, salty food. ",
+            "wiki_url": "https://en.wikipedia.org/wiki/Cabernet_Sauvignon",
+            "alt_url_1": "https://www.totalwine.com/content/learn/cabernet-sauvignon-wine-guide",
             "name": "cabernet_sauvignon",
             "friendly_name": "Cabernet Sauvignon"
         }
@@ -11,6 +16,11 @@
         "pk": 2,
         "model": "products.varietal",
         "fields": {
+            "wine_type": 1,
+            "img_file_name": "pinot_noir_grapes.jpg",
+            "description": "Pinot Noir is almost always made into dry red wine (or rosé) without a hint of sweetness, though some have abundant fruit flavors that you could mistake for being sweet. Pinot Noir grapes are picked when they have the ideal balance of acidity and sugar. The grape skins are left in contact with the wine during fermentation, adding color, flavor, and texture.  \n​Pinot Noir grapes have thin skins that are relatively low in tannin. That's why Pinot Noirs, whether from Burgundy, France, or Sonoma's Russian River Valley, feel silky when you drink them.",
+            "wiki_url": "https://en.wikipedia.org/wiki/Pinot_noir",
+            "alt_url_1": "https://www.totalwine.com/content/learn/pinot-noir-wine-guide",
             "name": "pinot_noir",
             "friendly_name": "Pinot Noir"
         }
@@ -19,6 +29,11 @@
         "pk": 3,
         "model": "products.varietal",
         "fields": {
+            "wine_type": 1,
+            "img_file_name": "",
+            "description": "",
+            "wiki_url": "",
+            "alt_url_1": "",
             "name": "rhone_blend",
             "friendly_name": "Rhone Blend"
         }
@@ -27,6 +42,11 @@
         "pk": 4,
         "model": "products.varietal",
         "fields": {
+            "wine_type": 1,
+            "img_file_name": "",
+            "description": "",
+            "wiki_url": "",
+            "alt_url_1": "",
             "name": "red_blend",
             "friendly_name": "Red Blend"
         }
@@ -35,6 +55,11 @@
         "pk": 5,
         "model": "products.varietal",
         "fields": {
+            "wine_type": 1,
+            "img_file_name": "",
+            "description": "",
+            "wiki_url": "",
+            "alt_url_1": "",
             "name": "zinfandel",
             "friendly_name": "Zinfandel"
         }
@@ -43,6 +68,11 @@
         "pk": 6,
         "model": "products.varietal",
         "fields": {
+            "wine_type": 1,
+            "img_file_name": "",
+            "description": "",
+            "wiki_url": "",
+            "alt_url_1": "",
             "name": "bordeaux_blend",
             "friendly_name": "Bordeaux Blend"
         }
@@ -51,6 +81,11 @@
         "pk": 7,
         "model": "products.varietal",
         "fields": {
+            "wine_type": 1,
+            "img_file_name": "",
+            "description": "",
+            "wiki_url": "",
+            "alt_url_1": "",
             "name": "malbec",
             "friendly_name": "Malbec"
         }
@@ -59,6 +94,11 @@
         "pk": 8,
         "model": "products.varietal",
         "fields": {
+            "wine_type": 1,
+            "img_file_name": "",
+            "description": "",
+            "wiki_url": "",
+            "alt_url_1": "",
             "name": "pinotage",
             "friendly_name": "Pinotage"
         }
@@ -67,6 +107,11 @@
         "pk": 9,
         "model": "products.varietal",
         "fields": {
+            "wine_type": 2,
+            "img_file_name": "chard_grapes.jpg",
+            "description": "Chardonnays are typically considered medium-bodied, though some are notably lighter than others. They can also span the spectrum from sweet to dry. Some Chardonnays feature notes of crisp green apple, while others taste of creamy vanilla. The variety of flavors found in Chardonnay is what makes it a standout star at wine tastings.",
+            "wiki_url": "https://en.wikipedia.org/wiki/Chardonnay",
+            "alt_url_1": "https://www.totalwine.com/content/learn/chardonnay-wine-guide",
             "name": "chardonnay",
             "friendly_name": "Chardonnay"
         }
@@ -75,6 +120,11 @@
         "pk": 10,
         "model": "products.varietal",
         "fields": {
+            "wine_type": 1,
+            "img_file_name": "",
+            "description": "",
+            "wiki_url": "",
+            "alt_url_1": "",
             "name": "sangiovese",
             "friendly_name": "Sangiovese"
         }
@@ -83,6 +133,11 @@
         "pk": 11,
         "model": "products.varietal",
         "fields": {
+            "wine_type": 2,
+            "img_file_name": "",
+            "description": "",
+            "wiki_url": "",
+            "alt_url_1": "",
             "name": "corvina",
             "friendly_name": "Corvina"
         }
@@ -91,6 +146,11 @@
         "pk": 12,
         "model": "products.varietal",
         "fields": {
+            "wine_type": 1,
+            "img_file_name": "",
+            "description": "",
+            "wiki_url": "",
+            "alt_url_1": "",
             "name": "montepulciano",
             "friendly_name": "Montepulciano"
         }
@@ -99,6 +159,11 @@
         "pk": 13,
         "model": "products.varietal",
         "fields": {
+            "wine_type": 2,
+            "img_file_name": "",
+            "description": "",
+            "wiki_url": "",
+            "alt_url_1": "",
             "name": "pinot_grigio",
             "friendly_name": "Pinot Grigio/Pinot Gris"
         }
@@ -107,6 +172,11 @@
         "pk": 14,
         "model": "products.varietal",
         "fields": {
+            "wine_type": 1,
+            "img_file_name": "",
+            "description": "",
+            "wiki_url": "",
+            "alt_url_1": "",
             "name": "tempranillo",
             "friendly_name": "Tempranillo"
         }
@@ -115,6 +185,11 @@
         "pk": 15,
         "model": "products.varietal",
         "fields": {
+            "wine_type": 1,
+            "img_file_name": "",
+            "description": "",
+            "wiki_url": "",
+            "alt_url_1": "",
             "name": "grenache",
             "friendly_name": "Grenache"
         }
@@ -123,6 +198,11 @@
         "pk": 16,
         "model": "products.varietal",
         "fields": {
+            "wine_type": 1,
+            "img_file_name": "",
+            "description": "",
+            "wiki_url": "",
+            "alt_url_1": "",
             "name": "merlot",
             "friendly_name": "merlot"
         }
@@ -131,6 +211,11 @@
         "pk": 17,
         "model": "products.varietal",
         "fields": {
+            "wine_type": 2,
+            "img_file_name": "",
+            "description": "",
+            "wiki_url": "",
+            "alt_url_1": "",
             "name": "carricante",
             "friendly_name": "Carricante"
         }

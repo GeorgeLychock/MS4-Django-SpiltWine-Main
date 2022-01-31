@@ -93,6 +93,10 @@ button:focus {
     z-index: -1;
 }
 
+.sw-overlay-varietals {
+  background: rgba(255, 255, 255, .95);
+}
+
 /* Base Elements */
 html {
     height: 100%;
@@ -121,14 +125,15 @@ p {
 }
 
 /* Common Text Colors */
+.sw-p-color-blk {color: black;}
 .sw-p-color-01 {color: #004d99;}
-.sw-p-color-02 {color: black;}
 .sw-i-color-01 {color: #ffb570} /* !important changed for lg media*/
 .sw-i-color-02 {color: whitesmoke}
 .sw-i-color-03 {color: #ffb570}
 .sw-i-color-04 {color: #004d99;}
 .sw-h-color-01 {color: #f80;}
 .sw-h-color-02 {color: whitesmoke}
+.sw-h-color-03 {color: rgba(0, 76, 153, .75);}
 .sw-btn-color-01 {color: rgba(147, 212, 157, .25);}
 
 /* Common Background Colors*/
@@ -139,6 +144,10 @@ p {
 /* Font Sizing */
 .sw-font-size-50 {
   font-size: .5rem;
+}
+
+.sw-font-size-85 {
+  font-size: .85rem;
 }
 
 /* Common Positioning */
@@ -171,8 +180,7 @@ p {
 }
 
 .sw-dt-sidebars {
-  background-color: rgba(0, 76, 153, .5);
-  min-height: 600px;
+  max-height: fit-content;
   border: solid 1px whitesmoke;
   border-radius: 25px;
 }
@@ -208,6 +216,10 @@ p {
   width: auto;
 }
 
+/* Varietals */
+.sw-varietal-des {
+  font-size: .8rem;
+}
 
 /* @media */
 

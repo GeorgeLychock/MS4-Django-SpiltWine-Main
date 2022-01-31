@@ -18,7 +18,7 @@ def all_products(request):
     # combine queries
     # products = .JOIN()
 
-    # Exucute Search query
+    # Execute Search query
     if request.GET:
         if 'q1' in request.GET:
             query = request.GET['q1']
@@ -43,10 +43,12 @@ def all_wines(request):
     # wines = Wine.objects.filter(country_state=1)
     # sort_target ="California"
     wines = Wine.objects.all()
+    varietals = Varietal.objects.all()
     sort = 'All Wines'
     direction = None
     countries = None
     country = None
+    featured = wines.filter(featured=True)
 
     if request.GET:
         if 'sort' in request.GET:
@@ -76,6 +78,16 @@ def all_wines(request):
                 sort = country
                 
             wines = wines.order_by(sortkey)
+
+        if 'varietal' in request.GET:
+            varietal = request.GET['varietal']
+            # wines sorted by specific varietal
+            if varietal:
+                wines = wines.filter(varietal__name=varietal)
+                sortkey = 'name'
+                sort = varietal
+                
+            wines = wines.order_by(sortkey)
     
     current_sorting = f'{sort}_{direction}'
     sorting = str.title(sort)
@@ -85,6 +97,8 @@ def all_wines(request):
         'current_sorting': current_sorting,
         'sorting': sorting,
         'countries': countries,
+        'featured': featured,
+        'varietals': varietals,
     }
 
     return render(request, 'products/wines.html', wine_content)
