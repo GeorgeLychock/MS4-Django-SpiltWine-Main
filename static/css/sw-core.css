@@ -83,6 +83,16 @@ button:focus {
     width: 1.5rem;
 }
 
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(255, 255, 255, .5);
+    z-index: -1;
+}
+
 /* Base Elements */
 html {
     height: 100%;
@@ -122,9 +132,9 @@ p {
 .sw-btn-color-01 {color: rgba(147, 212, 157, .25);}
 
 /* Common Background Colors*/
-.sw-b-color-01 {background-color: rgb(213, 121, 102, .75);}
+.sw-b-color-01 {background-color: rgba(213, 121, 102, .75);}
 .sw-b-color-02 {background-color: rgba(0, 76, 153, .75);}
-.sw-b-color-03 {background-color: rgb(0, 0, 0, .75);}
+.sw-b-color-03 {background-image: linear-gradient(rgba(255, 255, 255, .95), rgba(255, 255, 255, .9));}
 
 /* Font Sizing */
 .sw-font-size-50 {
@@ -167,19 +177,15 @@ p {
   border-radius: 25px;
 }
 
+/* Deliver Banner */
+.sw-db-container {
+  padding-top: 130px;
+}
+
 .sw-delivery-banner {
-  border: solid 1px whitesmoke;
   text-align: center;
 }
 
-/* Deliver Banner */
-.sw-db-container {
-  padding-top: 120px;
-}
-
-.sw-deliver-banner {
-  min-height: 60px;
-}
 
 /* Forms */
 .sw-form-input {
@@ -232,7 +238,7 @@ p {
       }
 
       .sw-db-container {
-        padding-top: 200px;
+        padding-top: 140px;
       }
   }
 

@@ -39,7 +39,7 @@
   </head>
 <body>
     <div class="container">
-        <header class="row mt-md-4 fixed-top sw-b-color-03">
+        <header class="row sw-b-color-03 fixed-top">
             <div class="col-12 col-md-9">
                 <!-- Desktop Header -->
                 <div class="row pt-lg-2">
@@ -52,7 +52,7 @@
                         {% include 'includes/header-search-form.html' %}
                     </div>
                 </div>
-                <div class="row d-none d-md-block pt-md-4">
+                <div class="row d-none d-md-block">
                     <div class="col-12">
                         {% include 'includes/main-nav.html' %}
                     </div>
@@ -97,29 +97,23 @@
                 </div>
             </div>
             <!-- Desktop Apps Menu -->
-            <div class="d-none d-md-block col-md-3 pt-md-4 text-center sw-i-color-03">
+            <div class="d-none d-md-block col-md-3 text-center sw-i-color-03">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col">
                         <div class="d-inline"><span>{% include 'includes/user-menu.html' %}</span></div>
                     </div>
-                    <div class="col-6">
-                        <div class="d-inline"><span class="material-icons-outlined pt-2 fs-1">settings</span></div>
-                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-6">
-                        <div class="d-inline"><i class="bi bi-umbrella fs-1"></i></div>
-                    </div>
-                    <div class="col-6">
-                        <div class="d-inline"><span class="material-icons-outlined pt-2 fs-1">flight</span></div>
-                    </div>
+            </div>
+            <div class="row sw-b-color-02">
+                <div class="col">
+                    {% include 'includes/delivery-banner.html' %}
                 </div>
             </div>
         </header>
     </div>
     <!-- Delivery Banner -->
     <div class="container sw-db-container">
-        <div class="row sw-delivery-banner sw-b-color-02">
+        <div class="row">
             <div class="col">
                 {% include 'includes/delivery-banner.html' %}
             </div>
@@ -131,7 +125,12 @@
             <div class="row mt-md-4">
                 <!-- Desktop User Menu -->
                 <nav class="d-none d-md-block col-md-1 pt-md-4 sw-dt-sidebars sw-i-color-02 text-center">
-                        <div class="">{% include 'includes/shopping-cart-link.html' %}</div>
+                    <div class="">{% include 'includes/shopping-cart-link.html' %}</div>
+                    <div class="col-6">
+                        <div class="d-inline"><span class="material-icons-outlined pt-2 fs-1">settings</span></div>
+                    </div>
+                    <div class="d-inline"><i class="bi bi-umbrella fs-1"></i></div>
+                    <div class="d-inline"><span class="material-icons-outlined pt-2 fs-1">flight</span></div>
                 </nav>
                 <!-- Main Content -->
                 <section id="main_content" class="col col-md-8 mt-4">
