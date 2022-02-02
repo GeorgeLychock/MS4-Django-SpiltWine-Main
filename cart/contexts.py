@@ -4,7 +4,9 @@ from django.shortcuts import get_object_or_404
 from products.models import Wine
 
 def cart_contents(request):
-
+    """ Create the shopping cart context so cart total, and shipping costs are avaiable across all apps """
+    """ from Code Institute, Django Module https://codeinstitute.net/global/ """
+    
     cart_items = []
     total = 0
     product_count = 0

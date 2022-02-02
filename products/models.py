@@ -121,6 +121,7 @@ class Wine(models.Model):
     img_file_name = models.ImageField(null=True, blank=True)
     img_url = models.URLField(max_length=1024, null=True, blank=True)
     vintage = models.IntegerField(null=True, blank=True)
+    has_sizes = models.BooleanField(default=False, null=True, blank=True)
     size = models.DecimalField(max_digits=6, decimal_places=2)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
