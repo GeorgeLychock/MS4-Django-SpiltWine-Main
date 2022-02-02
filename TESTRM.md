@@ -166,7 +166,8 @@ Unless otherwise noted, all the following were tested and passed:
 ### Known Bugs
 #### OPEN 
 -   If the user does not enter search terms, the main search function returns user to the home page no matter where the user is on the site.
-
+-   In the cart view, the subtotal does not compute correctly
+-   Need to figure out what to do about product sizes since a different size also means a different price; probably going with a different size means a different SKU
 
 #### FIXED
 -   Recipe Links on My Ratings:
