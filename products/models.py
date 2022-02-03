@@ -131,10 +131,10 @@ class Wine(models.Model):
     appellation = models.ForeignKey('Appellation', null=True, blank=True, on_delete=models.SET_NULL)
     wine_type = models.ForeignKey('WineType', null=True, on_delete=models.SET_NULL)
     varietal = models.ForeignKey('Varietal', null=True, on_delete=models.SET_NULL)
-    style = models.CharField(max_length=25, null=True, blank=True)
+    style = models.ForeignKey('Style', null=True, on_delete=models.SET_NULL)
     abv = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
     taste = models.TextField(max_length=100, null=True, blank=True)
-    body = models.CharField(max_length=100,null=True, blank=True)
+    body = models.ForeignKey('Body', null=True, on_delete=models.SET_NULL)
     featured = models.BooleanField(null=False, blank=False, default=False)
 
     def __str__(self):
