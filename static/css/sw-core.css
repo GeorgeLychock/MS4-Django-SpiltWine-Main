@@ -110,6 +110,11 @@ button:focus {
   cursor: pointer;
 }
 
+.update-link,
+.remove-link {
+  cursor: pointer;
+}
+
 /* Base Elements */
 html {
     height: 100%;

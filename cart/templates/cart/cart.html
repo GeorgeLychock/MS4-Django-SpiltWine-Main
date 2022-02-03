@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_tools %}
 
 {% block header %}
     <div class="container-fluid sh-cont-header">
@@ -48,10 +49,24 @@
                                 <p class="my-0">${{ item.product.price }}</p>
                             </td>
                             <td class="py-3 w-25">
-                                <p class="my-0">{{ item.quantity }}</p>
+                                <form class="form update-form" method="POST" action="{% url 'update_cart' item.product.pk %}">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input class="form-control qty_input" type="number" name="quantity"
+                                                 value="{{ item.quantity }}" min="1" max="99" 
+                                                 data-item_id="{{ item.product.pk }}" id="id_qty_{{ item.product.pk }}">
+                                            {% if item.product.has_sizes %}
+                                                 <input type="hidden" name="product_size" value="{{ item.size }}">
+                                             {% endif %}
+                                        </div>
+                                    </div>
+                                </form>
+                                <a class="update-link text-info"><small>Update</small></a>
+                                <a class="remove-link text-danger float-right" id="remove_{{ item.product.pk  }}"><small>Remove</small></a>
                             </td>
                             <td class="py-3">
-                                <p class="my-0">${{ item.product.price }}</p>
+                                <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                             </td>
                         </tr>
                     {% endfor %}
@@ -69,7 +84,7 @@
                     </tr>
                     <tr>
                         <td colspan="5" class="text-right">
-                            <a href="{% url 'products' %}" class="btn rounded-0 btn-lg">
+                            <a href="{% url 'wines' %}" class="btn rounded-0 btn-lg">
                                 <span class="icon">
                                     <i class="bi bi-chevron-left"></i>
                                 </span>
@@ -100,4 +115,29 @@
 {% endblock %}
 
 {% block aside %}
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<!-- Cart Update jQuery from Code Institute, Django Module https://codeinstitute.net/global/ -->
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-link').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/cart/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
 {% endblock %}
