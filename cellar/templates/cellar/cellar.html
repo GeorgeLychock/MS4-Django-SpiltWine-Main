@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="sw-logo-font mb-4">Shopping cellar</h2>
+            <h2 class="sw-logo-font mb-4">Your Cellar</h2>
             <hr>
         </div>
     </div>
@@ -49,7 +49,7 @@
                                 <p class="my-0">${{ item.product.price }}</p>
                             </td>
                             <td class="py-3 w-25">
-                                <form class="form update-form" method="POST" action="{% url 'update_cellar' item.product.pk %}">
+                                <form class="form update-form" method="POST" action="">
                                     {% csrf_token %}
                                     <div class="form-group">
                                         <div class="input-group">
@@ -72,14 +72,7 @@
                     {% endfor %}
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
-                            <h6><strong>cellar Total: ${{ total|floatformat:2 }}</strong></h6>
-                            <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                            <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
-                            {% if free_delivery_delta > 0 %}
-                                <p class="mb-1 text-danger">
-                                    You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
-                                </p>
-                            {% endif %}
+                            <h4 class="mt-4"><strong>Cellar Value: ${{ cellar_total|floatformat:2 }}</strong></h4>
                         </td>
                     </tr>
                     <tr>
@@ -88,10 +81,10 @@
                                 <span class="icon">
                                     <i class="bi bi-chevron-left"></i>
                                 </span>
-                                <span class="text-uppercase">Keep Shopping</span>
+                                <span class="text-uppercase">Return to Wine Database</span>
                             </a>
                             <a href="" class="btn rounded-0 btn-lg">
-                                <span class="text-uppercase">Secure Checkout</span>
+                                <span class="text-uppercase">See Cellar Statistics</span>
                                 <span class="icon">
                                     <i class="bi bi-lock"></i>
                                 </span>

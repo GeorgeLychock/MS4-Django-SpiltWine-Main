@@ -1,5 +1,8 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import CellarItem
+from products.models import Wine
+from .forms import ItemForm
 
 
 def view_cellar(request):
@@ -8,11 +11,10 @@ def view_cellar(request):
     return render(request, 'cellar/cellar.html')
 
 
-def add_to_cellar(request, item_id):
-    """ Add a quantity of the specified product to the shopping bag """
-    """ from Code Institute, Django Module https://codeinstitute.net/global/ """
+def add_to_local_cellar(request, item_id):
+    """ Add a quantity of the specified product to the cellar db """
 
-    quantity = int(request.POST.get('quantity'))
+    quantity = int(request.POST.get('local_cellar_quantity'))
     redirect_url = request.POST.get('redirect_url')
     cellar = request.session.get('cellar', {})
 
@@ -23,6 +25,24 @@ def add_to_cellar(request, item_id):
 
     request.session['cellar'] = cellar
     return redirect(redirect_url)
+
+
+def add_to_cellar(request, item_id):
+    """ Add a quantity of the specified product to the cellar db """
+    wine = get_object_or_404(Wine, pk=item_id)
+
+    if request.method == 'POST':
+        form = ItemForm(request.POST)
+        if form.is_valid():
+            # form.fields['cellar_wine_name'] = item_id
+            form.save()
+            return redirect('cellar')
+    form = ItemForm()
+    context = {
+        'form': form,
+        'wine': wine,
+    }
+    return render(request, 'cellar/add_to_cellar.html', context)
 
 
 def update_cellar(request, item_id):

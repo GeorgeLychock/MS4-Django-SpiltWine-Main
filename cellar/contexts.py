@@ -1,44 +1,34 @@
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
+from .models import CellarItem
 from products.models import Wine
 
 def cellar_contents(request):
     """ Create the cellar context so cellar data are avaiable across all apps """
-    """ from Code Institute, Django Module https://codeinstitute.net/global/ """
     
     cellar_items = []
-    total = 0
+    cellar_total = 0
     product_count = 0
-    cellar = request.session.get('cellar', {})
+    user_id = 34
+    cellar = CellarItem.objects.all()
+    cellar = cellar.filter(cellar_user_pk=user_id)
 
-    for item_id, quantity in cellar.items():
-        product = get_object_or_404(Wine, pk=item_id)
-        total += quantity * product.price
-        product_count += quantity
+    for item in cellar:
+        pk = item.cellar_wine_pk
+        product = get_object_or_404(Wine, name=pk)
+        cellar_total += item.quantity_onhand * product.price
+        product_count += item.quantity_onhand
         cellar_items.append({
-            'item_id': item_id,
-            'quantity': quantity,
+            'item_id': item.cellar_wine_pk,
+            'quantity': item.quantity_onhand,
             'product': product,
         })
-
-    if total < settings.FREE_DELIVERY_THRESHOLD:
-        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
-        free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
-    else:
-        delivery = 0
-        free_delivery_delta = 0
-    
-    grand_total = delivery + total
     
     context = {
         'cellar_items': cellar_items,
-        'total': total,
+        'cellar_total': cellar_total,
         'product_count': product_count,
-        'delivery': delivery,
-        'free_delivery_delta': free_delivery_delta,
-        'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
-        'grand_total': grand_total,
     }
 
     return context
