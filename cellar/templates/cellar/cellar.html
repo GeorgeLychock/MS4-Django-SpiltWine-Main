@@ -16,7 +16,13 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="sw-logo-font mb-4">Your Cellar</h2>
+            <h2 class="sw-logo-font mb-4 sw-h-color-01">Your Cellar</h2>
+            <a href="{% url 'wines' %}" class="btn rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="bi bi-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Return to Wine Library</span>
+            </a>
             <hr>
         </div>
     </div>
@@ -49,7 +55,7 @@
                                 <p class="my-0">${{ item.product.price }}</p>
                             </td>
                             <td class="py-3 w-25">
-                                <form class="form update-form" method="POST" action="">
+                                <form class="form update-form" method="POST" action="{% url 'update_cellar' item.item_id %}">
                                     {% csrf_token %}
                                     <div class="form-group">
                                         <div class="input-group">
@@ -70,36 +76,15 @@
                             </td>
                         </tr>
                     {% endfor %}
-                    <tr>
-                        <td colspan="5" class="pt-5 text-right">
-                            <h4 class="mt-4"><strong>Cellar Value: ${{ cellar_total|floatformat:2 }}</strong></h4>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="5" class="text-right">
-                            <a href="{% url 'wines' %}" class="btn rounded-0 btn-lg">
-                                <span class="icon">
-                                    <i class="bi bi-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Return to Wine Database</span>
-                            </a>
-                            <a href="" class="btn rounded-0 btn-lg">
-                                <span class="text-uppercase">See Cellar Statistics</span>
-                                <span class="icon">
-                                    <i class="bi bi-lock"></i>
-                                </span>
-                            </a>
-                        </td>
-                    </tr>
                 </table>
             </div>
             {% else %}
                 <p class="lead mb-5">Your cellar is empty.</p>
-                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <a href="{% url 'wines' %}" class="btn btn-outline-black rounded-0 btn-lg">
                     <span class="icon">
                         <i class="bi bi-chevron-left"></i>
                     </span>
-                    <span class="text-uppercase">Keep Shopping</span>
+                    <span class="text-uppercase">Return to Wine Library</span>
                 </a>
             {% endif %}
         </div>
@@ -108,6 +93,74 @@
 {% endblock %}
 
 {% block aside %}
+<aside class="d-none d-md-block col col-md-3 sw-dt-sidebars sw-b-color-02 ">
+    <!-- SpiltWine Featured Items -->
+    <div class="row py-2">
+        <div class="col text-center sw-h-color-02">
+            <h5>Cellar Stats</h5>
+        </div>
+    </div>
+    {% if cellar_items %}
+        <div class="row">
+            <div class="col">
+                <p class="sw-p-color-02">Cellar Value: ${{ cellar_total|floatformat:2 }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="sw-p-color-02"># of Cellar Items: {{ cellar_count }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div>
+                    <div class="sw-p-color-02"># of Varietals in Your Cellar:</div>
+                    <div class="sw-p-color-03"><small> {{ cellar_varietal_count|length }} / 180</small></div>
+                    <div class="d-inline float-end sw-p-color-02"><strong><i class="bi bi-info-square mr-2"></i></strong></div>
+                </div>
+                {% if cellar_varietal_count|length > 0 and cellar_varietal_count|length <= 44 %}
+                <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: {{ cellar_varietal_count|length }}%" aria-valuenow="{{ cellar_varietal_count|length }}" aria-valuemin="0"
+                        aria-valuemax="180">
+                    </div>
+                </div>
+                {% elif cellar_varietal_count|length > 44 and cellar_varietal_count|length <= 89 %}
+                <div class="progress">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: {{ cellar_varietal_count|length }}%" aria-valuenow="{{ cellar_varietal_count|length }}" aria-valuemin="0"
+                        aria-valuemax="180">
+                    </div>
+                </div>
+                {% elif cellar_varietal_count|length > 89 and cellar_varietal_count|length <= 134 %}
+                <div class="progress">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: {{ cellar_varietal_count|length }}%" aria-valuenow="{{ cellar_varietal_count|length }}" aria-valuemin="0"
+                        aria-valuemax="180">
+                    </div>
+                </div>
+                {% else %}
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: {{ cellar_varietal_count|length }}%" aria-valuenow="{{ cellar_varietal_count|length }}" aria-valuemin="0"
+                        aria-valuemax="180">
+                    </div>
+                </div>
+                {% endif %}
+                <div class="sw-p-color-02">
+                    {% for varietal_item in cellar_varietal_count %}
+                        <small>{{ varietal_item }}</small>
+                        {% if forloop.counter != cellar_varietal_count|length %}
+                        ,
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% else%}
+        <div class="row">
+            <div class="col">
+                <p class="sw-p-color-02">Your Cellar is empty at the moment.</p>
+            </div>
+        </div>
+    {% endif %}
+</aside>
 {% endblock %}
 
 {% block postloadjs %}

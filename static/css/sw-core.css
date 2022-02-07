@@ -71,6 +71,10 @@ button:focus {
   background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
 }
 
+.bg-dark {
+  background-color: rgba(0, 76, 153, .5)!important;
+}
+
 
 /* Reused CSS */
 /* from Code Institute Django Module */
@@ -125,7 +129,6 @@ body {
     background-size: cover;
     background-color: #fff;
     height: calc(100vh - 164px);
-    color: #f80;
     font-family: 'Noto Sans', sans-serif;
 }
 
@@ -145,6 +148,8 @@ p {
 /* Common Text Colors */
 .sw-p-color-blk {color: black;}
 .sw-p-color-01 {color: #004d99;}
+.sw-p-color-02 {color: whitesmoke;}
+.sw-p-color-03 {color: #f80;}
 .sw-i-color-01 {color: #ffb570} /* !important changed for lg media*/
 .sw-i-color-02 {color: whitesmoke}
 .sw-i-color-03 {color: #ffb570}
@@ -204,7 +209,7 @@ p {
 /* Header */
 .sw-logo-font {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 .sw-dt-sidebars {
@@ -284,7 +289,7 @@ p {
       }
 
       .sw-logo-font {
-        font-size: 3rem;
+        font-size: 2rem;
       }
 
       .sw-cont-header {
@@ -292,7 +297,7 @@ p {
       }
 
       .sw-db-container {
-        padding-top: 140px;
+        padding-top: 100px;
       }
   }
 
