@@ -75,6 +75,10 @@ button:focus {
   background-color: rgba(0, 76, 153, .5)!important;
 }
 
+.form-label {
+  color: #6c757d;
+}
+
 
 /* Reused CSS */
 /* from Code Institute Django Module */
