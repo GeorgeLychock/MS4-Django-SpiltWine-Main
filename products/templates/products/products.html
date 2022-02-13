@@ -15,7 +15,7 @@
             <div class="card h-100 border-0">
                 {% if product.img_file_name %}
                 <a href="">
-                    <img class="card-img-top img-fluid mt-3" src="../media/{{ product.img_file_name }}"
+                    <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}{{ product.img_file_name }}"
                         alt="{{ product.name }}">
                 </a>
                 {% else %}

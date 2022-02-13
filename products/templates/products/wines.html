@@ -67,7 +67,7 @@
                 <div class="sw-card-body">
                     {% if wine.img_file_name %}
                     <a href="{% url 'wine_detail' wine.pk %}">
-                        <img class="card-img-top img-fluid mt-3 sw-card-img" src="../media/{{ wine.img_file_name }}"
+                        <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}{{ wine.img_file_name }}"
                             alt="{{ wine.name }}">
                     </a>
                     {% else %}
@@ -139,7 +139,7 @@
                 <div class="card-body pb-0">
                     {% if f.img_file_name %}
                     <a href="{% url 'wine_detail' f.pk %}">
-                        <img class="card-img-top img-fluid mt-3 sw-card-img" src="../media/{{ f.img_file_name }}"
+                        <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}{{ f.img_file_name }}"
                             alt="{{ f.name }}">
                     </a>
                     {% else %}

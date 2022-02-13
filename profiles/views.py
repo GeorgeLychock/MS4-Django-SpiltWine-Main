@@ -32,10 +32,9 @@ def profile(request):
             })
         except UserProfile.DoesNotExist:
             form = UserProfileForm()
-    # else:
-    #     form = UserProfileForm(instance=profile)
 
     form = UserProfileForm(instance=profile)
+
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'
