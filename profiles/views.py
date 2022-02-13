@@ -16,6 +16,28 @@ def profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
+    
+    # Attempt to prefill the form with any info the user maintains in their profile
+    if request.user.is_authenticated:
+        try:
+            profile = UserProfile.objects.get(user=request.user)
+            form = UserProfileForm(initial={
+                'full_name': profile.user.get_full_name(),
+                'first_name': profile.user.first_name,
+                'last_name': profile.user.last_name,
+                'email': profile.user.email,
+                'phone_number': profile.default_phone_number,
+                'country': profile.default_country,
+                'postcode': profile.default_postcode,
+                'town_or_city': profile.default_town_or_city,
+                'street_address1': profile.default_street_address1,
+                'street_address2': profile.default_street_address2,
+                'county': profile.default_county,
+            })
+        except UserProfile.DoesNotExist:
+            form = UserProfileForm()
+    # else:
+    #     form = UserProfileForm(instance=profile)
 
     form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
@@ -28,7 +50,6 @@ def profile(request):
     }
 
     return render(request, template, context)
-
 
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
