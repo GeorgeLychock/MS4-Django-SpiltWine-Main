@@ -22,10 +22,6 @@ def profile(request):
         try:
             profile = UserProfile.objects.get(user=request.user)
             form = UserProfileForm(initial={
-                'full_name': profile.user.get_full_name(),
-                'first_name': profile.user.first_name,
-                'last_name': profile.user.last_name,
-                'email': profile.user.email,
                 'phone_number': profile.default_phone_number,
                 'country': profile.default_country,
                 'postcode': profile.default_postcode,
@@ -44,6 +40,7 @@ def profile(request):
 
     template = 'profiles/profile.html'
     context = {
+        'profile': profile,
         'form': form,
         'orders': orders,
         'on_profile_page': True
