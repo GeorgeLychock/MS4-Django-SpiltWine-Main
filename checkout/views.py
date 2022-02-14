@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 
@@ -61,7 +61,7 @@ def checkout(request):
         cart = request.session.get('cart', {})
         if not cart:
             messages.error(request, "There's nothing in your cart at the moment.")
-            return redirect(reverse('products'))
+            return redirect('products')
 
         current_cart = cart_contents(request)
         total = current_cart['grand_total']
