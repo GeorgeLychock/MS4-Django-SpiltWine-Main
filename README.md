@@ -31,7 +31,11 @@ StreetHeat v1.0 is a patented garment accessory that provides a user extra comfo
 
 > ### Important Notes
 >
->-  The primary focus of this project is to display Django, Python, and database skills learned in the Full Stack Frameowrks with Django module of the Salem State University / Code Institute Full Stack Software Developer Certificate Program.
+>-  The primary focus of this project is to display Django, Python, and database skills learned in the Full Stack Frameworks with Django module of the Salem State University / Code Institute Full Stack Software Developer Certificate Program.
+>-  The cart, profile, and checkout apps' code is largely from Code Institute's module "Full Stack Frameworks with Django". The largest change I made to these apps was to delete much of the product parameter sizes code since my product array in my final project did not require it. I also made minor updates such as stying and removing the reverse() methods from views rendering.
+>-  Because I'm working on a local dev machine, and not GitPod, I could not finish the webhooks developement and testing until I had the project deployed.
+>-  
+
 
 <a name="US"></a>
 
