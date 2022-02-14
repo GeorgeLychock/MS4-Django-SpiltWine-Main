@@ -71,8 +71,8 @@
                             alt="{{ wine.name }}">
                     </a>
                     {% else %}
-                    <a href="{% url 'wine_detail' wine.pk %}">
-                        <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}cab_grapes.jpg" alt="{{ wine.name }}">
+                    <a href="">
+                        <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}noimage.png" alt="{{ wine.name }}">
                     </a>
                     {% endif %}
                     <div class="mt-4 pb-0">
