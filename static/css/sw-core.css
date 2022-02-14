@@ -58,7 +58,7 @@ button:focus {
 }
 
 .nav-link i {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 0 5px;
 }
 
@@ -72,13 +72,12 @@ button:focus {
 }
 
 .bg-dark {
-  background-color: rgba(0, 76, 153, .5)!important;
+  background-color: rgba(128, 0, 0, .45)!important;
 }
 
 .form-label {
   color: #6c757d;
 }
-
 
 /* Reused CSS */
 /* from Code Institute Django Module */
@@ -115,7 +114,7 @@ button:focus {
     top: 0;
     left: 0;
     position: fixed;
-    background: rgba(255, 255, 255, .5);
+    background: rgba(255, 255, 255, .75);
     z-index: -1;
 }
 
@@ -231,16 +230,19 @@ p {
 .sw-i-color-02 {color: whitesmoke}
 .sw-i-color-03 {color: #ffb570}
 .sw-i-color-04 {color: #004d99;}
-.sw-h-color-01 {color: #f80;}
+.sw-h-color-01 {color: #6b8e23;}
 .sw-h-color-02 {color: whitesmoke}
 .sw-h-color-03 {color: rgba(0, 76, 153, .75);}
-.sw-h-color-04 {color: yellow}
+.sw-h-color-04 {color: lightblue}
 .sw-btn-color-01 {color: rgba(147, 212, 157, .25);}
 
 /* Common Background Colors*/
 .sw-b-color-01 {background-color: rgba(213, 121, 102, .75);}
-.sw-b-color-02 {background-color: rgba(0, 76, 153, .75);}
+.sw-b-color-02 {background-color: rgba(128, 0, 0, 1.0);}
+.sw-b-color-02a {background-color: rgba(128, 0, 0, .85);}
+.sw-b-color-02b {background-color: rgba(128, 0, 0, .65);}
 .sw-b-color-03 {background-image: linear-gradient(rgba(255, 255, 255, .95), rgba(255, 255, 255, .9));}
+.sw-b-color-04 {background-image: linear-gradient(rgba(255, 255, 255, .95), rgba(255, 255, 255, .7));}
 
 /* Font Sizing */
 .sw-font-size-50 {
@@ -267,7 +269,7 @@ p {
 /* Links and Buttons */
 .sw-link-text-01 {
   text-decoration: none;
-  font-size: .85rem;
+  font-size: .75rem;
 }
 
 /* Spacers */
@@ -290,10 +292,19 @@ p {
   font-size: 1.5rem;
 }
 
+.sw-header-logo {
+  padding-left: 25px;
+}
+
 .sw-dt-sidebars {
+  min-height: 600px;
   max-height: fit-content;
   border: solid 1px whitesmoke;
-  border-radius: 25px;
+  border-radius: 5px;
+}
+
+.sw-user-menu {
+  padding: 20px 20px 0 0;
 }
 
 /* Deliver Banner */
@@ -303,7 +314,8 @@ p {
 
 .sw-delivery-banner {
   text-align: center;
-  min-height: 50px;
+  padding: 3px 0;
+  min-height: 25px;
 }
 
 
@@ -312,8 +324,8 @@ p {
   min-width: 20rem !important;
 }
 
-.sw-search-form {
-  width: max-content;
+.sw-search-input {
+  width: 100%;
 }
 
 /* Content Areas */
@@ -326,16 +338,18 @@ p {
 .sw-card-col {
   border-bottom: #333;
 }
+
 .sw-card-header {
   font-size: .8rem;
 }
+
 .sw-card-img {
   max-height: 220px;
   width: auto;
 }
 
 .sw-card-body {
-  height: 260px;
+  height: 280px;
 }
 
 .sw-card-footer {

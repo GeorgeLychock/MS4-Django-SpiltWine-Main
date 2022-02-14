@@ -1,10 +1,7 @@
 <div class="sw-delivery-banner">
-    <div class="sw-banner-msg-01">
-        <h5 class="my-1 sw-h-color-02">Free delivery on orders over ${{ free_delivery_threshold }}!</h5>
-    </div>
     {% if messages %}
         {% for message in messages %}
-            <div class="row sw-flash-msg-rwo">
+            <div class="row sw-flash-msg-row">
                 <h6 class="sw-flash-msg sw-h-color-04">{{ message }}</h6>
             </div>
         {% endfor %}

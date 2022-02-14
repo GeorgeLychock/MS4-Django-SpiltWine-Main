@@ -1,16 +1,29 @@
-<a class="{% if grand_total %}sw-i-color-03 font-weight-bold
-{% else %}sw-i-color-01
-{% endif %} nav-link" href="{% url 'cart' %}">
-<div class="text-center">
-    <div class="d-inline"><span class="material-icons-outlined">shopping_cart</span></div>
-    <div class="d-inline float-end">
-        <p class="my-0">
-            {% if grand_total %}
-                ${{ grand_total|floatformat:2 }}
-            {% else %}
-                $0.00
-            {% endif %}
-        </p>
+<div>
+    <a class="{% if grand_total %}sw-i-color-03 font-weight-bold
+    {% else %}sw-i-color-01
+    {% endif %} nav-link" href="{% url 'cart' %}">
+    <div class="text-center">
+        <div class="d-inline"><i class="bi bi-cart2 font-weight-bold"></i></div>
+        <!-- Mobile Display -->
+        <div class="d-md-none float-end">
+            <p class="my-0">
+                {% if grand_total %}
+                    ${{ grand_total|floatformat:2 }}
+                {% else %}
+                    $0.00
+                {% endif %}
+            </p>
+        </div>
+        <!-- Desktop/Tablet Display -->
+        <div class="d-none d-md-inline">
+            <p class="my-0">
+                {% if grand_total %}
+                    ${{ grand_total|floatformat:2 }}
+                {% else %}
+                    $0.00
+                {% endif %}
+            </p>
+        </div>
     </div>
+    </a>
 </div>
-</a>

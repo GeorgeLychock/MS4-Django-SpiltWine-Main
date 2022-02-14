@@ -122,9 +122,9 @@
         </div>
     </div>
     {% for f in featured %}
-    <div class="row p-4">
+    <div class="row p-1 pb-2">
         <div class="col">
-            <div class="card h-100 border-0">
+            <div class="card h-100 border-0 sw-b-color-04">
                 <div class="card-header">
                     {% if f.varietal %}
                     <div class="">
@@ -136,7 +136,7 @@
                     </div>
                     {% endif %}
                 </div>
-                <div class="card-body pb-0">
+                <div class="sw-card-body pb-0">
                     {% if f.img_file_name %}
                     <a href="{% url 'wine_detail' f.pk %}">
                         <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}{{ f.img_file_name }}"
