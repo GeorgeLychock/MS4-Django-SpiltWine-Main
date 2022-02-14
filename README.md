@@ -68,6 +68,24 @@ StreetHeat v1.0 is a patented garment accessory that provides a user extra comfo
 -   Allow users to view top 5 rated products
 -   Allow Users to choose an avatar from a pallet of avatars for their profile
 
+# UX/UI
+-   ## UI
+    <a name="UI"></a>
+    -   ### Wireframes
+        <a name="UIWF"></a>
+        -   UI Map (Site Map aligned to data structures and functions) - [View](https://github.com/GeorgeLychock/MS3-Project-Python-uSpice/blob/master/_documentation/ui/Site-UI-Map-.jpg)
+    -   ### Sprints
+        -   UI Sprint Map - [View](https://github.com/GeorgeLychock/MS3-Project-Python-uSpice/blob/master/_documentation/ui/Site-UI-Sprints-.jpg)
+
+
+-   ## UX - Design
+    <a name="DES"></a>
+    -   ### Wireframes
+        <a name="UXWF"></a>
+        -   Home Page - Desktop and Tablet Wireframe - [View](_documentation/wireframes/spiltwine-wireframe-desktop-home.jpg)
+        -   Home Page - Mobile Wireframe - [View](_documentation/wireframes/spiltwine-wireframe-mobile-home.jpg)
+
+
 <a name="TECH"></a>
 # Technical Background
 ## Features and Logic
