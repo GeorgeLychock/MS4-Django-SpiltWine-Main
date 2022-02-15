@@ -12,6 +12,8 @@ def all_products(request):
     # Add queries to fetch all categories of product data
     products = Wine.objects.all()
     query = None
+    query_term = None
+    featured = []
 
     # wine_accessories = WineAccessories.objects.all()
     # culinary = Culinary.objects.all()
@@ -29,10 +31,16 @@ def all_products(request):
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
+            featured = products.filter(featured=True)
+            if featured.length() == 0:
+                featured = []
+            query_term = str.title(query)
+    
 
     all_content = {
         'products': products,
-        'search_term': query,
+        'search_term': query_term,
+        'featured': featured
     }
 
     return render(request, 'products/products.html', all_content)
