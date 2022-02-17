@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Wine, Varietal, CountryState
@@ -137,9 +138,13 @@ def varietals(request):
 
     return render(request, 'products/varietals.html', varietal_content)
 
-
+@login_required
 def add_wine(request):
     """ Add a wine to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect('home')
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -158,9 +163,13 @@ def add_wine(request):
 
     return render(request, template, context)
 
-
+@login_required
 def edit_wine(request, product_id):
     """ Edit a product in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect('home')
+
     product = get_object_or_404(Wine, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -182,9 +191,13 @@ def edit_wine(request, product_id):
 
     return render(request, template, context)
 
-
+@login_required
 def delete_wine(request, product_id):
     """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect('home')
+
     product = get_object_or_404(Wine, pk=product_id)
     product.delete()
     messages.success(request, 'Wine deleted!')
