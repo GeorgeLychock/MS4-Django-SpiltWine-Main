@@ -138,20 +138,20 @@ def varietals(request):
     return render(request, 'products/varietals.html', varietal_content)
 
 
-def add_product(request):
-    """ Add a product to the store """
+def add_wine(request):
+    """ Add a wine to the store """
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully added product!')
-            return redirect('add_product')
+            product = form.save()
+            messages.success(request, 'Successfully added your wine!')
+            return redirect('wine_detail', product.pk)
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add your wine. Please ensure the form is valid.')
     else:
         form = ProductForm()
         
-    template = 'products/add_product.html'
+    template = 'products/add_wine.html'
     context = {
         'form': form,
     }
@@ -159,7 +159,7 @@ def add_product(request):
     return render(request, template, context)
 
 
-def edit_product(request, product_id):
+def edit_wine(request, product_id):
     """ Edit a product in the store """
     product = get_object_or_404(Wine, pk=product_id)
     if request.method == 'POST':
@@ -167,7 +167,6 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated product!')
-            # return redirect('wine_detail', args=[product.pk])
             return redirect('wine_detail', product.pk)
         else:
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
@@ -175,7 +174,7 @@ def edit_product(request, product_id):
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
 
-    template = 'products/edit_product.html'
+    template = 'products/edit_wine.html'
     context = {
         'form': form,
         'product': product,
@@ -184,9 +183,9 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
-def delete_product(request, product_id):
+def delete_wine(request, product_id):
     """ Delete a product from the store """
     product = get_object_or_404(Wine, pk=product_id)
     product.delete()
-    messages.success(request, 'Product deleted!')
-    return redirect('products')
+    messages.success(request, 'Wine deleted!')
+    return redirect('wines')

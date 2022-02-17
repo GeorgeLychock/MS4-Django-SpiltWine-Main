@@ -87,6 +87,14 @@
                                 </form>
                                 <!-- Add wine to the user's cellar -->
                                 <a href="{% url 'add_to_cellar' wine.pk %}">Add to Cellar</a>
+                                {% if request.user.is_superuser %}
+                                <div>
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_wine' wine.pk %}">Edit</a> | 
+                                        <a class="text-danger" href="{% url 'delete_wine' wine.pk %}">Delete</a>
+                                    </small>
+                                </div>
+                            {% endif %}
                             </div>
                         </div>
                     </div>
