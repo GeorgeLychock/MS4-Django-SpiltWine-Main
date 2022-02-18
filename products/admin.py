@@ -7,7 +7,7 @@ class WineAdmin(admin.ModelAdmin):
         'name',
         'country_state',
         'price',
-        'img_file_name',
+        'image',
     )
 
     ordering = ('name',)

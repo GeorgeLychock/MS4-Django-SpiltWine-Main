@@ -17,9 +17,9 @@
         {% for product in products %}
         <div class="col-6 col-md-4">
             <div class="card h-100 border-0">
-                {% if product.img_file_name %}
+                {% if product.image %}
                 <a href="">
-                    <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}{{ product.img_file_name }}"
+                    <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}{{ product.image }}"
                         alt="{{ product.name }}">
                 </a>
                 {% else %}
@@ -95,9 +95,9 @@
                         {% endif %}
                     </div>
                     <div class="sw-card-body pb-0">
-                        {% if f.img_file_name %}
+                        {% if f.image %}
                         <a href="{% url 'wine_detail' f.pk %}">
-                            <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}{{ f.img_file_name }}"
+                            <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}{{ f.image }}"
                                 alt="{{ f.name }}">
                         </a>
                         {% else %}

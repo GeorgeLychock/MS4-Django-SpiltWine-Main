@@ -65,9 +65,9 @@
                     {% endif %}
                 </div>
                 <div class="sw-card-body">
-                    {% if wine.img_file_name %}
+                    {% if wine.image %}
                     <a href="{% url 'wine_detail' wine.pk %}">
-                        <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}{{ wine.img_file_name }}"
+                        <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}{{ wine.image }}"
                             alt="{{ wine.name }}">
                     </a>
                     {% else %}
@@ -137,9 +137,9 @@
                     {% endif %}
                 </div>
                 <div class="sw-card-body pb-0">
-                    {% if f.img_file_name %}
+                    {% if f.image %}
                     <a href="{% url 'wine_detail' f.pk %}">
-                        <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}{{ f.img_file_name }}"
+                        <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}{{ f.image }}"
                             alt="{{ f.name }}">
                     </a>
                     {% else %}
