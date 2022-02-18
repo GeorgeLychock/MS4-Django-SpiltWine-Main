@@ -134,8 +134,9 @@ WSGI_APPLICATION = 'spilt_wine.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 # DATABASES = {
-#     'default': dj_database_url.parse('postgres://fllpxqduieabeg:e910268078d3299f35114eafbe9d54465ceb0ca0bed13a2be318678ced3800c9@ec2-54-157-15-228.compute-1.amazonaws.com:5432/disi8oleg7ksu')
+#     'default': dj_database_url.parse('')
 # }
+
 
 if development:
     DATABASES = {
