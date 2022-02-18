@@ -133,6 +133,10 @@ WSGI_APPLICATION = 'spilt_wine.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': dj_database_url.parse('postgres://fllpxqduieabeg:e910268078d3299f35114eafbe9d54465ceb0ca0bed13a2be318678ced3800c9@ec2-54-157-15-228.compute-1.amazonaws.com:5432/disi8oleg7ksu')
+# }
+
 if development:
     DATABASES = {
         'default': {
@@ -140,10 +144,10 @@ if development:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-# else:
-    # DATABASES = {
-    #     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    # }
+else:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
 
 
 # Password validation
