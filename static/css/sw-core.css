@@ -307,6 +307,11 @@ p {
   padding: 20px 20px 0 0;
 }
 
+/* Mobile User Apps Menu */
+.sw-apps-menu-mobile {
+  font-size: .65rem;
+}
+
 /* Deliver Banner */
 .sw-db-container {
   padding-top: 130px;

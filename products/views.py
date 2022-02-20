@@ -33,8 +33,8 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
             featured = products.filter(featured=True)
-            if featured.length() == 0:
-                featured = []
+            # if featured.length() == 0:
+            #     featured = []
             query_term = str.title(query)
     
 
