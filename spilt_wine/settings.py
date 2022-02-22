@@ -225,6 +225,16 @@ STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
 
+# django-countries
+COUNTRIES_FIRST = [
+    '',
+    'US',
+    'CA',
+    'IE'
+]
+COUNTRIES_FIRST_SORT = True
+COUNTRIES_FIRST_BREAK = '-'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
