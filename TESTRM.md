@@ -172,8 +172,15 @@ Unless otherwise noted, all the following were tested and passed:
 -   The custom clearable file input function does not work; 
 
 #### FIXED
+-   Redirect errors with use of reverse and args:
+    -   The following code is the instruction does not work in the current Django:
+
+            return redirect(reverse('checkout_success', args=[order.order_number]))
+    -   replaced with:
+    
+            return redirect('checkout_success', order_number=order.order_number)
 -   Recipe Links on My Ratings:
-    -   -   Links to recipes on My Ratings page do not work
+    -   Links to recipes on My Ratings page do not work
         -   FIX: had to add "../" to the link to the link path
 
 
