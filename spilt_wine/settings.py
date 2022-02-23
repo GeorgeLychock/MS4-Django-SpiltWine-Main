@@ -227,7 +227,6 @@ STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
 
 # django-countries
 COUNTRIES_FIRST = [
-    '',
     'US',
     'CA',
     'IE'
