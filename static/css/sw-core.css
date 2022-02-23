@@ -227,7 +227,7 @@ p {
 .sw-p-color-02 {color: whitesmoke;}
 .sw-p-color-03 {color: #f80;}
 .sw-i-color-01 {color: #ffb570} /* !important changed for lg media*/
-.sw-i-color-02 {color: whitesmoke}
+.sw-i-color-02 {color: rgba(128, 0, 0, .85)}
 .sw-i-color-03 {color: #ffb570}
 .sw-i-color-04 {color: #004d99;}
 .sw-h-color-01 {color: #6b8e23;}
