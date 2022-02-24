@@ -170,6 +170,8 @@ Unless otherwise noted, all the following were tested and passed:
 -   In the cart view, the subtotal does not compute correctly
 -   Need to figure out what to do about product sizes since a different size also means a different price; probably going with a different size means a different SKU
 -   The custom clearable file input function does not work; 
+-   Do not get the email context in the CLI when order is successfully completed.
+        CI video shows POST to checkout/wh, dev shows just checkout/
 
 #### FIXED
 -   Redirect errors with use of reverse and args:
