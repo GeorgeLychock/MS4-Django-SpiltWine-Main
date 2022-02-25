@@ -114,7 +114,7 @@ button:focus {
     top: 0;
     left: 0;
     position: fixed;
-    background: rgba(255, 255, 255, .75);
+    background: rgba(255, 255, 255, 1);
     z-index: -1;
 }
 

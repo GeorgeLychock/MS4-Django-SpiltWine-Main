@@ -84,6 +84,7 @@ def all_wines(request):
             # wines sorted by specific country/state
             if country:
                 wines = wines.filter(country_state__name=country)
+                featured = featured.filter(country_state__name=country)
                 sortkey = 'name'
                 sort = country
                 
