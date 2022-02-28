@@ -226,11 +226,11 @@ p {
 .sw-p-color-01 {color: #004d99;}
 .sw-p-color-02 {color: whitesmoke;}
 .sw-p-color-03 {color: #f80;}
-.sw-i-color-01 {color: #6b8e23;}
-.sw-i-color-02 {color: whitesmoke;}
+.sw-i-color-01 {color: #9c3;}
+.sw-i-color-02 {color: #9c3;}
 .sw-i-color-03 {color: #ffb570;}
 .sw-i-color-04 {color: #004d99;}
-.sw-h-color-01 {color: #6b8e23;}
+.sw-h-color-01 {color: #9c3;}
 .sw-h-color-02 {color: whitesmoke;}
 .sw-h-color-03 {color: rgba(0, 76, 153, .75);}
 .sw-h-color-04 {color: lightblue;}
@@ -241,8 +241,11 @@ p {
 .sw-b-color-02 {background-color: rgba(128, 0, 0, 1.0);}
 .sw-b-color-02a {background-color: rgba(128, 0, 0, .85);}
 .sw-b-color-02b {background-color: rgba(128, 0, 0, .65);}
-.sw-b-color-03 {background-image: linear-gradient(rgba(255, 255, 255, .95), rgba(255, 255, 255, .9));}
-.sw-b-color-04 {background-image: linear-gradient(rgba(255, 255, 255, .95), rgba(255, 255, 255, .7));}
+.sw-b-color-03 {background-color: #8b0000;}
+.sw-b-color-04 {background-color: whitesmoke;}
+.sw-b-color-05 {background-color: rgba(255, 255, 255, 1);}
+.sw-b-color-05a {background-color: rgba(255, 255, 255, .65);}
+.sw-b-color-05b {background-image: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .25));}
 
 /* Font Sizing */
 .sw-font-size-50 {
@@ -287,24 +290,17 @@ p {
 }
 
 /* Header */
+.sw-header-logo {
+  padding-left: 25px;
+}
+
 .sw-logo-font {
   font-family: 'Noto Sans', sans-serif;
   font-size: 1.5rem;
 }
 
-.sw-header-logo {
-  padding-left: 25px;
-}
-
-.sw-dt-sidebars {
-  min-height: 600px;
-  max-height: fit-content;
-  border: solid 1px whitesmoke;
-  border-radius: 5px;
-}
-
 .sw-user-menu {
-  padding: 20px 20px 0 0;
+  padding: 0 0 0 0;
 }
 
 /* Mobile User Apps Menu */
@@ -312,9 +308,14 @@ p {
   font-size: .65rem;
 }
 
+/* Desktop Main Nav */
+.sw-dt-main-nav {
+  padding-left: 90px;
+}
+
 /* Deliver Banner */
 .sw-db-container {
-  padding-top: 130px;
+
 }
 
 .sw-delivery-banner {
@@ -323,6 +324,13 @@ p {
   min-height: 25px;
 }
 
+/* Desktop Side Bar */
+.sw-dt-sidebars {
+  min-height: 600px;
+  max-height: fit-content;
+  border: solid 1px whitesmoke;
+  border-radius: 5px;
+}
 
 /* Forms */
 .sw-form-input {
@@ -336,7 +344,7 @@ p {
 /* Content Areas */
 
 .sw-content-container {
-  padding-top: 5px;
+  padding-top: 85px;
 }
 
 /* Index */
@@ -380,7 +388,7 @@ p {
 /* from Code Institute Django Module */
 /* Slightly larger container on xl screens */
   @media (min-width: 768px) {
-    .sw-i-color-02 {color: rgba(128, 0, 0, .85)}
+
   }
   
   /* fixed top navbar only on medium and up */
@@ -391,42 +399,35 @@ p {
       background-color: #fff;
       height: calc(100vh - 164px);
       font-family: 'Noto Sans', sans-serif;
+      }
+
+      .sw-b-color-05 {background-color: rgba(255, 255, 255, .05);}
+      .sw-b-color-05b {background-image: none;}
+
+    /* .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    } */
+
+    .sw-logo-font {
+      font-size: 2.5rem;
+    }
+
+    /* Index */
+    .sw-index-h4 {
+      text-align: left;
+    }
+    
+    .sw-btn-index-h4 {
+      font-size: 1rem;
+    }
   }
 
-  .sw-i-color-02 {color: rgba(128, 0, 0, .85)}
-
-  .fixed-top-desktop-only {
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 1030;
-  }
-
-  .sw-logo-font {
-    font-size: 2rem;
-  }
-
-  .sw-cont-header {
-    padding-top: 5px;
-  }
-
-  .sw-db-container {
-    padding-top: 100px;
-  }
-
-  /* Index */
-  .sw-index-h4 {
-    text-align: left;
-  }
-  
-  .sw-btn-index-h4 {
-    font-size: 1rem;
-  }
-  }
-
-  @media (min-width: 1200px) {
+  /* @media (min-width: 1200px) {
     .container {
       max-width: 80%;
     }
-  }
+  } */

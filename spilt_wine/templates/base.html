@@ -2,156 +2,132 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    {% block meta %}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% endblock %}
-
-    {% block custom_meta %}
-    {% endblock %}
-
-    {% block corecss %}
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
-      rel="stylesheet">
-    {% endblock %}
-
-    {% block extra_css %}
-    {% endblock %}
-
-    {% block custom_css %}
-        <link rel="stylesheet" href="{% static 'css/sw-core.css' %}">
-    {% endblock %}
-
-    {% block corejs %}
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-        
-        <!-- Stripe -->
-        <script src="https://js.stripe.com/v3/"></script>
+    <head>
+        <!-- Required meta tags -->
+        {% block meta %}
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
         {% endblock %}
 
-    {% block custom_js %}
-    {% endblock %}
+        {% block custom_meta %}
+        {% endblock %}
 
-    <title>Spilt Wine {% block extra_title %}{% endblock %}</title>
-  </head>
-<body>
-    <div class="container">
-        <header class="row sw-b-color-03 fixed-top">
-            <div class="col-12 col-md-9">
-                <!-- Desktop Header -->
-                <div class="row pt-lg-2">
-                    <div class="d-none d-md-block col-10 col-lg-5 my-auto py-1 py-lg-0 sw-header-logo">
-                        <a href="{% url 'home' %}" class="nav-link">
-                            <h1 class="my-0 sw-logo-font sw-h-color-01"><em>Spilt<small>Wine</small></em></h1>
-                        </a>
-                    </div>
-                    <div class="d-none d-md-block col-12 col-lg-7 my-auto py-1 py-lg-0 d-none d-lg-flex">
-                        {% include 'includes/header-search-form.html' %}
-                    </div>
+        {% block corecss %}
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+        {% endblock %}
+
+        {% block extra_css %}
+        {% endblock %}
+
+        {% block custom_css %}
+            <link rel="stylesheet" href="{% static 'css/sw-core.css' %}">
+        {% endblock %}
+
+        {% block corejs %}
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+                integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+                integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+                integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+                crossorigin="anonymous"></script>
+
+            <!-- Stripe -->
+            <script src="https://js.stripe.com/v3/"></script>
+        {% endblock %}
+
+        {% block custom_js %}
+        {% endblock %}
+
+        <title>Spilt Wine {% block extra_title %}{% endblock %}</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="fixed-top">
+        <div class="container-fluid d-none d-md-block sw-b-color-04">
+            <!-- Desktop Header -->
+            <div class="row pt-3">
+                <div class="col-md-3 sw-header-logo">
+                    <a href="{% url 'home' %}" class="nav-link">
+                        <h1 class="my-0 sw-logo-font sw-h-color-01"><em>Spilt<small>Wine</small></em></h1>
+                    </a>
                 </div>
-                <div class="row d-none d-lg-block">
-                    <div class="col-12">
-                        {% include 'includes/main-nav.html' %}
-                    </div>
+                <div class="col-md-6">
+                    {% include 'includes/header-search-form.html' %}
                 </div>
-                <!-- Mobile Header -->
-                <div class="row">
-                    <div class="d-lg-none col">
-                        {% include 'includes/main-nav.html' %}
+                <!-- Desktop User Menu -->
+                <div class="col-md-3 text-center">
+                    <div class="row sw-user-menu">
+                        <div class="col-4">{% include 'includes/user-menu.html' %}</div>
+                        <div class="col-4">{% include 'includes/shopping-cart-link.html' %}</div>
                     </div>
-                </div>
-                <!-- Mobile Apps Menu -->
-                <div class="row d-md-none sw-apps-menu-mobile sw-b-color-02">
-                    <nav class="col-12 my-auto py-1 py-lg-0">
-                        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                            <li class="list-inline-item dropdown">
-                                {% include 'includes/user-menu.html' %}
-                            </li>
-                            <li class="list-inline-item">
-                                {% include 'includes/shopping-cart-link.html' %}
-                            </li>
-                            <li class="list-inline-item">
-                                {% include 'includes/cellar-link.html' %}
-                            </li>
-                            <li class="list-inline-item">
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" id="mobile-search-drop"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        <span class="material-icons-outlined sw-i-color-01">search</span>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="mobile-search-drop">
-                                        <li>
-                                            {% include 'includes/header-search-form.html' %}
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
                 </div>
             </div>
-            <!-- Desktop User Menu -->
-            <div class="d-none d-md-block col-md-3 text-center sw-i-color-03 pe-md-5">
-                <div class="row sw-user-menu">
-                    <div class="col-6">{% include 'includes/user-menu.html' %}</div>
-                    <div class="col-6">{% include 'includes/shopping-cart-link.html' %}</div>
+        </div>
+        <!-- Mobile Header and Main Nav -->
+        <div class="container-fluid d-md-none pt-4">
+            <div class="row">
+                <div class="d-lg-none col">
+                    {% include 'includes/main-nav.html' %}
                 </div>
             </div>
-            <div class="row sw-b-color-02a">
+        </div>
+        <!-- Desktop Main Nav -->
+        <div class="container-fluid d-none d-md-block sw-b-color-05a">
+            <div class="row sw-dt-main-nav">
+                <div class="col p-0">
+                    {% include 'includes/main-nav.html' %}
+                </div>
+            </div>
+        </div>
+
+    </header>
+        
+        <!-- Delivery Banner -->
+        <div class="container-fluid sw-db-container sw-b-color-02b">
+            <div class="row">
                 <div class="col">
                     {% include 'includes/delivery-banner.html' %}
                 </div>
             </div>
-        </header>
-    </div>
-    <!-- Delivery Banner -->
-    <div class="container sw-db-container">
-        <div class="row">
-            <div class="col">
-                {% include 'includes/delivery-banner.html' %}
-            </div>
         </div>
-    </div>
-    <!-- Main Content Area -->
-    <div class="container sw-content-container">
-        <article>
-            <div class="row mt-md-4">
-                <!-- Desktop Apps Menu -->
-                <nav class="d-none d-md-block col-md-1 pt-md-4 sw-dt-sidebars text-center">
-                    <div>{% include 'includes/cellar-link.html' %}</div>
-                    <div>
-                        <div class="d-inline fs-3 sw-i-color-02"><i class="bi bi-gear-fill"></i></div>
-                    </div>
-                </nav>
-                <!-- Main Content -->
-                <section id="main_content" class="col col-lg-8 mt-4">
-                    {% block content %}
+        <!-- Main Content Area -->
+        <div class="container sw-content-container">
+            <article>
+                <div class="row mt-md-4">
+                    <!-- Desktop Apps Menu -->
+                    <nav class="d-none d-md-block col-md-1 pt-md-4 sw-dt-sidebars text-center">
+                        <div>{% include 'includes/cellar-link.html' %}</div>
+                        <div>
+                            <div class="d-inline fs-3 sw-i-color-02"><i class="bi bi-gear-fill"></i></div>
+                        </div>
+                    </nav>
+                    <!-- Main Content -->
+                    <section id="main_content" class="col col-lg-8 mt-4">
+                        {% block content %}
+                        {% endblock %}
+                    </section>
+                    <!-- Desktop Aside -->
+                    {% block aside %}
                     {% endblock %}
-                </section>
-                <!-- Desktop Aside -->
-                {% block aside %}
-                {% endblock %}
-            </div>
-        </article>
-    </div>
+                </div>
+            </article>
+        </div>
 
-    {% block header %}
-    {% endblock %}
+        {% block header %}
+        {% endblock %}
 
-    {% block footer %}
-    {% endblock %}
+        {% block footer %}
+        {% endblock %}
 
-    {% block postloadjs %}
-    {% endblock %}
+        {% block postloadjs %}
+        {% endblock %}
 
 
-</body>
+    </body>
 </html>
