@@ -49,45 +49,74 @@
     <body>
         <!-- Header -->
         <header class="fixed-top">
-        <div class="container-fluid d-none d-md-block sw-b-color-04">
-            <!-- Desktop Header -->
-            <div class="row pt-3">
-                <div class="col-md-3 sw-header-logo">
-                    <a href="{% url 'home' %}" class="nav-link">
-                        <h1 class="my-0 sw-logo-font sw-h-color-01"><em>Spilt<small>Wine</small></em></h1>
-                    </a>
-                </div>
-                <div class="col-md-6">
-                    {% include 'includes/header-search-form.html' %}
-                </div>
-                <!-- Desktop User Menu -->
-                <div class="col-md-3 text-center">
-                    <div class="row sw-user-menu">
-                        <div class="col-4">{% include 'includes/user-menu.html' %}</div>
-                        <div class="col-4">{% include 'includes/shopping-cart-link.html' %}</div>
+            <div class="container-fluid d-none d-md-block sw-b-color-04a">
+                <!-- Desktop Header -->
+                <div class="row pt-3">
+                    <div class="col-md-3 sw-header-logo">
+                        <a href="{% url 'home' %}" class="nav-link">
+                            <h1 class="my-0 sw-logo-font sw-h-color-01"><em>Spilt<small>Wine</small></em></h1>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        {% include 'includes/header-search-form.html' %}
+                    </div>
+                    <!-- Desktop User Menu -->
+                    <div class="col-md-3 text-center">
+                        <div class="row sw-user-menu">
+                            <div class="col-6">{% include 'includes/user-menu.html' %}</div>
+                            <div class="col-2">{% include 'includes/shopping-cart-link.html' %}</div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Mobile Header and Main Nav -->
-        <div class="container-fluid d-md-none pt-4">
-            <div class="row">
-                <div class="d-lg-none col">
-                    {% include 'includes/main-nav.html' %}
+            <!-- Mobile Header and Main Nav -->
+            <div class="container-fluid d-md-none pt-1">
+                <div class="row">
+                    <div class="d-lg-none col">
+                        {% include 'includes/main-nav.html' %}
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Desktop Main Nav -->
-        <div class="container-fluid d-none d-md-block sw-b-color-05a">
-            <div class="row sw-dt-main-nav">
-                <div class="col p-0">
-                    {% include 'includes/main-nav.html' %}
+            <!-- Desktop Main Nav -->
+            <div class="container-fluid d-none d-md-block sw-b-color-05a">
+                <div class="row sw-dt-main-nav">
+                    <div class="col p-0">
+                        {% include 'includes/main-nav.html' %}
+                    </div>
                 </div>
             </div>
-        </div>
-
-    </header>
-        
+            <div class="container">
+                <!-- Mobile Apps Menu -->
+                <div class="row d-md-none sw-apps-menu-mobile">
+                    <nav class="col-12 my-auto py-1 py-lg-0">
+                        <ul class="list-group list-group-horizontal my-0 sw-b-color-none ">
+                            <li class="list-group-item p-0 pt-1 border-0 sw-b-color-none dropdown">
+                                {% include 'includes/user-menu.html' %}
+                            </li>
+                            <li class="list-group-item p-0 border-0 sw-b-color-none ">
+                                {% include 'includes/shopping-cart-link.html' %}
+                            </li>
+                            <li class="list-group-item p-0 border-0 sw-b-color-none ">
+                                {% include 'includes/cellar-link.html' %}
+                            </li>
+                            <li class="list-group-item p-0 border-0 sw-b-color-none ">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="mobile-search-drop"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="material-icons-outlined sw-i-color-01">search</span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="mobile-search-drop">
+                                        <li>
+                                            {% include 'includes/header-search-form.html' %}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
         <!-- Delivery Banner -->
         <div class="container-fluid sw-db-container sw-b-color-02b">
             <div class="row">
@@ -101,10 +130,10 @@
             <article>
                 <div class="row mt-md-4">
                     <!-- Desktop Apps Menu -->
-                    <nav class="d-none d-md-block col-md-1 pt-md-4 sw-dt-sidebars text-center">
+                    <nav class="d-none d-md-block col-md-1 pt-lg-4 sw-dt-sidebars text-center">
                         <div>{% include 'includes/cellar-link.html' %}</div>
-                        <div>
-                            <div class="d-inline fs-3 sw-i-color-02"><i class="bi bi-gear-fill"></i></div>
+                        <div class="mt-lg-3">
+                            <div class="d-inline fs-3 sw-i-color-03"><i class="bi bi-gear-fill"></i></div>
                         </div>
                     </nav>
                     <!-- Main Content -->
