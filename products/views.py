@@ -14,6 +14,7 @@ def all_products(request):
     products = Wine.objects.all()
     query = None
     query_term = None
+    style_switch = True
     featured = []
 
     # wine_accessories = WineAccessories.objects.all()
@@ -41,7 +42,8 @@ def all_products(request):
     all_content = {
         'products': products,
         'search_term': query_term,
-        'featured': featured
+        'featured': featured,
+        'style_switch': style_switch,
     }
 
     return render(request, 'products/products.html', all_content)
@@ -59,6 +61,7 @@ def all_wines(request):
     countries = None
     country = None
     featured = wines.filter(featured=True)
+    style_switch = True
 
     if request.GET:
         if 'sort' in request.GET:
@@ -111,6 +114,7 @@ def all_wines(request):
         'countries': countries,
         'featured': featured,
         'varietals': varietals,
+        'style_switch': style_switch,
     }
 
     return render(request, 'products/wines.html', wine_content)
@@ -120,9 +124,11 @@ def wine_detail(request, product_id):
     """ Shows the wine product details. """
 
     wine = get_object_or_404(Wine, pk=product_id)
+    style_switch = True
 
     wine_content = {
         'wine': wine,
+        'style_switch': style_switch,
     }
 
     return render(request, 'products/wine_detail.html', wine_content)
@@ -132,9 +138,11 @@ def varietals(request):
     """ Shows the wine varietal view """
 
     varietals = Varietal.objects.all()
+    style_switch = True
 
     varietal_content = {
         'varietals': varietals,
+        'style_switch': style_switch,
     }
 
     return render(request, 'products/varietals.html', varietal_content)
@@ -142,6 +150,8 @@ def varietals(request):
 @login_required
 def add_wine(request):
     """ Add a wine to the store """
+    style_switch = True
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect('home')
@@ -160,6 +170,7 @@ def add_wine(request):
     template = 'products/add_wine.html'
     context = {
         'form': form,
+        'style_switch': style_switch,
     }
 
     return render(request, template, context)
@@ -167,6 +178,8 @@ def add_wine(request):
 @login_required
 def edit_wine(request, product_id):
     """ Edit a product in the store """
+    style_switch = True
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect('home')
@@ -188,6 +201,7 @@ def edit_wine(request, product_id):
     context = {
         'form': form,
         'product': product,
+        'style_switch': style_switch,
     }
 
     return render(request, template, context)
