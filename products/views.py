@@ -11,10 +11,12 @@ def all_products(request):
     # """ Shows products and handles sorting and searching. """
 
     # Add queries to fetch all categories of product data
+    wines = Wine.objects.all()
     products = Wine.objects.all()
     query = None
     query_term = None
     featured = []
+    template_flag = 1
 
     # wine_accessories = WineAccessories.objects.all()
     # culinary = Culinary.objects.all()
@@ -36,12 +38,16 @@ def all_products(request):
             # if featured.length() == 0:
             #     featured = []
             query_term = str.title(query)
-    
 
+    # Will only display the first 4 items for now, until a slider utility is added for the wine section
+    wines = wines.filter(featured=True)[:4]
+    
     all_content = {
+        'wines': wines,
         'products': products,
         'search_term': query_term,
         'featured': featured,
+        'template_flag': template_flag,
     }
 
     return render(request, 'products/products.html', all_content)

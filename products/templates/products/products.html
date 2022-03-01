@@ -13,130 +13,61 @@
             {% endif %}
         </div>
     </div>
-    <div class="row">
-        {% for product in products %}
-        <div class="col-6 col-md-4">
-            <div class="card h-100 border-0">
-                {% if product.image %}
-                <a href="">
-                    <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}{{ product.image }}"
-                        alt="{{ product.name }}">
+    <!-- Build Wine products section -->
+    <div class="row pt-md-4">
+        <div class="sw-product-title sw-p-color-01"><h5>Our Featured Wines</h5></div>
+        {% for wine in wines %}
+        <div class="col-3">
+            <div class="card h-100 border-0 text-center">
+                {% if wine.image %}
+                <a href="{% url 'wine_detail' wine.pk %}">
+                    <img class="card-img-top img-fluid mt-3 sw-product-img" src="{{ MEDIA_URL }}{{ wine.image }}"
+                        alt="{{ wine.name }}">
                 </a>
                 {% else %}
-                <a href="">
-                    <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                <a href="{% url 'wine_detail' wine.pk %}">
+                    <img class="card-img-top img-fluid mt-3 sw-product-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ wine.name }}">
                 </a>
                 {% endif %}
                 <div class="card-body pb-0">
-                    <p class="mb-0">{{ product.name }}</p>
+                    <a href="{% url 'wine_detail' wine.pk %}" class="mb-0 sw-link-text-01">{{ wine.name }}</a>
                 </div>
                 <div class="card-footer pt-0 border-0 text-left sw-p-color-blk">
                     <div class="row">
                         <div class="col">
-                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                            {% if product.country_state %}
+                            <p class="lead mb-0 text-left font-weight-bold">${{ wine.price }}</p>
+                            {% if wine.country_state %}
                             <div class="">
-                                <small class=""><i class="mr-1"></i>{{ product.country_state.friendly_name }}</small>
+                                <small class=""><i class="mr-1"></i>{{ wine.country_state.friendly_name }}</small>
                             </div>
                             {% endif %}
-                            {% if product.region %}
+                            {% if wine.region %}
                             <div>
-                                <small class=""><i class="mr-1"></i>{{ product.region.friendly_name }}</small>
+                                <small class=""><i class="mr-1"></i>{{ wine.region.friendly_name }}</small>
                             </div>
                             {% endif %}
-                            {% if product.appellation %}
+                            {% if wine.appellation %}
                             <div>
-                                <small class=""><i class="mr-1"></i>{{ product.appellation.friendly_name }}</small>
+                                <small class=""><i class="mr-1"></i>{{ wine.appellation.friendly_name }}</small>
                             </div>
                             {% endif %}
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p class="sw-font-size-50">{{ product.description }}</p>
-                            {% if product.varietal %}
+                            <p class="sw-font-size-50">{{ wine.description|truncatewords:20 }}</p>
+                            {% if wine.varietal %}
                             <div class="">
-                                <small class=""><i class="mr-1"></i>{{ product.varietal.friendly_name }}</small>
+                                <small class=""><i class="mr-1"></i>{{ wine.varietal.friendly_name }}</small>
                             </div>
                             {% endif %}
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
         {% endfor %}
     </div>
 </div>
 {% endblock %}
-
-{% if featured %}
-    {% block aside %}
-    <aside class="d-none d-md-block col col-md-3 sw-dt-sidebars sw-b-color-02 ">
-        <!-- SpiltWine Featured Items -->
-        <div class="row py-2">
-            <div class="col text-center sw-h-color-02">
-                <h5>Featured Wines</h5>
-                <h6>from {{ search_term }}</h6>
-            </div>
-        </div>
-        {% for f in featured %}
-        <div class="row p-1 pb-2">
-            <div class="col">
-                <div class="card h-100 border-0 sw-b-color-04">
-                    <div class="card-header">
-                        {% if f.varietal %}
-                        <div class="">
-                            <small class=""><i class="mr-1"></i>{{ f.varietal.friendly_name }}</small>
-                        </div>
-                        {% else %}
-                        <div class="">
-                            <small class=""><i class="mr-1"></i>Varietal not Specified</small>
-                        </div>
-                        {% endif %}
-                    </div>
-                    <div class="sw-card-body pb-0">
-                        {% if f.image %}
-                        <a href="{% url 'wine_detail' f.pk %}">
-                            <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}{{ f.image }}"
-                                alt="{{ f.name }}">
-                        </a>
-                        {% else %}
-                        <a href="{% url 'wine_detail' f.pk %}">
-                            <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}cab_grapes.jpg" alt="{{ f.name }}">
-                        </a>
-                        {% endif %}
-                        <p class="mb-0">{{ f.name }}</p>
-                    </div>
-                    <div class="card-footer pt-0 border-0 text-left sw-p-color-blk">
-                        <div class="row">
-                            <div class="col">
-                                <p class="lead mb-0 text-left font-weight-bold text-danger">${{ f.price }}</p>
-                                {% if f.country_state %}
-                                <div class="">
-                                    <small class=""><i class="mr-1"></i>{{ f.country_state.friendly_name }}</small>
-                                </div>
-                                {% endif %}
-                                {% if f.region %}
-                                <div>
-                                    <small class=""><i class="mr-1"></i>{{ f.region.friendly_name }}</small>
-                                </div>
-                                {% endif %}
-                                {% if f.appellation %}
-                                <div>
-                                    <small class=""><i class="mr-1"></i>{{ f.appellation.friendly_name }}</small>
-                                </div>
-                                {% endif %}
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <p class="sw-font-size-50">{{ f.description }}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    {% endblock %}
-{% endif %}
