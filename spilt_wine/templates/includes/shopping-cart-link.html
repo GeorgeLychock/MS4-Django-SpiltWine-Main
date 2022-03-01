@@ -3,10 +3,10 @@
     {% else %}sw-i-color-02
     {% endif %} nav-link p-0 ps-2" href="{% url 'cart' %}">
     <div class="text-center">
-        <div class="d-inline"><i class="bi bi-cart2 font-weight-bold"></i></div>
+        <div class="d-inline"><i class="bi bi-cart2 font-weight-bold sw-font-size-200"></i></div>
         <!-- Mobile Display -->
-        <div class="d-md-none float-end">
-            <p class="my-0">
+        <div class="d-md-none">
+            <p class="m-0">
                 {% if grand_total %}
                     ${{ grand_total|floatformat:2 }}
                 {% else %}
@@ -16,7 +16,7 @@
         </div>
         <!-- Desktop/Tablet Display -->
         <div class="d-none d-md-inline">
-            <p class="my-0">
+            <p class="m-0">
                 {% if grand_total %}
                     ${{ grand_total|floatformat:2 }}
                 {% else %}

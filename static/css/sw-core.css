@@ -57,9 +57,12 @@ button:focus {
   border-color: beige;
 }
 
+.navbar-toggler {
+  font-size: .8rem;
+}
+
 .nav-link i {
-  font-size: 1.5rem;
-  margin: 0 5px;
+  font-size: 1rem;
 }
 
 .form-check label {
@@ -258,6 +261,10 @@ p {
   font-size: .85rem;
 }
 
+.sw-font-size-150 {
+  font-size: 1.5rem;
+}
+
 /* Common Positioning */
 .sw-text-center {
     text-align: center;
@@ -269,6 +276,11 @@ p {
 
 .sw-padding-0 {
   padding: 0;
+}
+
+/* Icons */
+.sw-user-menu-icon {
+  font-size: 1.5rem;
 }
 
 /* Links and Buttons */
@@ -317,7 +329,7 @@ p {
 
 /* Deliver Banner */
 .sw-db-container {
-  margin-top: 110px;
+  margin-top: 115px;
 }
 
 .sw-delivery-banner {
@@ -390,6 +402,14 @@ p {
 /* from Code Institute Django Module */
 /* Slightly larger container on xl screens */
   @media (min-width: 768px) {
+    .nav-link i {
+      font-size: 1.5rem;
+      margin: 0 5px;
+    }
+
+    .sw-user-menu-icon {
+      font-size: 2rem;
+    }
 
   }
   
