@@ -48,7 +48,7 @@
     </head>
     <body>
         <!-- Header -->
-        <header class="fixed-top {% if not style_switch%}sw-b-color-04{% endif %}">
+        <header class="fixed-top {% if not style_switch%}sw-b-color-04{% else %}sw-b-color-none{% endif %}">
             <div class="container-fluid d-none d-md-block sw-b-color-04a">
                 <!-- Desktop Header -->
                 <div class="row pt-3">
@@ -78,7 +78,7 @@
                 </div>
             </div>
             <!-- Desktop Main Nav -->
-            <div class="container-fluid d-none d-md-block sw-b-color-05a">
+            <div class="container-fluid d-none d-md-block sw-b-color-04b">
                 <div class="row sw-dt-main-nav">
                     <div class="col p-0">
                         {% include 'includes/main-nav.html' %}
@@ -139,7 +139,7 @@
                         </div>
                     </nav>
                     <!-- Main Content -->
-                    <section id="main_content" class="col {% if template_flag == 1 %}col-md-11{% else %}col-md-8{% endif %} mt-4">
+                    <section id="main_content" class="col {% if template_flag == 1 %}col-md-11{% else %}col-md-8{% endif %} mt-2">
                         {% block content %}
                         {% endblock %}
                     </section>

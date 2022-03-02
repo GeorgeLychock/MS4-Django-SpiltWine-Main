@@ -241,16 +241,19 @@ p {
 
 /* Common Background Colors*/
 .sw-b-color-none {background-color: transparent;}
+.sw-b-image-none {background-image: none;}
 .sw-b-color-01 {background-color: rgba(213, 121, 102, .75);}
 .sw-b-color-02 {background-color: rgba(128, 0, 0, 1.0);}
 .sw-b-color-02a {background-color: rgba(128, 0, 0, .85);}
 .sw-b-color-02b {background-color: rgba(128, 0, 0, .65);}
 .sw-b-color-03 {background-color: #8b0000;}
 .sw-b-color-04 {background-color: whitesmoke;}
-.sw-b-color-04a {background-image: radial-gradient(rgba(255, 255, 255, .25), rgba(255, 255, 255, 1));}
+.sw-b-color-04a {background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, .05));}
+.sw-b-color-04b {background-image: linear-gradient(to right, rgba(255, 255, 255, .25), rgba(255, 255, 255, .05));}
+.sw-b-color-04c {background-image: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .25), rgba(255, 255, 255, 0));}
 .sw-b-color-05 {background-color: rgba(255, 255, 255, 1);}
 .sw-b-color-05a {background-color: rgba(255, 255, 255, .65);}
-.sw-b-color-05b {background-image: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .25));}
+.sw-b-color-05b {background-image: linear-gradient(rgba(255, 255, 255, .25), rgba(255, 255, 255, 1));}
 
 /* Font Sizing */
 .sw-font-size-50 {
@@ -366,6 +369,11 @@ p {
   text-align: right;
 }
 
+.sw-index-title {
+  padding: 40px 0 20px 0;
+  height: 200px;
+}
+
 .sw-btn-index-h4 {
   font-size: .75rem;
 }
@@ -437,9 +445,6 @@ p {
       height: calc(100vh - 164px);
       font-family: 'Noto Sans', sans-serif;
       }
-
-    .sw-b-color-05 {background-color: rgba(255, 255, 255, .05);}
-    .sw-b-color-05b {background-image: none;}
 
     .sw-logo-font {
       font-size: 2.5rem;
