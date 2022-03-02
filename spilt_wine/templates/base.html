@@ -54,7 +54,7 @@
                 <div class="row pt-3">
                     <div class="col-md-3 sw-header-logo">
                         <a href="{% url 'home' %}" class="nav-link">
-                            <h1 class="my-0 sw-logo-font sw-h-color-01"><em>Spilt<small>Wine</small></em></h1>
+                            <h1 class="my-0 sw-logo-font sw-h-color-01">SpiltWine</h1>
                         </a>
                     </div>
                     <div class="col-md-6">
@@ -139,7 +139,7 @@
                         </div>
                     </nav>
                     <!-- Main Content -->
-                    <section id="main_content" class="col {% if template_flag == 1 %}col-md-11{% else %}col-md-8{% endif %} mt-2">
+                    <section id="main_content" class="col {% if template_flag == 1 %}col-md-11{% else %}col-md-10{% endif %} mt-2">
                         {% block content %}
                         {% endblock %}
                     </section>

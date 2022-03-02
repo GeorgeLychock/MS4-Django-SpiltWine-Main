@@ -42,6 +42,7 @@
 
 /* Imports */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
 
 /* Bootstrap Overides */
@@ -208,12 +209,12 @@ body {
     background-size: cover;
     background-color: #fff;
     height: calc(100vh - 164px);
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    font-family: 'Montserrat', 'FreeSans', sans-serif;
+    font-family: 'Noto Sans', 'FreeSans', sans-serif;
 }
 
 a {
@@ -365,6 +366,10 @@ p {
 }
 
 /* Index */
+.sw-index-flip {
+  float: right;
+}
+
 .sw-index-h4 {
   text-align: right;
 }
@@ -372,6 +377,11 @@ p {
 .sw-index-title {
   padding: 40px 0 20px 0;
   height: 200px;
+  width: 200px;
+}
+
+.sw-index-title-font {
+  font-family: 'Bitter', sans-serif;
 }
 
 .sw-btn-index-h4 {
@@ -470,6 +480,15 @@ p {
     .sw-btn-index-h4 {
       font-size: 1rem;
     }
+
+    .sw-index-title {
+      width: 100%;
+    }
+
+    .sw-index-flip {
+      float: none;
+    }
+
   }
 
   /* @media (min-width: 1200px) {
