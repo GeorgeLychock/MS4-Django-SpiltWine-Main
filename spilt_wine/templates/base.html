@@ -120,7 +120,7 @@
             </div>
         </header>
         <!-- Delivery Banner -->
-        <div class="container-fluid sw-db-container sw-b-color-02b">
+        <div class="container-fluid sw-db-container">
             <div class="row">
                 <div class="col">
                     {% include 'includes/delivery-banner.html' %}
@@ -139,7 +139,7 @@
                         </div>
                     </nav>
                     <!-- Main Content -->
-                    <section id="main_content" class="col {% if template_flag == 1 %}col-md-11{% else %}col-md-10{% endif %} mt-2">
+                    <section id="main_content" class="col {% if template_flag == 1 %}col-md-11{% else %}col-md-8{% endif %} mt-2">
                         {% block content %}
                         {% endblock %}
                     </section>

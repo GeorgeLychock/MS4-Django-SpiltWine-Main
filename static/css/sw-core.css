@@ -237,7 +237,7 @@ p {
 .sw-h-color-01 {color: #9c3;}
 .sw-h-color-02 {color: whitesmoke;}
 .sw-h-color-03 {color: rgba(0, 76, 153, .75);}
-.sw-h-color-04 {color: lightblue;}
+.sw-h-color-04 {color: darkslateblue;}
 .sw-btn-color-01 {color: rgba(147, 212, 157, .25);}
 
 /* Common Background Colors*/
@@ -305,6 +305,12 @@ p {
 /* Sizing */
 .sw-img-100p {
   width: 100%;
+}
+
+/* Messages */
+.sw-flash-msg {
+  font-weight: 600;
+  font-style: italic;
 }
 
 /* Header */
@@ -398,6 +404,7 @@ p {
 
 .sw-card-col {
   border-bottom: #333;
+  margin-bottom: 5px;
 }
 
 .sw-card-header {
