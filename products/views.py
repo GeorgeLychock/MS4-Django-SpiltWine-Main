@@ -92,7 +92,8 @@ def all_wines(request):
                 wines = wines.filter(country_state__name=country)
                 featured = featured.filter(country_state__name=country)
                 sortkey = 'name'
-                sort = country
+                sort = countries.filter(name=country)
+                sort = sort[0].friendly_name
                 
             wines = wines.order_by(sortkey)
 
@@ -103,7 +104,8 @@ def all_wines(request):
                 varietals = Varietal.objects.all()
                 wines = wines.filter(varietal__name=varietal)
                 sortkey = 'name'
-                sort = varietal
+                sort = varietals.filter(name=varietal)
+                sort = sort[0].friendly_name
                 
             wines = wines.order_by(sortkey)
     
