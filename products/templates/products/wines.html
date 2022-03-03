@@ -26,7 +26,7 @@
     <div class="row mt-1 mb-2">
         <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
             <div class="sort-select-wrapper w-50">
-                <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                <select id="sort-selector" class="form-select form-select-sm rounded-1 border border-{% if current_sorting != 'All Wines_None' %}info{% else %}black{% endif %}">
                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                     <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                     <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -53,7 +53,7 @@
         {% for wine in wines %}
         <div class="col-6 col-md-3 sw-card-col">
             <div class="card h-100 text-center">
-                <div class="card-header sw-card-header p-0">
+                <div class="card-header sw-card-header p-0 sw-b-color-02c">
                     {% if wine.varietal %}
                     <div>
                         <small class=""><i class="mr-1"></i>{{ wine.varietal.friendly_name }}</small>
@@ -85,26 +85,18 @@
                             <div class="sw-card-price text-start">
                                 <p class="lead mb-0 font-weight-bold">${{ wine.price }}</p>
                             </div>
-                            {% if wine.country_state %}
-                            <div class="sw-wine-info">
-                                <i class="mr-1"></i>{{ wine.country_state.friendly_name }}
+                            <div class="sw-wine-info text-uppercase">
+                                {% if wine.country_state %}{{ wine.country_state.friendly_name }}{% endif %}
+                                {% if wine.region %}, {{ wine.region.friendly_name }}{% endif %}
+                                {% if wine.appellation %}, {{ wine.appellation.friendly_name }}{% endif %}
                             </div>
-                            {% endif %}
-                            {% if wine.region %}
-                            <div class="sw-wine-info">
-                                <i class="mr-1"></i>{{ wine.region.friendly_name }}
-                            </div>
-                            {% endif %}
-                            {% if wine.appellation %}
-                            <div class="sw-wine-info">
-                                <i class="mr-1"></i>{{ wine.appellation.friendly_name }}
-                            </div>
-                            {% endif %}
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col">
-                            <p class="sw-font-size-50">{{ wine.description|truncatewords:10 }}</p>
+                            <div class="sw-card-des">
+                                <p class="sw-font-size-60 text-start">{{ wine.description|truncatewords:10 }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

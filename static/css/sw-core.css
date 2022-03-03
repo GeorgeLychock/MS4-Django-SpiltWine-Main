@@ -222,7 +222,7 @@ a {
 }
 
 p {
-  margin-left: 10px;
+  margin-left: 2px;
 }
 
 /* Common Text Colors */
@@ -247,6 +247,7 @@ p {
 .sw-b-color-02 {background-color: rgba(128, 0, 0, 1.0);}
 .sw-b-color-02a {background-color: rgba(128, 0, 0, .85);}
 .sw-b-color-02b {background-color: rgba(128, 0, 0, .65);}
+.sw-b-color-02c {background-color: rgba(128, 0, 0, .1);}
 .sw-b-color-03 {background-color: #8b0000;}
 .sw-b-color-04 {background-color: whitesmoke;}
 .sw-b-color-04a {background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, .05));}
@@ -259,6 +260,10 @@ p {
 /* Font Sizing */
 .sw-font-size-50 {
   font-size: .5rem;
+}
+
+.sw-font-size-60 {
+  font-size: .6rem;
 }
 
 .sw-font-size-85 {
@@ -404,7 +409,7 @@ p {
 
 .sw-card-col {
   border-bottom: #333;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .sw-card-header {
@@ -418,10 +423,15 @@ p {
 
 .sw-card-body {
   height: 300px;
+  padding: 0 4px;
 }
 
 .sw-card-name {
-  height: 30px;
+  min-height: 3rem;
+}
+
+.sw-card-des {
+  min-height: 3rem;
 }
 
 .sw-card-footer {
@@ -429,7 +439,8 @@ p {
 }
 
 .sw-wine-info {
-  font-size: .8rem;
+  font-size: .7rem;
+  min-height: 2rem;
 }
 
 /* Varietals */
