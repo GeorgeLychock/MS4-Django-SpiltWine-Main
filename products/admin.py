@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Wine, Appellation, Region, WineType, Brand, CountryState, Varietal, Style, Body
+from .models import Wine, Appellation, Region, WineType, WineBrand, CountryState, Varietal, Style, Body
 
 class WineAdmin(admin.ModelAdmin):
     list_display = (
@@ -16,7 +16,7 @@ class WineAdmin(admin.ModelAdmin):
 admin.site.register(Appellation)
 admin.site.register(Region)
 admin.site.register(WineType)
-admin.site.register(Brand)
+admin.site.register(WineBrand)
 admin.site.register(CountryState)
 admin.site.register(Varietal)
 admin.site.register(Style)

@@ -1,3 +1,5 @@
+import uuid
+
 from tabnanny import verbose
 from django.db import models
 
@@ -45,7 +47,7 @@ class WineType(models.Model):
         return self.friendly_name
 
 
-class Brand(models.Model):
+class WineBrand(models.Model):
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -125,7 +127,7 @@ class Wine(models.Model):
     size = models.DecimalField(max_digits=6, decimal_places=2)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
-    brand = models.ForeignKey('Brand', null=True, blank=True, on_delete=models.SET_NULL)
+    brand = models.ForeignKey('WineBrand', null=True, blank=True, on_delete=models.SET_NULL)
     country_state = models.ForeignKey('CountryState', null=True, on_delete=models.SET_NULL)
     region = models.ForeignKey('Region', null=True, blank=True, on_delete=models.SET_NULL)
     appellation = models.ForeignKey('Appellation', null=True, blank=True, on_delete=models.SET_NULL)
