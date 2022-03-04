@@ -17,7 +17,7 @@
     <div class="row pt-md-4">
         <div class="sw-product-title sw-p-color-01"><h5>Our Featured Wines</h5></div>
         {% for wine in wines %}
-        <div class="col-3">
+        <div class="col-6 col-md-3">
             <div class="card h-100 border-0 text-center">
                 {% if wine.image %}
                 <a href="{% url 'wine_detail' wine.pk %}">
