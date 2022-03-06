@@ -14,8 +14,120 @@
         </div>
     </div>
     <!-- Build Wine products section -->
-    <div class="row pt-md-4">
-        <div class="sw-product-title sw-p-color-01"><h5>Our Featured Wines</h5></div>
+    <div class="row mt-4 pt-md-4">
+        <div class="sw-product-title ps-0 sw-p-color-01"><h5>Featured Wines</h5></div>
+        {% for wine in wines %}
+        <div class="col-6 col-md-3">
+            <div class="card h-100 border-0 text-center">
+                {% if wine.image %}
+                <a href="{% url 'wine_detail' wine.pk %}">
+                    <img class="card-img-top img-fluid mt-3 sw-product-img" src="{{ MEDIA_URL }}{{ wine.image }}"
+                        alt="{{ wine.name }}">
+                </a>
+                {% else %}
+                <a href="{% url 'wine_detail' wine.pk %}">
+                    <img class="card-img-top img-fluid mt-3 sw-product-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ wine.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body pb-0">
+                    <a href="{% url 'wine_detail' wine.pk %}" class="mb-0 sw-link-text-01">{{ wine.name }}</a>
+                </div>
+                <div class="card-footer pt-0 border-0 text-left sw-p-color-blk">
+                    <div class="row">
+                        <div class="col">
+                            <p class="lead mb-0 text-left font-weight-bold">${{ wine.price }}</p>
+                            {% if wine.country_state %}
+                            <div class="">
+                                <small class=""><i class="mr-1"></i>{{ wine.country_state.friendly_name }}</small>
+                            </div>
+                            {% endif %}
+                            {% if wine.region %}
+                            <div>
+                                <small class=""><i class="mr-1"></i>{{ wine.region.friendly_name }}</small>
+                            </div>
+                            {% endif %}
+                            {% if wine.appellation %}
+                            <div>
+                                <small class=""><i class="mr-1"></i>{{ wine.appellation.friendly_name }}</small>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="sw-font-size-50">{{ wine.description|truncatewords:20 }}</p>
+                            {% if wine.varietal %}
+                            <div class="">
+                                <small class=""><i class="mr-1"></i>{{ wine.varietal.friendly_name }}</small>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+    <!-- Build Wine Accessories products section -->
+    <div class="row mt-4 pt-md-4">
+        <div class="sw-product-title ps-0 sw-p-color-01"><h5>Featured Wine Accessories</h5></div>
+        {% for wine in wines %}
+        <div class="col-6 col-md-3">
+            <div class="card h-100 border-0 text-center">
+                {% if wine.image %}
+                <a href="{% url 'wine_detail' wine.pk %}">
+                    <img class="card-img-top img-fluid mt-3 sw-product-img" src="{{ MEDIA_URL }}{{ wine.image }}"
+                        alt="{{ wine.name }}">
+                </a>
+                {% else %}
+                <a href="{% url 'wine_detail' wine.pk %}">
+                    <img class="card-img-top img-fluid mt-3 sw-product-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ wine.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body pb-0">
+                    <a href="{% url 'wine_detail' wine.pk %}" class="mb-0 sw-link-text-01">{{ wine.name }}</a>
+                </div>
+                <div class="card-footer pt-0 border-0 text-left sw-p-color-blk">
+                    <div class="row">
+                        <div class="col">
+                            <p class="lead mb-0 text-left font-weight-bold">${{ wine.price }}</p>
+                            {% if wine.country_state %}
+                            <div class="">
+                                <small class=""><i class="mr-1"></i>{{ wine.country_state.friendly_name }}</small>
+                            </div>
+                            {% endif %}
+                            {% if wine.region %}
+                            <div>
+                                <small class=""><i class="mr-1"></i>{{ wine.region.friendly_name }}</small>
+                            </div>
+                            {% endif %}
+                            {% if wine.appellation %}
+                            <div>
+                                <small class=""><i class="mr-1"></i>{{ wine.appellation.friendly_name }}</small>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="sw-font-size-50">{{ wine.description|truncatewords:20 }}</p>
+                            {% if wine.varietal %}
+                            <div class="">
+                                <small class=""><i class="mr-1"></i>{{ wine.varietal.friendly_name }}</small>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+    <!-- Build Culinary products section -->
+    <div class="row mt-4 pt-md-4">
+        <div class="sw-product-title ps-0 sw-p-color-01"><h5>Featured Culinary Products</h5></div>
         {% for wine in wines %}
         <div class="col-6 col-md-3">
             <div class="card h-100 border-0 text-center">
