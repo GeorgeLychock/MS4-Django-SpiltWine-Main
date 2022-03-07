@@ -16,7 +16,14 @@
    
     <!-- Build Wine products section -->
     <div class="row mt-4 pt-md-4">
-        <div class="sw-product-title ps-0 sw-p-color-01"><h5>Featured Wines</h5></div>
+        <div class="sw-product-title ps-0 mb-2 sw-p-color-01">
+            <div>
+                <h5>Featured Wines</h5>
+            </div>
+            <div>
+                <a href="{% url 'wines' %}" class="btn rounded-0 text-uppercase float-end pe-3 sw-btn-index-h4">View All Wines</a>
+            </div>
+        </div>
         {% for wine in wines %}
         <div class="col-6 col-md-3 sw-card-col">
             <div class="card h-100 text-center">
@@ -73,7 +80,14 @@
     </div>
     <!-- Build Wine Accessories products section -->
     <div class="row mt-4 pt-md-4">
-        <div class="sw-product-title ps-0 sw-p-color-01"><h5>Featured Wine Accessories</h5></div>
+        <div class="sw-product-title ps-0 mb-2 sw-p-color-01">
+            <div>
+                <h5>Featured Wine Accessories</h5>
+            </div>
+            <div>
+                <a href="" class="btn rounded-0 text-uppercase float-end pe-3 sw-btn-index-h4">View All Wine Accessories (Coming Soon!)</a>
+            </div>
+        </div>
         {% for wa in wine_accessory %}
         <div class="col-6 col-md-3 sw-card-col">
             <div class="card h-100 text-center">
@@ -130,7 +144,14 @@
     </div>
     <!-- Build Culinary products section -->
     <div class="row mt-4 pt-md-4">
-        <div class="sw-product-title ps-0 sw-p-color-01"><h5>Featured Culinary Products</h5></div>
+        <div class="sw-product-title ps-0 mb-2 sw-p-color-01">
+            <div>
+                <h5>Featured Culinary Products</h5>
+            </div>
+            <div>
+                <a href="" class="btn rounded-0 text-uppercase float-end pe-3 sw-btn-index-h4">View All Culinary Products (Coming Soon!)</a>
+            </div>
+        </div>
         {% for c in culinary %}
         <div class="col-6 col-md-3 sw-card-col">
             <div class="card h-100 text-center">

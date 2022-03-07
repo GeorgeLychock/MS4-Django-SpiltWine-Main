@@ -41,7 +41,7 @@ def all_products(request):
             #     featured = []
             query_term = str.title(query)
 
-    # Will only display the first 4 items for now, until a slider utility is added for the wine section
+    # Will only display the first 4 items for now, until a slider utility is added
     wines = wines.filter(featured=True)[:4]
     culinary = culinary[:4]
     wine_accessory = wine_accessory[:4]
