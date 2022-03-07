@@ -1,0 +1,70 @@
+[
+  {
+    "pk": 1,
+    "model": "products.culinary",
+    "fields": {
+      "name": "Luxardo Maraschino Cherries",
+      "puid": "32522e55-05d2-4268-baf1-b6984440f79a",
+      "image": "11466992123934.webp",
+      "img_url": "",
+      "sku": "120442920-1",
+      "size": 14.1,
+      "measure": "oz",
+      "description": "Produced in Luxardo, Italy, these cherries are nothing like the bright red orbs you find in cocktails from workaday bars. Dense and chewy with a sweet-tart flavor, these maraschino cherries are made with prized sour marasca cherries preserved in the fruit's famed liqueur.",
+      "price": 22.99,
+      "brand": "Luxardo",
+      "featured": ""
+    }
+  },
+  {
+    "pk": 2,
+    "model": "",
+    "fields": {
+      "name": "Filthy Blue Cheese Olives",
+      "puid": "a690a840-3069-4aae-adc6-d5e1c74da0e9",
+      "image": "14259648790558.webp",
+      "img_url": "",
+      "sku": "130726233-1",
+      "size": 8,
+      "measure": "oz",
+      "description": "These large, fleshy queen olives are filled full of rich, creamy premium Wisconsin blue cheese and bathed in Oil Free \"\"Filthy\"\"brine. The Filthy Blue Cheese Olive is people who demand more from their garnish and a wonderful way to elevate your Martini.",
+      "price": 8.49,
+      "brand": "Filthy",
+      "featured": ""
+    }
+  },
+  {
+    "pk": 3,
+    "model": "",
+    "fields": {
+      "name": "Tillen Farms Hot & Spicy Beans",
+      "puid": "803884a0-31ef-464d-94d6-e66ff0047dd6",
+      "image": "13619333595166.webp",
+      "img_url": "",
+      "sku": "15257233-1",
+      "size": 12,
+      "measure": "oz",
+      "description": "One of our original bestsellers since 1984 is Tillen Farms Hot N Spicy Beans. Possessing the greatest amount of heat, these are widely revered and enjoyed as the world's greatest swizzle sticks for Bloody Marys.",
+      "price": 7.99,
+      "brand": "Tillen Farms",
+      "featured": ""
+    }
+  },
+  {
+    "pk": 4,
+    "model": "",
+    "fields": {
+      "name": "Bookbinder's Prepared Horseradish",
+      "puid": "77b184fd-bb10-4ca7-bd92-f3eef4ccd9b9",
+      "image": "13619336740894.webp",
+      "img_url": "",
+      "sku": "222045233-1",
+      "size": 9.75,
+      "measure": "oz",
+      "description": "Super Hot!",
+      "price": 2.99,
+      "brand": "Bookbinder's",
+      "featured": ""
+    }
+  }
+]
