@@ -1,0 +1,70 @@
+[
+  {
+    "pk": 1,
+    "model": "products.wineaccessory",
+    "fields": {
+      "name": "OGGI - Cocktail Shaker",
+      "puid": "d04f82b7-5a2f-45d5-b58a-a9ceb56a19bb",
+      "image": "13046873817118.webp",
+      "img_url": "",
+      "sku": "92170920-1",
+      "size": 26,
+      "measure": 1,
+      "description": "Mix drinks like the pros with this stainless steel cocktail shaker set. Make yourself as well as your guests perfect drinks in a shaker that will look right at home on any bar, table or drink tray.",
+      "price": 14.99,
+      "brand": 1,
+      "featured": false
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.wineaccessory",
+    "fields": {
+      "name": "Tovolo - King Cube Tray - Blue",
+      "puid": "cb255f7c-a4da-4343-afb1-6fc598a5c44e",
+      "image": "11374503362590.webp",
+      "img_url": "",
+      "sku": "127154920-1",
+      "size": 0,
+      "measure": 3,
+      "description": "Ice cubes, squared. These larger-than-normal ice cubes add a little special pizazz to a drink on the rocks. The silicone tray makes for easy removal of the cubes so that they won't shatter or crack. Cheers!",
+      "price": 9.99,
+      "brand": 2,
+      "featured": true
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.wineaccessory",
+    "fields": {
+      "name": "True - Bash Muddler",
+      "puid": "b48754ee-92b3-42bd-bdfa-ed3404b60007",
+      "image": "11931324481566.webp",
+      "img_url": "",
+      "sku": "208577920-1",
+      "size": 0,
+      "measure": 3,
+      "description": "It muddles like the wind.",
+      "price": 5.99,
+      "brand": 3,
+      "featured": true
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.wineaccessory",
+    "fields": {
+      "name": "True - Hawthorne Strainer",
+      "puid": "f2e74f16-91b9-4dab-9080-b31ec69a6d71",
+      "image": "11931311734814.webp",
+      "img_url": "",
+      "sku": "149755920-1",
+      "size": 0,
+      "measure": 3,
+      "description": "Our Hawthorne-style stainless steel cocktail strainer makes quick, clean work of everything from Martinis to Manhattans. A double-pronged rim and tight-wound spring catch muddled fruit, ice and herbs; the spring then slides off for easy cleaning.",
+      "price": 5.99,
+      "brand": 3,
+      "featured": false
+    }
+  }
+]

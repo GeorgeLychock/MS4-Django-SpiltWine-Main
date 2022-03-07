@@ -166,7 +166,7 @@ class Measure(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=254)
     sku = models.CharField(max_length=254, null=True, blank=True)
-    puid = models.CharField(max_length=32, null=False, editable=False)
+    puid = models.CharField(max_length=64, null=False, editable=False)
     image = models.ImageField(null=True, blank=True)
     img_url = models.URLField(max_length=1024, null=True, blank=True)
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
