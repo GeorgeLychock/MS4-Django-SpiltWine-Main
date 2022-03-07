@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Wine, Varietal, CountryState
+from .models import Wine, Varietal, CountryState, Culinary, WineAccessory
 from .forms import ProductForm
 
 
@@ -13,6 +13,8 @@ def all_products(request):
     # Add queries to fetch all categories of product data
     wines = Wine.objects.all()
     products = Wine.objects.all()
+    culinary = Culinary.objects.all()
+    wine_accessory = WineAccessory.objects.all()
     query = None
     query_term = None
     featured = []
@@ -41,9 +43,13 @@ def all_products(request):
 
     # Will only display the first 4 items for now, until a slider utility is added for the wine section
     wines = wines.filter(featured=True)[:4]
+    culinary = culinary[:4]
+    wine_accessory = wine_accessory[:4]
     
     all_content = {
         'wines': wines,
+        'culinary': culinary,
+        'wine_accessory': wine_accessory,
         'products': products,
         'search_term': query_term,
         'featured': featured,
