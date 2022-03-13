@@ -4,10 +4,11 @@ from .models import CellarItem
 
 class CellarItemAdmin(admin.ModelAdmin):
     list_display = (
+        'pk',
         'cellar_wine_pk',
         'date_added_to_cellar',
         'quantity_onhand',
-        'cellar_user_pk',
+        'user_id',
     )
 
     ordering = ('date_added_to_cellar',)

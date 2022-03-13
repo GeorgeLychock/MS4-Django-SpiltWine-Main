@@ -11,19 +11,23 @@ def cellar_contents(request):
     cellar_total = 0
     cellar_count = 0
     varietal_count = []
-    user_id = 34
+    cellar_user = request.user
     cellar = CellarItem.objects.all()
-    cellar = cellar.filter(cellar_user_pk=user_id)
+    cellar = cellar.filter(user_id=cellar_user.pk)
 
     for item in cellar:
         pk = item.cellar_wine_pk
         product = get_object_or_404(Wine, name=pk)
         if not varietal_count.count(product.varietal.friendly_name):
             varietal_count.append(product.varietal.friendly_name)
-        cellar_total += item.quantity_onhand * product.price
-        cellar_count += item.quantity_onhand
+
+        # UPDATE NEEDED: need to catch error if price isn't given
+        if item.quantity_onhand != None:
+            cellar_total += item.quantity_onhand * product.price
+            cellar_count += item.quantity_onhand
+
         cellar_items.append({
-            'item_id': item.cellar_wine_pk,
+            'item_id': item.pk,
             'quantity': item.quantity_onhand,
             'product': product,
         })

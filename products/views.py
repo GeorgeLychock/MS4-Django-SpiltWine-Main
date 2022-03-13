@@ -37,11 +37,10 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
             featured = products.filter(featured=True)
-            # if featured.length() == 0:
-            #     featured = []
+
             query_term = str.title(query)
 
-    # Will only display the first 4 items for now, until a slider utility is added
+    # Will only display the first 4 items for each category for now, until a slider utility is added
     wines = wines.filter(featured=True)[:4]
     culinary = culinary[:4]
     wine_accessory = wine_accessory[:4]

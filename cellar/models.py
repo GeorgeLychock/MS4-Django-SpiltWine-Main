@@ -1,9 +1,10 @@
 from django.db import models
+from django.contrib.auth.models import User
 from products.models import Wine
 
 class CellarItem(models.Model):
     cellar_wine_pk = models.ForeignKey(Wine, null=True, blank=True, on_delete=models.CASCADE)
-    cellar_user_pk = models.CharField(max_length=254)
+    user_id = models.IntegerField(null=True, blank=True)
     date_added_to_cellar = models.DateTimeField(auto_now_add=True)
     quantity_onhand = models.IntegerField(null=True, blank=True)
 

@@ -3,6 +3,7 @@ from .models import Wine, Appellation, Region, WineType, WineBrand, CountryState
 
 class WineAdmin(admin.ModelAdmin):
     list_display = (
+        'pk',
         'sku',
         'name',
         'country_state',

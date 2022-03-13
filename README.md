@@ -135,7 +135,11 @@ https://www.djangoproject.com/
 -   [Migrating Data using fixtures Django](https://www.bing.com/videos/search?q=creating+django+fixtures+from+csv&view=detail&mid=21A1F428ED88293C96F021A1F428ED88293C96F0&FORM=VIRE) Instructions on how to convert csv to fixture JSON and migrate to Django
 
 Django Tutorial https://www.geeksforgeeks.org/django-tutorial/?ref=gcse
+
+Django Project
 -   [DjangoProject Queries Documentation](https://docs.djangoproject.com/en/4.0/topics/db/queries/)
+-   https://docs.djangoproject.com/en/4.0/topics/db/models/#model-inheritance
+
 Primary Key Best Practices https://stackoverflow.com/questions/337503/whats-the-best-practice-for-primary-keys-in-tables#:~:text=Primary%20keys%20should%20be%20as%20small%20as%20necessary
 
 JSON Convertor https://www.convertcsv.com/csv-to-json.htm

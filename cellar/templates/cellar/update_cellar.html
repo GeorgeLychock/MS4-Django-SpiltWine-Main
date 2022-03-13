@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Cellar Admin</h2>
+            <h2 class="logo-font">Update Cellar Item</h2>
         </div>
     </div>
     <div class="row">
@@ -53,19 +53,13 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <p class="sw-font-size-50">{{ wine.description }}</p>
-                                {% if wine.varietal %}
-                                <div class="">
-                                    <small class=""><i class="mr-1"></i>{{ wine.varietal.friendly_name }}</small>
-                                </div>
-                                {% endif %}
-                                <!-- Add wine to the user's cellar -->
-                                <form action="{% url 'add_to_cellar' wine.pk %}" method="POST">
+                                <!-- Update the cellar item quantity -->
+                                <form action="{% url 'update_cellar' cellar_item.pk %}" method="POST">
                                     {% csrf_token %}
                                     {{ form.as_p }}
                                     <div>
                                         <p>
-                                            <button type="submit">Add Item</button>
+                                            <button type="submit">Update Item</button>
                                         </p>
                                     </div>
                                 </form>
