@@ -335,7 +335,11 @@ p {
 
 /* Mobile User Apps Menu */
 .sw-apps-menu-mobile {
-  font-size: .5rem;
+  font-size: .65rem;
+}
+
+.sw-apps-menu-mobile-item {
+  width: auto;
 }
 
 /* Desktop Main Nav */
