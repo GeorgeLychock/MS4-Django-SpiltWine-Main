@@ -57,7 +57,7 @@
                             </td>
                             <td class="py-3">
                                 <p class="my-0"><strong>{{ ci.product.name }}</strong></p>
-                                <p class="my-0 text-muted"><strong>Size: </strong>{% if ci.product.has_sizes %}{{ ci.product.size|upper }}{% else %}N/A{% endif %}</p>
+                                <p class="my-0 text-muted">{% if ci.product.vintage %}Vintage: {{ ci.product.vintage }}{% else %}No Vintage{% endif %}</p>
                                 <p class="my-0 small text-muted">SKU: {{ ci.product.sku|upper }}</p>
                             </td>
                             <td class="py-3">
