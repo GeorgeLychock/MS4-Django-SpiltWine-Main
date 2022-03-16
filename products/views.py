@@ -59,10 +59,8 @@ def all_products(request):
 
 
 def all_wines(request):
-    """ Shows all products and handles sorting and searching. """
+    """ Shows all wines and handles sorting and searching. """
 
-    # wines = Wine.objects.filter(country_state=1)
-    # sort_target ="California"
     wines = Wine.objects.all()
     varietals = None
     sort = 'All Wines'
@@ -70,15 +68,21 @@ def all_wines(request):
     countries = None
     country = None
     featured = wines.filter(featured=True)
+    sorter_toggle = False
 
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
-            # if sorting by name, direction. From Code Institute, https://codeinstitute.net/global/
+            # sorting by name, direction. From Code Institute, https://codeinstitute.net/global/
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 wines = wines.annotate(lower_name=Lower('name'))
+            if sortkey == 'varietal':
+                sortkey = 'varietal__name'
+                wines = wines.annotate(lower_varietal=Lower('varietal'))
+            if sortkey == 'country':
+                sortkey = 'country_state__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -101,6 +105,7 @@ def all_wines(request):
                 sort = sort[0].friendly_name
                 
             wines = wines.order_by(sortkey)
+            sorter_toggle = True
 
         if 'varietal' in request.GET:
             varietal = request.GET['varietal']
@@ -113,6 +118,7 @@ def all_wines(request):
                 sort = sort[0].friendly_name
                 
             wines = wines.order_by(sortkey)
+            sorter_toggle = True
     
     current_sorting = f'{sort}_{direction}'
     sorting = str.title(sort)
@@ -124,6 +130,7 @@ def all_wines(request):
         'countries': countries,
         'featured': featured,
         'varietals': varietals,
+        'sorter_toggle': sorter_toggle
     }
 
     return render(request, 'products/wines.html', wine_content)
@@ -145,6 +152,8 @@ def varietals(request):
     """ Shows the wine varietal view """
 
     varietals = Varietal.objects.all()
+    sortkey = 'name'
+    varietals = varietals.order_by(sortkey)
 
     varietal_content = {
         'varietals': varietals,
