@@ -71,11 +71,13 @@
             </div>
             <!-- Mobile Header and Main Nav -->
             <div class="container-fluid d-md-none pt-1 sw-b-color-nav">
+                {% if style_switch %}
                 <div class="row">
                     <div class="col-md-6">
                         {% include 'includes/header-search-form.html' %}
                     </div>
                 </div>
+                {% endif %}
                 <div class="row">
                     <div class="d-lg-none col">
                         {% include 'includes/main-nav.html' %}
