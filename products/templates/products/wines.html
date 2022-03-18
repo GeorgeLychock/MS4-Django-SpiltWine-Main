@@ -110,7 +110,7 @@
 {% endblock %}
 
 {% block aside %}
-<aside class="d-none d-md-block col col-md-3 sw-dt-sidebars sw-b-color-02 ">
+<aside class="col col-md-3 order-1 order-md-3 sw-dt-sidebars sw-b-color-02 ">
     <!-- SpiltWine Featured Items -->
     <div class="row py-2">
         <div class="col text-center sw-h-color-02">
@@ -124,7 +124,7 @@
     </div>
     {% for f in featured %}
     <div class="row p-1 pb-2">
-        <div class="col">
+        <div class="col-4 col-md-12">
             <div class="card h-100 border-0 sw-b-color-04">
                 <div class="card-header">
                     {% if f.varietal %}
@@ -137,7 +137,7 @@
                     </div>
                     {% endif %}
                 </div>
-                <div class="sw-card-body pb-0">
+                <div class="sw-card-body pb-0 text-center">
                     {% if f.image %}
                     <a href="{% url 'wine_detail' f.pk %}">
                         <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}{{ f.image }}"
@@ -148,7 +148,9 @@
                         <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}cab_grapes.jpg" alt="{{ f.name }}">
                     </a>
                     {% endif %}
-                    <p class="mb-0">{{ f.name }}</p>
+                </div>
+                <div class="pb-0 ps-2 text-start">
+                    <h6 class="mb-0">{{ f.name }}</h6>
                 </div>
                 <div class="card-footer pt-0 border-0 text-left sw-p-color-blk">
                     <div class="row">
