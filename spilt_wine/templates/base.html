@@ -49,8 +49,8 @@
     <body>
         <!-- Header -->
         <header class="fixed-top {% if not style_switch%}sw-b-color-04{% else %}sw-b-color-none{% endif %}">
+            <!-- Desktop Header -->
             <div class="container-fluid d-none d-md-block sw-b-color-04a">
-                <!-- Desktop Header -->
                 <div class="row pt-3">
                     <div class="col-md-3 sw-header-logo">
                         <a href="{% url 'home' %}" class="nav-link">
@@ -72,6 +72,11 @@
             <!-- Mobile Header and Main Nav -->
             <div class="container-fluid d-md-none pt-1 sw-b-color-nav">
                 <div class="row">
+                    <div class="col-md-6">
+                        {% include 'includes/header-search-form.html' %}
+                    </div>
+                </div>
+                <div class="row">
                     <div class="d-lg-none col">
                         {% include 'includes/main-nav.html' %}
                     </div>
@@ -88,46 +93,20 @@
             <div class="container">
                 <!-- Mobile Apps Menu -->
                 <div class="row d-md-none sw-apps-menu-mobile">
-                    <div class="{% if not style_switch %}{% else %}col-7{% endif %}"></div>
-                    <nav class="{% if not style_switch %}col-12{% else %}col-5{% endif %} my-auto py-1 py-lg-0">
-
+                    <!-- Apply mobile style switch to change user menu orientation on sub pages on mobile devices -->
+                    <div class="{% if not style_switch %}{% else %}col-5{% endif %}"></div>
+                    <nav class="{% if not style_switch %}col-12{% else %}col-7{% endif %} my-auto py-1 py-lg-0">
                         <div class="row pe-2 sw-b-color-none">
-
-                            <div class="{% if not style_switch %}col-3{% else %}col-6{% endif %} p-0 pt-1 border-0 sw-b-color-none">
+                            <div class="col-4 p-2 border-0 sw-b-color-none">
                                 {% include 'includes/user-menu.html' %}
                             </div>
-
-                            <div class="{% if not style_switch %}col-3{% else %}col-6{% endif %} p-0 pe-3 pt-2 border-0 sw-b-color-none ">
+                            <div class="col-4 p-2 border-0 sw-b-color-none ">
                                 {% include 'includes/shopping-cart-link.html' %}
                             </div>
-                        {% if not style_switch %}
-                        {% else %}
-                        </div>
-
-                        <div class="row pe-2 sw-b-color-none">
-                        {% endif %}
-
-
-                            <div class="{% if not style_switch %}col-3{% else %}col-6{% endif %} p-0 pt-2 border-0 sw-b-color-none ">
+                            <div class="col-4 p-2 border-0 sw-b-color-none ">
                                 {% include 'includes/cellar-link.html' %}
                             </div>
-
-                            <div class="{{% if not style_switch %}col-3{% else %}col-6{% endif %} p-0 pt-1 border-0 sw-apps-menu-mobile-item sw-b-color-none">
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" id="mobile-search-drop"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="bi bi-search sw-i-color-01"></i>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="mobile-search-drop">
-                                        <li>
-                                            {% include 'includes/header-search-form.html' %}
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
                         </div>
-
                     </nav>
                 </div>
             </div>

@@ -377,7 +377,8 @@ p {
 }
 
 .sw-search-input {
-  width: 100%;
+  font-size: .65rem;
+  height: 34px;
 }
 
 /* Content Areas */
