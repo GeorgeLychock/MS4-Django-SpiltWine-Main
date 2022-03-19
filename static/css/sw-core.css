@@ -299,6 +299,10 @@ p {
   font-size: .8rem;
 }
 
+.sw-link-text-02 {
+  text-decoration: none;
+}
+
 /* Spacers */
 .sw-spacer-100p {
   width: 100%;
@@ -326,7 +330,7 @@ p {
 
 .sw-logo-font {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .sw-user-menu {
@@ -352,7 +356,7 @@ p {
   font-weight: 700;
 }
 
-/* Deliver Banner */
+/* Delivery Banner */
 .sw-db-container {
   margin-top: 115px;
 }
@@ -411,6 +415,10 @@ p {
 }
 
 /* Products */
+.sw-content-title {
+  font-size: 1.5rem;
+}
+
 .sw-product-title {
   border-bottom: #8b0000 1px solid;
 }

@@ -7,14 +7,41 @@
     <div class="row">
         <div class="col text-center mt-3">
             {% if search_term %}
-            <h2 class="logo-font">Search results for "{{ search_term }}"</h2>
+            <h2 class="sw-content-title">Search results for "{{ search_term }}"</h2>
             {% else %}
-            <h2 class="logo-font">Our Products Collection</h2>
+            <h2 class="sw-content-title">Our Products Collection</h2>
             {% endif %}
         </div>
     </div>
-   
-    <!-- Build Wine products section -->
+    <!-- Build Search Results section -->
+    <!-- Not shown unless search was requested -->
+    {% if search_term %}
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Result</th>
+                    <th scope="col">Varietal</th>
+                    <th scope="col">Country/State</th>
+                    <th scope="col">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for product in products %}
+                  <tr>
+                    <th scope="row"><a class="sw-link-text-02" href="{% url 'wine_detail' product.pk %}">{{ product.name }}</a></th>
+                    <td>{{ product.varietal.friendly_name }}</td>
+                    <td>{{ product.country_state.friendly_name }}</td>
+                    <td>${{ product.price }}</td>
+                  </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+        </div>
+    </div>
+    {% endif %}
+    <!-- Build Wine Products section -->
     <div class="row mt-4 pt-md-4">
         <div class="sw-product-title ps-0 mb-2 sw-p-color-01">
             <div>
@@ -78,7 +105,7 @@
         </div>
         {% endfor %}
     </div>
-    <!-- Build Wine Accessories products section -->
+    <!-- Build Wine Accessories Products section -->
     <div class="row mt-4 pt-md-4">
         <div class="sw-product-title ps-0 mb-2 sw-p-color-01">
             <div>
@@ -142,7 +169,7 @@
         </div>
         {% endfor %}
     </div>
-    <!-- Build Culinary products section -->
+    <!-- Build Culinary Products section -->
     <div class="row mt-4 pt-md-4">
         <div class="sw-product-title ps-0 mb-2 sw-p-color-01">
             <div>
