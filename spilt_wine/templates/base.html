@@ -99,13 +99,19 @@
                     <div class="{% if not style_switch %}{% else %}col-5{% endif %}"></div>
                     <nav class="{% if not style_switch %}col-12{% else %}col-7{% endif %} my-auto py-1 py-lg-0">
                         <div class="row pe-2 sw-b-color-none">
-                            <div class="col-4 p-2 border-0 sw-b-color-none">
+                            {% if not style_switch %}
+                            <div class="col-1 p-0 px-2 ps-3 border-0 sw-b-color-none">
+                                <a href="{% url 'home' %}"><i class="bi bi-chevron-left font-weight-bold sw-font-size-150"></i></a>
+                            </div>
+                            <div class="{% if not style_switch %}col-1{% else %}{% endif %}"></div>
+                            {% endif %}
+                            <div class="{% if not style_switch %}col-3{% else %}col-4{% endif %} p-0 px-2 ps-3 border-0 sw-b-color-none">
                                 {% include 'includes/user-menu.html' %}
                             </div>
-                            <div class="col-4 p-2 border-0 sw-b-color-none ">
+                            <div class="{% if not style_switch %}col-3{% else %}col-4{% endif %} p-0 px-2 border-0 sw-b-color-none ">
                                 {% include 'includes/shopping-cart-link.html' %}
                             </div>
-                            <div class="col-4 p-2 border-0 sw-b-color-none ">
+                            <div class="{% if not style_switch %}col-3{% else %}col-4{% endif %} p-0 px-2 border-0 sw-b-color-none ">
                                 {% include 'includes/cellar-link.html' %}
                             </div>
                         </div>
