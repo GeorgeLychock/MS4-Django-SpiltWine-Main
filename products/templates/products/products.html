@@ -3,9 +3,9 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container-fluid">
+<div class="container-fluid px-1 px-md-3">
     <div class="row">
-        <div class="col text-center mt-3">
+        <div class="col text-center mt-md-3 mb-1">
             {% if search_term %}
             <h2 class="sw-content-title">Search results for "{{ search_term }}"</h2>
             {% else %}
@@ -17,17 +17,17 @@
     <!-- Not shown unless search was requested -->
     {% if search_term %}
     <div class="row">
-        <div class="col-12">
-            <table class="table table-hover">
-                <thead>
+        <div class="col-12 p-1">
+            <table class="table table-hover align-middle">
+                <thead class="sw-font-size-85">
                   <tr>
                     <th scope="col">Result</th>
                     <th scope="col">Varietal</th>
-                    <th scope="col">Country/State</th>
+                    <th scope="col">Region</th>
                     <th scope="col">Price</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="sw-font-size-75">
                 {% for product in products %}
                   <tr>
                     <th scope="row"><a class="sw-link-text-02" href="{% url 'wine_detail' product.pk %}">{{ product.name }}</a></th>

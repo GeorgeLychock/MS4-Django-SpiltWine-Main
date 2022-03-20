@@ -267,6 +267,10 @@ p {
   font-size: .6rem;
 }
 
+.sw-font-size-75 {
+  font-size: .75rem;
+}
+
 .sw-font-size-85 {
   font-size: .85rem;
 }
@@ -316,6 +320,7 @@ p {
 .sw-img-100p {
   width: 100%;
 }
+
 
 /* Messages */
 .sw-flash-msg {
@@ -383,6 +388,10 @@ p {
 .sw-search-input {
   font-size: .65rem;
   height: 34px;
+}
+
+.sw-search-input-width {
+  width: 100%;
 }
 
 /* Content Areas */
@@ -483,6 +492,10 @@ p {
 
     .sw-nav-weight {
       font-weight: 500;
+    }
+
+    .sw-search-input-width {
+      width: 90%;
     }
 
   }
