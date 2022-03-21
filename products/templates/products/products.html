@@ -52,7 +52,7 @@
             </div>
         </div>
         {% for wine in wines %}
-        <div class="col-6 col-md-3 sw-card-col">
+        <div class="col-6 col-md-3 sw-card-col p-1">
             <div class="card h-100 text-center">
                 <div class="card-header sw-card-header p-0 sw-b-color-02c">
                     {% if wine.varietal %}
@@ -76,7 +76,7 @@
                         <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}noimage.png" alt="{{ wine.name }}">
                     </a>
                     {% endif %}
-                    <div class="mt-4 pb-0 sw-card-name">
+                    <div class="mt-1 mt-lg-3 pb-0 sw-card-name">
                         <a class="sw-link-text-01" href="{% url 'wine_detail' wine.pk %}">{{ wine.name }}</a>
                     </div>
                 </div>
@@ -84,13 +84,13 @@
                     <div class="row">
                         <div class="col">
                             <div class="sw-card-price text-start">
-                                <p class="lead mb-0 font-weight-bold">${{ wine.price }}</p>
+                                <p class="mb-0 font-weight-bold">${{ wine.price }}</p>
                             </div>
                         </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col">
-                            <div class="sw-card-des">
+                            <div class="d-none d-md-block sw-card-des">
                                 <p class="sw-font-size-60 text-start">{{ wine.description|truncatewords:10 }}</p>
                             </div>
                             <div class="sw-wine-info text-uppercase">

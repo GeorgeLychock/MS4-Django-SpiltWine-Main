@@ -300,7 +300,7 @@ p {
 /* Links and Buttons */
 .sw-link-text-01 {
   text-decoration: none;
-  font-size: .8rem;
+  font-size: .65rem;
 }
 
 .sw-link-text-02 {
@@ -442,20 +442,21 @@ p {
 
 .sw-card-header {
   font-size: .8rem;
+  min-height: 2.5rem;
 }
 
 .sw-card-img {
-  max-height: 220px;
-  width: auto;
+  width: 100%;
 }
 
 .sw-card-body {
-  height: 300px;
   padding: 0 4px;
+  height: 185px;
 }
 
 .sw-card-name {
   min-height: 3rem;
+  line-height: .9;
 }
 
 .sw-card-des {
@@ -467,7 +468,8 @@ p {
 }
 
 .sw-wine-info {
-  font-size: .7rem;
+  font-size: .6rem;
+  font-style: italic;
   min-height: 2rem;
 }
 
@@ -486,6 +488,10 @@ p {
       margin: 0 5px;
     }
 
+    .sw-link-text-01 {
+      font-size: .8rem;
+    }
+
     .sw-user-menu-icon {
       font-size: 2rem;
     }
@@ -497,6 +503,7 @@ p {
     .sw-search-input-width {
       width: 90%;
     }
+
 
   }
   
@@ -543,10 +550,24 @@ p {
       float: none;
     }
 
+  /* Product Cards */
+  .sw-card-body {
+    height: 250px;
   }
 
-  /* @media (min-width: 1200px) {
+  .sw-card-img {
+    max-height: 220px;
+    width: auto;
+  }
+
+  .sw-card-header {
+    min-height: 1rem;
+  }
+
+}
+
+/* @media (min-width: 1200px) {
     .container {
       max-width: 80%;
     }
-  } */
+} */
