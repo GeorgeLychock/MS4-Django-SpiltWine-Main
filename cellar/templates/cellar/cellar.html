@@ -27,13 +27,13 @@
     </div>
     <!-- cellar Table from Code Institute, Django Module https://codeinstitute.net/global/ -->
     <div class="row">
-        <div class="col">
+        <div class="col-12 p-0">
             {% if cellar_items %}
             <div class="table-responsive rounded">
                 <table class="table table-sm table-borderless">
-                    <thead class="text-black">
+                    <thead class="sw-font-size-75">
                         <tr>
-                            <th scope="col">Product Info</th>
+                            <th scope="col">Product</th>
                             <th scope="col"></th>
                             <th scope="col">Price</th>
                             <th scope="col">Qty</th>
@@ -42,33 +42,33 @@
                     </thead>
                     {% for ci in cellar_items %}
                         <tr>
-                            <td class="p-3 w-25">
+                            <td class="p-1">
                                 {% if ci.product.image %}
                                 <a href="{% url 'wine_detail' ci.product.pk %}">
-                                    <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}{{ ci.product.image }}"
+                                    <img class="card-img-top img-fluid mt-3 sw-card-img-cellar" src="{{ MEDIA_URL }}{{ ci.product.image }}"
                                         alt="{{ ci.product.name }}">
                                 </a>
                                 {% else %}
                                 <a href="{% url 'wine_detail' ci.product.pk %}">
-                                    <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}noimage.png"
+                                    <img class="card-img-top img-fluid mt-3 sw-card-img-cellar" src="{{ MEDIA_URL }}noimage.png"
                                         alt="{{ ci.product.name }}">
                                 </a>
                                 {% endif %}
                             </td>
-                            <td class="py-3">
+                            <td class="py-3 sw-font-size-60">
                                 <p class="my-0"><strong>{{ ci.product.name }}</strong></p>
                                 <p class="my-0 text-muted">{% if ci.product.vintage %}Vintage: {{ ci.product.vintage }}{% else %}No Vintage{% endif %}</p>
                                 <p class="my-0 small text-muted">SKU: {{ ci.product.sku|upper }}</p>
                             </td>
-                            <td class="py-3">
+                            <td class="py-3 sw-font-size-60">
                                 <p class="my-0">${{ ci.product.price }}</p>
                             </td>
-                            <td class="py-3 w-25">
+                            <td class="py-3 sw-font-size-60">
                                 <form class="form update-form" method="POST" action="{% url 'update_cellar' ci.item_id %}">
                                     {% csrf_token %}
                                     <div class="form-group">
                                         <div class="input-group">
-                                            <input class="form-control qty_input" type="number" name="quantity_onhand"
+                                            <input class="form-control qty_input sw-font-size-60" type="number" name="quantity_onhand"
                                                  value="{{ ci.quantity }}" min="0" max="99" 
                                                  data-ci_id="{{ ci.product.pk }}" id="id_qty_{{ ci.product.pk }}">
                                             {% if ci.product.has_sizes %}
@@ -81,7 +81,7 @@
                                 <a class="remove-link text-danger float-right" id="remove_{{ ci.item_id }}"><small>Remove</small></a>
                             </td>
                             <td class="py-3">
-                                <p class="my-0">${{ ci.product.price | calc_subtotal_cellar:ci.quantity }}</p>
+                                <p class="my-0 sw-font-size-60">${{ ci.product.price | calc_subtotal_cellar:ci.quantity }}</p>
                             </td>
                         </tr>
                     {% endfor %}

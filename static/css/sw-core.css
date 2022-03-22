@@ -449,6 +449,11 @@ p {
   width: 100%;
 }
 
+.sw-card-img-cellar {
+  max-height: 75px;
+  width: auto;
+}
+
 .sw-card-body {
   padding: 0 4px;
   height: 185px;
@@ -551,6 +556,10 @@ p {
     }
 
   /* Product Cards */
+  .sw-card-body-prod {
+    height: 280px;
+  }
+
   .sw-card-body {
     height: 250px;
   }

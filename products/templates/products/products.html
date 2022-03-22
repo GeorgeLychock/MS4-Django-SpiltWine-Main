@@ -65,7 +65,7 @@
                     </div>
                     {% endif %}
                 </div>
-                <div class="sw-card-body">
+                <div class="sw-card-body-prod">
                     {% if wine.image %}
                     <a href="{% url 'wine_detail' wine.pk %}">
                         <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}{{ wine.image }}"
@@ -129,7 +129,7 @@
                     </div>
                     {% endif %}
                 </div>
-                <div class="sw-card-body">
+                <div class="sw-card-body-prod">
                     {% if wa.image %}
                     <a href="">
                         <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}{{ wa.image }}"
@@ -193,7 +193,7 @@
                     </div>
                     {% endif %}
                 </div>
-                <div class="sw-card-body">
+                <div class="sw-card-body-prod">
                     {% if c.image %}
                     <a href="">
                         <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}{{ c.image }}"
