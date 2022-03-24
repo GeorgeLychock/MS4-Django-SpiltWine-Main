@@ -140,6 +140,7 @@ def wine_detail(request, product_id):
     """ Shows the wine product details. """
 
     wine = get_object_or_404(Wine, pk=product_id)
+    cart = request.session.get('cart', {})
 
     wine_content = {
         'wine': wine,
