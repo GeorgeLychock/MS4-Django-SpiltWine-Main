@@ -1,7 +1,7 @@
-# George Lychock - MS4 Project: Unknown
+# George Lychock - MS4 Project: Spilt Wine
 ### Salem State University Fullstack Software Developer Certificate
 #### MS4 Django Spilt Wine
--   [View Live Dev Site]()
+-   [View Live Dev Site](https://ms4-spiltwine.herokuapp.com/)
 
 <hr>
 
@@ -27,13 +27,14 @@
 
 <a name="UC"></a>
 # Use Case
-StreetHeat v1.0 is a patented garment accessory that provides a user extra comfort by attaching a heating or cooling element to an existing piece of clothing, such as a scarf. The product website should show a prospective customer where they can purchase StreetHeat in proximaty to their current location while also providing the visitor with their location's current weather, traffic conditions, and a map that displays locations of coffee houses, soup shops, ice cream shops, smoothie shops or other establishments a user might be interested in when trying to battle the elements. A visitor should be able to view a product page on a specific version of StreetHeat as well as a means to purchase the product online.
+Spilt Wine is an ecommerce website that sells wines, wine accessories, and culinary items. The user has access to a shopping cart which keeps track of their cart items and displays their current purchase costs as they view products and navigate the site. The user can purchase the items with a credit card and will receive an email verification of their purchase. The site will display a detailed view of each product where the user can add the item to their cart, or if logged in and if the item is a wine, can add the wine item to their virtual wine cellar (Cellar). The Cellar is a custom application that keeps the user's information on the wines they add to their Cellar which can be viewed by logging in when the user returns to the site. The Cellar gives the user the ability to update the quantity of the item or remove the item from their Cellar. The Cellar displays useful statistics on the items they have added, including: Total value,total number of items, # of varietals, a list of varietals, a progress bar showing the number of varietals (out of a total of 180) contained in their Cellar, etc. All content and functionality are available on any size device.
 
 > ### Important Notes
 >
 >-  The primary focus of this project is to display Django, Python, and database skills learned in the Full Stack Frameworks with Django module of the Salem State University / Code Institute Full Stack Software Developer Certificate Program.
->-  The cart, profile, and checkout apps' code is almost entirely from Code Institute's module "Full Stack Frameworks with Django". The largest change I made to these apps was to delete much of the product parameter sizes code since my product array in my final project did not require it. I also made minor updates such as stying and removing the reverse() methods from views rendering.
+>-  The cart, profile, and checkout apps' code is almost entirely from Code Institute's module "Full Stack Frameworks with Django". The largest change I made to these apps was to delete much of the product sizes code since my product array does not require it. I also made updates such as styling, changing the HTML amd CSS to Bootstrap 5.1 framework, and removing the reverse() methods from views rendering.
 >-  Because I'm working on a local dev machine, and not GitPod, I could not finish the webhooks developement and testing until I had the project deployed. (Although I figured out afterwards that I had to install and use the Stripe CLI to perform webhook testing on my local env anyway)
+>-  The custom app Cellar is the primary focus on my project although the base website is a fully functioning ecommerce site based on the curricullum mini project.
 >-  
 
 
