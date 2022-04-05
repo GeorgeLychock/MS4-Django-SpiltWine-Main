@@ -43,14 +43,26 @@ Spilt Wine is an ecommerce website that sells wines, wine accessories, and culin
 ## User Stories
 
 >-  I used the User Story list shown in the CI curriculum as a template:
->-  User Story List  - [View](_documentation/product_specs/MS4 User Stories - v1.pdf)
+>-  User Story List  - [View PDF](_documentation/product_specs/MS4_User_Stories_v1.pdf)
+>-  User Story List  - [View HTML](_documentation/product_specs/MS4_User_Stories_v1.html)
 
--   ### Anonymous AND Logged In User Experience
-    -   #### **Story 1** As a Site Visitor, I want to be able to search recipes by using a quick search method.
-        -  #### *Acceptance Criteria* -- Duplicated in Testing Section
-            1.  A search form is presented without leaving the home page
-            2.  A minimal number of search criteria is presented to choose from
-            3.  When the form is submitted, user is redirected to the advanced search page and presented the results list/table
+All Acceptance Criteria Results can be found in [TESTRM.md](TESTRM.md)
+
+-   ### Visitor/Shopper
+    -   #### **Story 1** As a Visitor/Shopper I want to be able to view a list of products so that I can select a product to purchase.
+        -  #### *Acceptance Criteria*
+            1.  A list of product sub-categories is presented
+            2.  Sub-category links present user with sub-category product listings
+            3.  Product listings should display as product cards displaying: product name, varietal, product image, price, description, origin of wine.
+            4.  Product image and name should link to product detail page (described below)
+
+    -   #### **Story 2** As a Visitor/Shopper I want to be able to view individual product details so that I can so I can determine a product description, image, and product info.
+        -  #### *Acceptance Criteria*
+            1.  A list of product sub-categories is presented
+            2.  Sub-category links present user with sub-category product listings
+            3.  Product listings should display as product cards displaying: product name, varietal, product image, price, description, origin of wine.
+            4.  Product image and name should link to product detail page (described below)
+
 
 <a name="REQS"></a>
 ## Requirements
@@ -58,9 +70,9 @@ Spilt Wine is an ecommerce website that sells wines, wine accessories, and culin
 -   Application must be responsive and fully functional to use on any device
 -   Allow users to search products
 -   Allow users to log in and log out of the app
--   Logging in provides user with feature to rate a product
 -   Logging in provides a site admin with feature to build a product
 -   Allow users to view details about the product including an image
+-   Provide a logged in user or anonymous user with feature to buy a product
 
 <a name="BACKLOG"></a>
 ## Future Requirements
@@ -146,6 +158,8 @@ Primary Key Best Practices https://stackoverflow.com/questions/337503/whats-the-
 JSON Convertor https://www.convertcsv.com/csv-to-json.htm
 
 django-countries https://pypi.org/project/django-countries/#show-certain-countries-first
+
+https://medium.com/swlh/how-to-style-your-django-forms-7e8463aae4fa
 
 #   Testing
 <a name="TESTING"></a>
