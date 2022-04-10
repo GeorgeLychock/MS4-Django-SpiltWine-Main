@@ -5,7 +5,7 @@
 <div class="overlay"></div>
 <div class="container-fluid p-1">
     <div class="row">
-        <div class="col text-center mt-3">
+        <div class="col text-center mt-md-1 mt-lg-3 mb-2">
             <h2 class="sw-detail-title">Wine Details </h2>
         </div>
     </div>
@@ -28,30 +28,53 @@
                     </div>
                     <div class="col-8 col-md-8">
                         <div class="card-body pb-0">
-                            <p class="mb-0">{{ wine.name }}</p>
-                        </div>
-                        <div class="card-footer pt-0 border-0 text-left sw-p-color-blk">
-                            <div class="row pt-2">
+                            <div class="row">
+                                <div class="col-12 col-md-10">
+                                    <div class="card-title mb-0">{{ wine.name }}</div>
+                                </div>
+                                <div class="col-12 col-md-2 pt-md-2">
+                                    <div class="mb-0 sw-font-size-85">{{ wine.vintage }}</div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-0 sw-font-size-85">{{ wine.brand.friendly_name }}</div>
+                                </div>
+                            </div>
+                            <div class="row pt-2 mt-2">
                                 <div class="col sw-font-size-75">
-                                    <p class="mb-0 text-left"><strong>${{ wine.price }}</strong></p>
-                                    {% if wine.country_state %}
-                                    <div class="">
-                                        <small class=""><i class="mr-1"></i>{{ wine.country_state.friendly_name }}</small>
-                                    </div>
-                                    {% endif %}
+                                    <p class="mb-0 text-left sw-p-color-03"><strong>${{ wine.price }}</strong></p>
+                                    <p class="mb-0 text-left"><strong>{{ wine.size }}</strong> {{ wine.measure }}</p>
                                     {% if wine.varietal %}
-                                    <div class="">
+                                    <div class=""><small><strong>Varietal: </strong></small>
                                         <small class=""><i class="mr-1"></i>{{ wine.varietal.friendly_name }}</small>
                                     </div>
                                     {% endif %}
+                                    {% if wine.country_state %}
+                                    <div class=""><small><strong>Country/State: </strong></small>
+                                        <small class=""><i class="mr-1"></i>{{ wine.country_state.friendly_name }}</small>
+                                    </div>
+                                    {% endif %}
                                     {% if wine.region %}
-                                    <div>
+                                    <div><small><strong>Region: </strong></small>
                                         <small class=""><i class="mr-1"></i>{{ wine.region.friendly_name }}</small>
                                     </div>
                                     {% endif %}
                                     {% if wine.appellation %}
-                                    <div>
+                                    <div><small><strong>Appellation/Sub-region: </strong></small>
                                         <small class=""><i class="mr-1"></i>{{ wine.appellation.friendly_name }}</small>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="row pt-2 mt-2">
+                                <div class="col sw-font-size-75">
+                                    {% if wine.wine_type %}
+                                    <div class=""><small><strong>Wine Type: </strong></small>
+                                        <small class=""><i class="mr-1"></i>{{ wine.wine_type.friendly_name }}</small>
+                                    </div>
+                                    {% endif %}
+                                    {% if wine.abv %}
+                                    <div class=""><small><strong>ABV: </strong></small>
+                                        <small class=""><i class="mr-1"></i>{{ wine.abv }}</small>
                                     </div>
                                     {% endif %}
                                 </div>
@@ -59,10 +82,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="row ps-2 pt-1 pt-md-3">
+                <div class="row ps-2 pt-1 pt-md-3 mt-2">
                     <div class="col">
                         <p class="sw-font-size-75">{{ wine.description }}</p>
                     </div>
+                </div>
+                <div class="row ps-2 mt-1">
+                    <div class="col">
+                        <div class="sw-font-size-75">{{ wine.taste }}</div>
+                        <div class="sw-font-size-75">{{ wine.style.friendly_name }}</div>
+                        <div class="sw-font-size-75">{{ wine.body.friendly_name }}</div>
+                    </div>
+                </div>
+                <div class="row ps-2 pt-1 pt-md-3">
+                    {% if wine.featured %}
+                        <div class="col">
+                            <p class="sw-font-size-75 sw-p-color-03">This wine is featured.</p>
+                        </div>
+                    {% else %}
+                        <div class="col">
+                            <p class="sw-font-size-75 sw-p-color-03">NOT featured.</p>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
             <!-- Action Panel -->

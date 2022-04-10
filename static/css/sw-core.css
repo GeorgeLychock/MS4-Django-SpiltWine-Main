@@ -257,6 +257,7 @@ p {
 .sw-b-color-05 {background-color: rgba(255, 255, 255, 1);} /* important! changes on MD and up, see media queries */
 .sw-b-color-05a {background-color: rgba(255, 255, 255, .65);}
 .sw-b-color-05b {background-image: linear-gradient(rgba(255, 255, 255, .25), rgba(255, 255, 255, 1));}
+.sw-b-color-06 {background-color: rgba(0,0,0, .05);}
 
 /* Font Sizing */
 .sw-font-size-50 {
@@ -273,6 +274,10 @@ p {
 
 .sw-font-size-85 {
   font-size: .85rem;
+}
+
+.sw-font-size-100 {
+  font-size: 1.0rem;
 }
 
 .sw-font-size-150 {
@@ -527,6 +532,9 @@ p {
       width: 90%;
     }
 
+    .sw-font-size-100 {
+      font-size: 1.0rem;
+    }
 
   }
   
