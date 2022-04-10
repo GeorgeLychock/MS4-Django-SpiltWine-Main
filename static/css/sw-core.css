@@ -398,6 +398,10 @@ p {
   padding: 0 5px;
 }
 
+.sw-form-input-num {
+  color: #17a2b8;
+}
+
 /* Content Areas */
 
 .sw-content-container {

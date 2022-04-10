@@ -1,5 +1,8 @@
 from django import forms
+from django.forms import TextInput, NumberInput
 from .widgets import CustomClearableFileInput
+from django.utils.translation import gettext_lazy as _
+
 from .models import Wine, WineBrand, Appellation, Region, WineType, CountryState, Varietal, Style, Body
 
 
@@ -7,11 +10,32 @@ class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Wine
-        # fields = '__all__'
         fields = ('name', 'vintage', 'brand', 'sku', 'featured', 'image', 'img_url', 
                 'has_sizes', 'size', 'measure', 'price', 'description', 
                 'country_state', 'region', 'appellation', 'wine_type', 'varietal', 'body', 'style', 
                 'abv', 'taste',)
+        widgets = {
+            'name': TextInput(attrs={
+                'class': "form-control",
+                'placeholder': 'Name'
+                }),
+            'vintage': NumberInput(attrs={
+                'class': "sw-form-input-num",
+                "size": "4",
+                'placeholder': 'Vintage',
+                'max': 2022,
+                'min': 1990
+                }),
+        }
+        help_texts = {
+            'vintage': _('Enter a year between 1990 and 2022.'),
+        }
+        error_messages = {
+            'vintage': {
+                'max': _('The vintage year is to old.'),
+            },
+        }
+
 
     # custom widget does not work currently
     image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
@@ -49,5 +73,5 @@ class ProductForm(forms.ModelForm):
         self.fields['style'].choices = friendly_names_styles
         self.fields['body'].choices = friendly_names_body
 
-        for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black rounded-0'
+        # for field_name, field in self.fields.items():
+        #     field.widget.attrs['class'] = 'border-black rounded-0'
