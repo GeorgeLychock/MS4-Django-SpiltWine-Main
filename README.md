@@ -27,7 +27,7 @@
 
 <a name="UC"></a>
 # Use Case
-Spilt Wine is an ecommerce website that sells wines, wine accessories, and culinary items. The user has access to a shopping cart which keeps track of their cart items and displays their current purchase costs as they view products and navigate the site. The user can purchase the items with a credit card and will receive an email verification of their purchase. The site will display a detailed view of each product where the user can add the item to their cart, or if logged in and if the item is a wine, can add the wine item to their virtual wine cellar (Cellar). The Cellar is a custom application that keeps the user's information on the wines they add to their Cellar which can be viewed by logging in when the user returns to the site. The Cellar gives the user the ability to update the quantity of the item or remove the item from their Cellar. The Cellar displays useful statistics on the items they have added, including: Total value,total number of items, # of varietals, a list of varietals, a progress bar showing the number of varietals (out of a total of 180) contained in their Cellar, etc. All content and functionality are available on any size device.
+Spilt Wine is an ecommerce website that sells wines, wine accessories, and culinary items. The user has access to a shopping cart which keeps track of their cart items and displays their current purchase costs as they view products and navigate the site. The user can purchase the items with a credit card and will receive an email verification of their purchase. The site will display a detailed view of each product where the user can add the item to their cart, or if logged in and if the item is a wine, can add the wine item to their virtual wine cellar (Cellar). The Cellar is a custom application that keeps the user's information on the wines they add to their Cellar which can be viewed by logging in when the user returns to the site. The Cellar gives the user the ability to update the quantity of the item or remove the item from their Cellar. The Cellar displays useful statistics on the items they have added, including: Total value ,total number of items, # of varietals, a list of varietals, a progress bar showing the number of varietals (out of a total of 180) contained in their Cellar, etc. All content and functionality are available on any size device.
 
 > ### Important Notes
 >
@@ -62,11 +62,12 @@ All Acceptance Criteria Results can be found in [TESTRM.md](TESTRM.md)
 
     -   #### **Story V-2** As a Visitor/Shopper I want to be able to view individual product details so that I can determine a product description, image, and product info.
         -  #### *Acceptance Criteria*
-            1.  Product details view should be accessible from all product listings, featured sidebars, and product summaries (eg in the Cart or Cellar summaries)
+            1.  Product details view should be accessible from all product listings, featured sidebars, product summaries (eg in the Cart or Cellar summaries), and search results summaries
             2.  The detail view should present all of the following information: product name, varietal, product image, price, a full description, origin of wine, 
             3.  Product card i
             4.  Product imag
 
+-   ### Administrator
     -   #### **Story A-1** As an Administrator I want to be able to add, update, and delete wine products in the wine product database so that I can provide access to their information throughout the website.
         -  #### *Acceptance Criteria*
             1.  A link to a wine product administrative view should be presented on the wine product details view for all users with editing rights and admin privileges.
