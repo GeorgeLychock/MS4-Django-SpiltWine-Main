@@ -35,7 +35,8 @@ Spilt Wine is an ecommerce website that sells wines, wine accessories, and culin
 >-  The cart, profile, and checkout apps' code is almost entirely from Code Institute's module "Full Stack Frameworks with Django". The largest change I made to these apps was to delete much of the product sizes code since my product array does not require it. I also made updates such as styling, changing the HTML amd CSS to Bootstrap 5.1 framework, and removing the reverse() methods from views rendering.
 >-  Because I'm working on a local dev machine, and not GitPod, I could not finish the webhooks developement and testing until I had the project deployed. (Although I figured out afterwards that I had to install and use the Stripe CLI to perform webhook testing on my local env anyway)
 >-  The custom app Cellar is the primary focus on my project although the base website is a fully functioning ecommerce site based on the curricullum mini project.
->-  
+>-  All user directed messages are displayed in a custom format, as opposed to Toasts, to have more control on position and to understand messages in Django and Python
+>-  Wine Accessories and Culinary products currently exist as placeholders, no product editing or sorting can be performed on products in those categories at present. All CRUD actions can be performed on wine products.
 
 
 <a name="US"></a>
@@ -45,23 +46,45 @@ Spilt Wine is an ecommerce website that sells wines, wine accessories, and culin
 >-  I used the User Story list shown in the CI curriculum as a template:
 >-  User Story List  - [View PDF](_documentation/product_specs/MS4_User_Stories_v1.pdf)
 >-  User Story List  - [View HTML](_documentation/product_specs/MS4_User_Stories_v1.html)
+>-  Full User Story detail is provided below but only for truly custom apps and any app I customized heavily.
+>-  The lists above contain all user stories that were used to test the deployed project.
+>-  I decided to track most of the user stories as a spreasheet given the number of stories and ease of import into a work tracking app (such as Jira) in the future if I so chose.
 
 All Acceptance Criteria Results can be found in [TESTRM.md](TESTRM.md)
 
 -   ### Visitor/Shopper
-    -   #### **Story 1** As a Visitor/Shopper I want to be able to view a list of products so that I can select a product to purchase.
+    -   #### **Story V-1** As a Visitor/Shopper I want to be able to view a list of products so that I can select a product to purchase.
         -  #### *Acceptance Criteria*
             1.  A list of product sub-categories is presented
             2.  Sub-category links present user with sub-category product listings
-            3.  Product listings should display as product cards displaying: product name, varietal, product image, price, description, origin of wine.
+            3.  Product listings and featured sidebars should display as product cards displaying: product name, varietal (for wines), product image, price, a truncated description, origin of wine (for wines)
             4.  Product image and name should link to product detail page (described below)
 
-    -   #### **Story 2** As a Visitor/Shopper I want to be able to view individual product details so that I can so I can determine a product description, image, and product info.
+    -   #### **Story V-2** As a Visitor/Shopper I want to be able to view individual product details so that I can determine a product description, image, and product info.
         -  #### *Acceptance Criteria*
-            1.  A list of product sub-categories is presented
-            2.  Sub-category links present user with sub-category product listings
-            3.  Product listings should display as product cards displaying: product name, varietal, product image, price, description, origin of wine.
-            4.  Product image and name should link to product detail page (described below)
+            1.  Product details view should be accessible from all product listings, featured sidebars, and product summaries (eg in the Cart or Cellar summaries)
+            2.  The detail view should present all of the following information: product name, varietal, product image, price, a full description, origin of wine, 
+            3.  Product card i
+            4.  Product imag
+
+    -   #### **Story A-1** As an Administrator I want to be able to add, update, and delete wine products in the wine product database so that I can provide access to their information throughout the website.
+        -  #### *Acceptance Criteria*
+            1.  A link to a wine product administrative view should be presented on the wine product details view for all users with editing rights and admin privileges.
+            2.  Once at the product admin view, a message indicating what product is being edited should be present
+            3.  The wine product admin view should contain all the following fields (read only fields are indicated, otherwise all fields can be edited): product name, vintage, brand, SKU, featured option, product image, product image url, has sizes option, size, measure, price, a full description, country or state origin, region origin, appellation origin, wine type, varietal, body, style, ABV, taste field
+            4.  Product information is updated correctly when I submit changes
+            5.  User is returned to the product detail page when changes are submitted
+            6.  Message is displayed indicating save was completed successfully
+
+    -   #### **Story Template** As an Administrator I want to be able to add, update, and delete products in the product database so that I am able to access their information through the website.
+        -  #### *Acceptance Criteria*
+            1.  How do I get there?
+            2.  What messaging does the user get when they arrive?
+            3.  What's it do when I get there?
+            4.  What messaging does the user get when they are there?
+            5.  How do I get out of there?
+            6.  What messaging does the user get when they leave?
+            
 
 
 <a name="REQS"></a>

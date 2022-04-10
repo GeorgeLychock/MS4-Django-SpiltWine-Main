@@ -231,18 +231,25 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate al
 
 <a name="TESTSTORIES"></a>
 ## User Story Testing
-Testing User Stories from User Experience (UX) Section
 
--   #### **Story 1** As a Site Visitor, I want to be able to search recipes by using a quick search method.
-    -  #### *Acceptance Criteria*
-        1.  A search form is presented without leaving the home page
-        2.  A minimal number of search criteria is presented to choose from
-        3.  When the form is submitted, user is redirected to the advanced search page and presented the results list/table
-        -   Results
-            -   PASS: All criteria met
-                -   Screeshots:
+-   ### Visitor/Shopper
+    -   #### **Story V-1** As a Visitor/Shopper I want to be able to view a list of products so that I can select a product to purchase.
+        -  #### *Acceptance Criteria*
+            1.  A list of product sub-categories is presented
+                -   PASS: All criteria met.
+                    -   The View Our Products link on the home page presents products listed by product category:
                     -   <img src="_documentation/testing/user-stories/US-01.png" />
-                    -   <img src="_documentation/testing/user-stories/US-02.png" />
+            2.  Sub-category links present user with sub-category product listings
+                -   BUG: Only the Wine category links work. Please see opening notes on README.md
+                    -   The Wine links present user with products sorted by the wine category:
+                    -   <img src="_documentation/testing/user-stories/US-01a.png" />
+            3.  Product listings and featured sidebars should display as product cards displaying: product name, varietal (for wines), product image, price, a truncated description, origin of wine (for wines)
+                -   PASS: All criteria met.
+                    -   Products are presented with correct information:
+                    -   <img src="_documentation/testing/user-stories/US-01b.png" />
+            4.  Product image and name should link to product detail page (described below)
+                -   PASS: All criteria met.
+                    -   The product titles and images link to a product detail page.
 
 -   #### **Story 2** As a Site Visitor, I want to see results of my search on a new page that offers sortable headers.
     -  #### *Acceptance Criteria*
