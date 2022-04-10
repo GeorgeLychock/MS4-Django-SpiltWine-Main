@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Cellar Admin</h2>
+            <h2 class="logo-font">Update Your Cellar</h2>
         </div>
     </div>
     <div class="row">
@@ -15,12 +15,12 @@
                 <div class="row g-0">
                     <div class="col col-md-4">
                         {% if wine.image %}
-                        <a href="{{ MEDIA_URL }}{ wine.image }}" target="_blank">
+                        <a href="{% url 'wine_detail' wine.pk %}" target="_blank">
                             <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}{{ wine.image }}"
                                 alt="{{ wine.name }}">
                         </a>
                         {% else %}
-                        <a href="">
+                        <a href="{% url 'wine_detail' wine.pk %}">
                             <img class="card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}noimage.png"
                                 alt="{{ wine.name }}">
                         </a>
@@ -28,7 +28,7 @@
                     </div>
                 <div class="col col-md-8">
                     <div class="card-body pb-0">
-                        <p class="mb-0">{{ wine.name }}</p>
+                        <p class="mb-0"><a class="sw-link-text-01 sw-font-size-100" href="{% url 'wine_detail' wine.pk %}">{{ wine.name }}</a></p>
                     </div>
                     <div class="card-footer pt-0 border-0 text-left sw-p-color-blk">
                         <div class="row">
