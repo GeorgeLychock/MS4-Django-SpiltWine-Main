@@ -90,8 +90,6 @@ button:focus {
     align-items: center;
     display: inline-flex;
     justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
 }
 
 .btn-black {
@@ -494,11 +492,6 @@ p {
 /* Wine Detail */
 .sw-detail-title {
   font-size: 1.25rem;
-}
-
-.sw-action-panel {
-  margin: 6px 0 0 0;
-  padding: 2px 0 0 0;
 }
 
 /* Varietals */
