@@ -506,6 +506,13 @@ p {
   font-size: .8rem;
 }
 
+/* Footers */
+.sw-cr {
+  text-align: center;
+  font-size: .65rem;
+  margin: 20px 0 0 0;
+}
+
 /* @media */
 
   @media (min-width: 768px) {
