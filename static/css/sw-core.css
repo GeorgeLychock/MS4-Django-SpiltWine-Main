@@ -310,6 +310,11 @@ p {
   text-decoration: none;
 }
 
+.sw-link-text-03 {
+  text-decoration: none;
+  font-size: .75rem;
+}
+
 /* Spacers */
 .sw-spacer-100p {
   width: 100%;
