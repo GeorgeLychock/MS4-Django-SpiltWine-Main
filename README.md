@@ -55,22 +55,44 @@ All Acceptance Criteria Results can be found in [TESTRM.md](TESTRM.md)
 -   ### Visitor/Shopper
     -   #### **Story V-1** As a Visitor/Shopper I want to be able to view a list of products so that I can select a product to purchase.
         -  #### *Acceptance Criteria*
-            1.  A list of product sub-categories is presented
-            2.  Sub-category links present user with sub-category product listings
+            1.  A list of product categories is presented
+            2.  Category links present user with category product listings
             3.  Product listings and featured sidebars should display as product cards displaying: product name, varietal (for wines), product image, price, a truncated description, origin of wine (for wines)
             4.  Product image and name should link to product detail page (described below)
 
     -   #### **Story V-2** As a Visitor/Shopper I want to be able to view individual product details so that I can determine a product description, image, and product info.
         -  #### *Acceptance Criteria*
             1.  Product details view should be accessible from all product listings, featured sidebars, product summaries (eg in the Cart or Cellar summaries), and search results summaries
-            2.  The detail view should present all of the following information: product name, varietal, product image, price, a full description, origin of wine, 
-            3.  Product card i
-            4.  Product imag
+            2.  The wine detail view should present all of the following information: product name, varietal, product image, price, a full description, origin of wine, size, units for size, wine type, body, ABV, style
+            3.  Present an Add to Cart option, for all users
+            4.  Present an Add to Cellar option, for authenticated users
+            5.  Present an Edit and Delete option, for admin authenticated users
+
+    -   #### **Story V-3** As a Visitor/Shopper I want to be able to view any featured items so that I can view product(s) the company feels are of particular interest of me.
+        -  #### *Acceptance Criteria*
+            1.  A Featured Items panel/section is presented on any product category view
+            2.  Featured items should present a product's name, image, varietal (for wine products), price, and origin (for wine products)
+            3.  The featured product image and title should be linked to the product's detail page
+            4.  A way to designate if a product is Featured should be present on the product Add view and the Update view
+
+    -   #### **Story S-1** As a Visitor/Shopper I want to be able to sort a list of products by price, name, country/state, or varietal so that I can view products more similar to what I'm looking for.
+        -  #### *Acceptance Criteria*
+            1.  A dropdown is presented in the main menu for the user to sort products by name (all products in alpha order), price, country/state, and varietal (for wine products)
+            2.  A dropdown is presented in the product category listings for the user to sort products by name (all products in alpha order), price, country/state, and varietal (for wine products)
 
 -   ### Administrator
     -   #### **Story A-1** As an Administrator I want to be able to add, update, and delete wine products in the wine product database so that I can provide access to their information throughout the website.
         -  #### *Acceptance Criteria*
-            1.  A link to a wine product administrative view should be presented on the wine product details view for all users with editing rights and admin privileges.
+            1.  A link to a wine product administrative view should be presented on the wine product details view for all users with editing rights or admin privileges.
+            2.  Once at the product admin view, a message indicating what product is being edited should be present
+            3.  The wine product admin view should contain all the following fields (read only fields are indicated, otherwise all fields can be edited): product name, vintage, brand, SKU, featured option, product image, product image url, has sizes option, size, measure, price, a full description, country or state origin, region origin, appellation origin, wine type, varietal, body, style, ABV, taste field
+            4.  Product information is updated correctly when I submit changes
+            5.  User is returned to the product detail page when changes are submitted
+            6.  Message is displayed indicating save was completed successfully
+
+    -   #### **Story A-2** As an Administrator I want to be able to add, update, and delete wine products in the wine product database so that I can provide access to their information throughout the website.
+        -  #### *Acceptance Criteria*
+            1.  A link to a wine product administrative view should be presented on the wine product details view for all users with editing rights or admin privileges.
             2.  Once at the product admin view, a message indicating what product is being edited should be present
             3.  The wine product admin view should contain all the following fields (read only fields are indicated, otherwise all fields can be edited): product name, vintage, brand, SKU, featured option, product image, product image url, has sizes option, size, measure, price, a full description, country or state origin, region origin, appellation origin, wine type, varietal, body, style, ABV, taste field
             4.  Product information is updated correctly when I submit changes

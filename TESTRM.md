@@ -165,6 +165,7 @@ Unless otherwise noted, all the following were tested and passed:
 ## Bugs / Fixes
 ### Known Bugs
 #### OPEN 
+-   There is no confirmation request on any delete/remove actions.
 -   Size is a decimal for 750, 187, 375 etc
 -   If the user does not enter search terms, the main search function returns user to the home page no matter where the user is on the site.
 -   In the cart view, the subtotal does not compute correctly
@@ -172,6 +173,7 @@ Unless otherwise noted, all the following were tested and passed:
 -   The custom clearable file input function does not work; 
 -   Do not get the email context in the CLI when order is successfully completed.
         CI video shows POST to checkout/wh, dev shows just checkout/
+-   webp file format does not work on browsers on iPhone6 and lower running iOS 12; all product images are currently in webp format, alt format would need to be created
 
 #### FIXED
 -   Redirect errors with use of reverse and args:
@@ -181,9 +183,7 @@ Unless otherwise noted, all the following were tested and passed:
     -   replaced with:
     
             return redirect('checkout_success', order_number=order.order_number)
--   Recipe Links on My Ratings:
-    -   Links to recipes on My Ratings page do not work
-        -   FIX: had to add "../" to the link to the link path
+
 
 
 <a name="TESTVALID"></a>
@@ -251,3 +251,23 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate al
                 -   PASS: All criteria met.
                     -   The product titles and images link to a product detail page.
 
+    -   #### **Story V-2** As a Visitor/Shopper I want to be able to view individual product details so that I can determine a product description, image, and product info.
+        -  #### *Acceptance Criteria*
+            1.  Product details view should be accessible from all product listings, featured sidebars, product summaries (eg in the Cart or Cellar summaries), and search results summaries
+                -   PASS: All criteria met.
+                    -   See Functionality Testing.
+            2.  The wine detail view should present all of the following information: product name, varietal, product image, price, a full description, origin of wine, size, units for size, wine type, body, ABV, style
+                -   PASS: All criteria met.
+                    -   Products are presented with correct information:
+                    -   <img src="_documentation/testing/user-stories/US-V-2-01.png" />
+            3.  Present an Add to Cart option, for all users
+                -   PASS: All criteria met.
+                    -   An Add to Cart option is presented to all users.
+            4.  Present an Add to Cellar option, for authenticated users. If user is not authenticated a login option is displayed.
+                -   PASS: All criteria met.
+                    -   Add to Cellar is only presented to authenticated users; Login option is displayed otherwise.
+                    -   <img src="_documentation/testing/user-stories/US-V-2-02.png" />
+            5.  Present an Edit and Delete option, for admin authenticated users
+                -   PASS: All criteria met.
+                    -   Edit/Delete options are presented only to admin (super) users; Login option is displayed otherwise.
+                    -   <img src="_documentation/testing/user-stories/US-V-2-03.png" />
