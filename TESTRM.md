@@ -238,15 +238,15 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate al
             1.  A list of product sub-categories is presented
                 -   PASS: All criteria met.
                     -   The View Our Products link on the home page presents products listed by product category:
-                    -   <img src="_documentation/testing/user-stories/US-01.png" />
+                    -   <img src="_documentation/testing/user-stories/US-V-1-01.png" />
             2.  Sub-category links present user with sub-category product listings
                 -   BUG: Only the Wine category links work. Please see opening notes on README.md
                     -   The Wine links present user with products sorted by the wine category:
-                    -   <img src="_documentation/testing/user-stories/US-01a.png" />
+                    -   <img src="_documentation/testing/user-stories/US-V-1-02.png" />
             3.  Product listings and featured sidebars should display as product cards displaying: product name, varietal (for wines), product image, price, a truncated description, origin of wine (for wines)
                 -   PASS: All criteria met.
                     -   Products are presented with correct information:
-                    -   <img src="_documentation/testing/user-stories/US-01b.png" />
+                    -   <img src="_documentation/testing/user-stories/US-V-1-03.png" />
             4.  Product image and name should link to product detail page (described below)
                 -   PASS: All criteria met.
                     -   The product titles and images link to a product detail page.
@@ -266,8 +266,11 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate al
             4.  Present an Add to Cellar option, for authenticated users. If user is not authenticated a login option is displayed.
                 -   PASS: All criteria met.
                     -   Add to Cellar is only presented to authenticated users; Login option is displayed otherwise.
+                    Unauthenticated User:
                     -   <img src="_documentation/testing/user-stories/US-V-2-02.png" />
+                    Authenticated User:
+                    -   <img src="_documentation/testing/user-stories/US-V-2-03.png" />
             5.  Present an Edit and Delete option, for admin authenticated users
                 -   PASS: All criteria met.
                     -   Edit/Delete options are presented only to admin (super) users; Login option is displayed otherwise.
-                    -   <img src="_documentation/testing/user-stories/US-V-2-03.png" />
+                    -   <img src="_documentation/testing/user-stories/US-V-2-04.png" />
