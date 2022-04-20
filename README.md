@@ -45,7 +45,6 @@ Spilt Wine is an ecommerce website that sells wines, wine accessories, and culin
 
 >-  I used the User Story list shown in the CI curriculum as a template:
 >-  User Story List  - [View PDF](_documentation/product_specs/MS4_User_Stories_v1.pdf)
->-  User Story List  - [View HTML](_documentation/product_specs/MS4_User_Stories_v1.html)
 >-  Full User Story detail is provided below but only for truly custom apps and any app I customized heavily.
 >-  The lists above contain all user stories that were used to test the deployed project.
 >-  I decided to track most of the user stories as a spreasheet given the number of stories and ease of import into a work tracking app (such as Jira) in the future if I so chose.
@@ -63,7 +62,7 @@ All Acceptance Criteria Results can be found in [TESTRM.md](TESTRM.md)
     -   #### **Story V-2** As a Visitor/Shopper I want to be able to view individual product details so that I can determine a product description, image, and product info.
         -  #### *Acceptance Criteria*
             1.  Product details view should be accessible from all product listings, featured sidebars, product summaries (eg in the Cart or Cellar summaries), and search results summaries
-            2.  The wine detail view should present all of the following information: product name, varietal, product image, price, a full description, origin of wine, size, units for size, wine type, body, ABV, style
+            2.  The wine detail view should present all of the following information: vintage, product name, brand, varietal, product image, price, a full description, origin of wine, size, units for size, wine type, body, ABV, style
             3.  Present an Add to Cart option, for all users
             4.  Present an Add to Cellar option, for authenticated users
             5.  Present an Edit and Delete option, for admin authenticated users
@@ -80,24 +79,58 @@ All Acceptance Criteria Results can be found in [TESTRM.md](TESTRM.md)
             1.  A dropdown is presented in the main menu for the user to sort products by name (all products in alpha order), price, country/state, and varietal (for wine products)
             2.  A dropdown is presented in the product category listings for the user to sort products by name (all products in alpha order), price, country/state, and varietal (for wine products)
 
--   ### Administrator
-    -   #### **Story A-1** As an Administrator I want to be able to add, update, and delete wine products in the wine product database so that I can provide access to their information throughout the website.
+-   ### Authenticated User
+    -   #### **Story C-1** As a/an Logged In User I want to be able to add, update, or delete wines from a personal library so that I can see a listing of all the wine I have in my wine collection.
         -  #### *Acceptance Criteria*
-            1.  A link to a wine product administrative view should be presented on the wine product details view for all users with editing rights or admin privileges.
+            1.  An Add to Cellar option is presented to authenticated users on the wine details view
+            2.  The option adds the wine to the user's cellar, confirms an item has been added, then redirects to the user's cellar
+            3.  A Cellar icon is presented to all users in a menu panel on all main views which directs the user to their cellar view
+            4.  Clicking Cellar icon: Authenticated users are directed to their personal cellar view
+            5.  Clicking Cellar icon: Unauthenticated users are directed to the login page
+            6.  The Cellar view displays a message if the cellar is empty
+            7.  A list of saved cellar items is presented if items have been added to the user's cellar. The list displays the product image, name, vintage, SKU, price, quantity on-hand in cellar, and subtotal value of each cellar item
+            8.  The quantity on-hand field displays the current quantity of the item in the user's cellar and is editable; quantity can be updated
+            9.  Update is confirmed
+            10.  The item can be removed from the Cellar
+
+    -   #### **Story C-2** As a/an Logged In User I want to be able to view metrics of my wine library so that I can understand the make up of my wine collection.
+        -  #### *Acceptance Criteria*
+            1.  A cellar statistics panel is displayed to the user displaying the following information based on the wines in the user's cellar:
+            >- Cellar Value
+            >- Number of items in the cellar
+            >- Number of varietals in the cellar
+            >- A list of the different varietals represented in the cellar
+
+            2.  What messaging does the user get when they arrive?
+            3.  What's it do when I get there?
+            4.  What messaging does the user get when they are there?
+            5.  How do I get out of there?
+            6.  What messaging does the user get when they leave?
+
+-   ### Administrator
+    -   #### **Story A-1** As an Administrator I want to be able to add and delete wine products in the wine product database so that I can provide access to their information throughout the website.
+        -  #### *Acceptance Criteria*
+            1.  A link to a wine product management option should be presented on the user menu dropdown for all users with editing rights or admin privileges.
+            2.  The option should present the user with a method to add a new product
+            3.  The method should present a form that allows the user to input all required and optional data for the product
+                -   Included fields for wine products (*required fields): *product name, vintage, brand, SKU, featured option, product image, product image url, has sizes option, *size, measure, price, *a full description, *country or state origin, region origin, appellation origin, *wine type, *varietal, *body, *style, ABV, taste field
+            4.  Upon clicking, an Add Product submit button should inform the user the product data has been saved and redirect the user to the new product's detail view
+            5.  Product information is added correctly
+            6.  A link to delete a wine product should be presented on the wine product details view for all users with editing rights or admin privileges
+            7.  A confirmation method should be presented to the admin to confirm product deletion
+            8.  User is returned to the product category view when user confirms deletion
+            9.  Message is displayed indicating the product was deleted successfully
+
+    -   #### **Story A-2** As an Administrator I want to be able to update wine products in the wine product database so that I can provide access to their information throughout the website.
+        -  #### *Acceptance Criteria*
+            1.  A link to a wine product edit view should be presented on the wine product details view for all users with editing rights or admin privileges.
             2.  Once at the product admin view, a message indicating what product is being edited should be present
             3.  The wine product admin view should contain all the following fields (read only fields are indicated, otherwise all fields can be edited): product name, vintage, brand, SKU, featured option, product image, product image url, has sizes option, size, measure, price, a full description, country or state origin, region origin, appellation origin, wine type, varietal, body, style, ABV, taste field
             4.  Product information is updated correctly when I submit changes
             5.  User is returned to the product detail page when changes are submitted
             6.  Message is displayed indicating save was completed successfully
 
-    -   #### **Story A-2** As an Administrator I want to be able to add, update, and delete wine products in the wine product database so that I can provide access to their information throughout the website.
-        -  #### *Acceptance Criteria*
-            1.  A link to a wine product administrative view should be presented on the wine product details view for all users with editing rights or admin privileges.
-            2.  Once at the product admin view, a message indicating what product is being edited should be present
-            3.  The wine product admin view should contain all the following fields (read only fields are indicated, otherwise all fields can be edited): product name, vintage, brand, SKU, featured option, product image, product image url, has sizes option, size, measure, price, a full description, country or state origin, region origin, appellation origin, wine type, varietal, body, style, ABV, taste field
-            4.  Product information is updated correctly when I submit changes
-            5.  User is returned to the product detail page when changes are submitted
-            6.  Message is displayed indicating save was completed successfully
+
 
     -   #### **Story Template** As an Administrator I want to be able to add, update, and delete products in the product database so that I am able to access their information through the website.
         -  #### *Acceptance Criteria*
