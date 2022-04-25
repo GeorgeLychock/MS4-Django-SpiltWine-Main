@@ -38,7 +38,7 @@ def add_to_cellar(request, item_id):
             print(quantity)
 
             messages.error(request, (
-                "Item Added to your cellar!")
+                f'{wine.name} successfully added to your cellar!')
             )
 
             new_cellar_item = CellarItem(
@@ -76,7 +76,7 @@ def update_cellar(request, item_id):
             messages.error(request, 'Failed to update cellar item. Please ensure the form is valid.')
     else:
         form = ItemForm(instance=cellar_item)
-        messages.info(request, f'You are editing {wine.name}')
+        messages.info(request, f'This item is already in your cellar. Edit {wine.name}')
 
 
     template = 'cellar/update_cellar.html'
