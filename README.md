@@ -72,7 +72,6 @@ All Acceptance Criteria Results can be found in [TESTRM.md](TESTRM.md)
             1.  A Featured Items panel/section is presented on any product category view
             2.  Featured items should present a product's name, image, varietal (for wine products), price, and origin (for wine products)
             3.  The featured product image and title should be linked to the product's detail page
-            4.  A way to designate if a product is Featured should be present on the product Add view and the Update view
 
     -   #### **Story S-1** As a Visitor/Shopper I want to be able to sort a list of products by price, name, country/state, or varietal so that I can view products more similar to what I'm looking for.
         -  #### *Acceptance Criteria*
@@ -82,8 +81,8 @@ All Acceptance Criteria Results can be found in [TESTRM.md](TESTRM.md)
 -   ### Authenticated User
     -   #### **Story C-1** As a/an Logged In User I want to be able to add, update, or delete wines from a personal library so that I can see a listing of all the wine I have in my wine collection.
         -  #### *Acceptance Criteria*
-            1.  An Add to Cellar option is presented to authenticated users on the wine details view
-            2.  The option adds the wine to the user's cellar, confirms an item has been added, then redirects to the user's cellar
+            1.  An Add to Cellar option is presented to authenticated users on the wine details view and redirects user to the add to cellar view, or, if the item is already in the cellar redirects to the update cellar view
+            2.  The option adds/updates the wine to the user's cellar, confirms an item has been added/updated, then redirects to the user's cellar
             3.  A Cellar icon is presented to all users in a menu panel on all main views which directs the user to their cellar view
             4.  Clicking Cellar icon: Authenticated users are directed to their personal cellar view
             5.  Clicking Cellar icon: Unauthenticated users are directed to the login page
@@ -100,12 +99,6 @@ All Acceptance Criteria Results can be found in [TESTRM.md](TESTRM.md)
             >- Number of items in the cellar
             >- Number of varietals in the cellar
             >- A list of the different varietals represented in the cellar
-
-            2.  What messaging does the user get when they arrive?
-            3.  What's it do when I get there?
-            4.  What messaging does the user get when they are there?
-            5.  How do I get out of there?
-            6.  What messaging does the user get when they leave?
 
 -   ### Administrator
     -   #### **Story A-1** As an Administrator I want to be able to add and delete wine products in the wine product database so that I can provide access to their information throughout the website.

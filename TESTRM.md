@@ -174,6 +174,7 @@ Unless otherwise noted, all the following were tested and passed:
 -   Do not get the email context in the CLI when order is successfully completed.
         CI video shows POST to checkout/wh, dev shows just checkout/
 -   webp file format does not work on browsers on iPhone6 and lower running iOS 12; all product images are currently in webp format, alt format would need to be created
+-   Varietal sorting in the sorting dropdowns on category views is working in DEV but not on deployed app in Heroku
 
 #### FIXED
 -   Redirect errors with use of reverse and args:
@@ -248,21 +249,18 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate al
                     -   Products are presented with correct information:
                     -   <img src="_documentation/testing/user-stories/US-V-1-03.png" width="250"/>
             4.  Product image and name should link to product detail page (described below)
-                -   PASS: All criteria met.
-                    -   The product titles and images link to a product detail page.
+                -   PASS: All criteria met. The product titles and images link to a product detail page.
 
     -   #### **Story V-2** As a Visitor/Shopper I want to be able to view individual product details so that I can determine a product description, image, and product info.
         -  #### *Acceptance Criteria*
             1.  Product details view should be accessible from all product listings, featured sidebars, product summaries (eg in the Cart or Cellar summaries), and search results summaries
-                -   PASS: All criteria met.
-                    -   See Functionality Testing.
+                -   PASS: All criteria met. See Functionality Testing.
             2.  The wine detail view should present all of the following information: product name, varietal, product image, price, a full description, origin of wine, size, units for size, wine type, body, ABV, style
                 -   PASS: All criteria met.
                     -   Products are presented with correct information:
                     -   <img src="_documentation/testing/user-stories/US-V-2-01.png"/>
             3.  Present an Add to Cart option, for all users
-                -   PASS: All criteria met.
-                    -   An Add to Cart option is presented to all users.
+                -   PASS: All criteria met. An Add to Cart option is presented to all users.
             4.  Present an Add to Cellar option, for authenticated users. If user is not authenticated a login option is displayed.
                 -   PASS: All criteria met.
                     -   Add to Cellar is only presented to authenticated users; Login option is displayed otherwise.
@@ -274,3 +272,91 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate al
                 -   PASS: All criteria met.
                     -   Edit/Delete options are presented only to admin (super) users; Login option is displayed otherwise.
                     -   <img src="_documentation/testing/user-stories/US-V-2-04.png" />
+
+    -   #### **Story V-3** As a Visitor/Shopper I want to be able to view any featured items so that I can view product(s) the company feels are of particular interest of me.
+        -  #### *Acceptance Criteria*
+            1.  A Featured Items panel/section is presented on any product category view
+                -   PASS: All criteria met. A featured items minor column is presented on the All Wines and subcategory views.
+            2.  Featured items should present a product's name, image, varietal (for wine products), price, and origin (for wine products)
+                -   PASS: All criteria met.
+                    -   All information is present:
+                    -   <img src="_documentation/testing/user-stories/US-V-3-01.png"/>
+            3.  The featured product image and title should be linked to the product's detail page
+                -   PASS: All criteria met. Both links redirect correctly.
+
+    -   #### **Story S-1** As a Visitor/Shopper I want to be able to sort a list of products by price, name, country/state, or varietal so that I can view products more similar to what I'm looking for.
+        -  #### *Acceptance Criteria*
+            1.  A dropdown is presented in the main menu for the user to sort products by name (all products in alpha order), price, country/state, and varietal (for wine products)
+                -   PASS: All criteria met.
+                    -   Sort options are present in the main nav dropdowns:
+                    -   <img src="_documentation/testing/user-stories/US-S-1-01.png"/>
+            2.  A dropdown is presented in the product category listings for the user to sort products by name (all products in alpha order), price, country/state, and varietal (for wine products)
+                -   FAIL/BUG: Sort options are present in the sort dropdown; all sort options work correctly except for varietal. Varietal sorting is working in DEV but not on deployed app in Heroku.
+                    -   Sort options are present in the sort dropdown:
+                    -   <img src="_documentation/testing/user-stories/US-S-1-02.png"/>
+
+-   ### Authenticated User
+    -   #### **Story C-1** As a/an Logged In User I want to be able to add, update, or delete wines from a personal library so that I can see a listing of all the wine I have in my wine collection.
+        -  #### *Acceptance Criteria*
+            1.  An Add to Cellar option is presented to authenticated users on the wine details view and redirects user to the add to cellar view, or, if the item is already in the cellar redirects to the update cellar view
+                -   PASS: All criteria met.
+            2.  The option adds/updates the wine to the user's cellar, confirms an item has been added/updated, then redirects to the user's cellar
+                -   PASS: All criteria met.
+                    -   Items are correctly add/updated in the cellar, messages indicate whether the user added or updated the cellar item:
+                    -   <img src="_documentation/testing/user-stories/US-C-1-01.png"/>
+            3.  A Cellar icon is presented to all users in a menu panel on all main views which directs the user to their cellar view
+                -   PASS: All criteria met.
+            4.  Clicking Cellar icon: Authenticated users are directed to their personal cellar view
+                -   PASS: All criteria met.
+            5.  Clicking Cellar icon: Unauthenticated users are directed to the login page
+                -   PASS: All criteria met.
+            6.  The Cellar view displays a message if the cellar is empty
+                -   PASS: All criteria met.
+                    -   Empty cellar message:
+                    -   <img src="_documentation/testing/user-stories/US-C-1-02.png"/>
+            7.  A list of saved cellar items is presented if items have been added to the user's cellar. The list displays the product image, name, vintage, SKU, price, quantity on-hand in cellar, and subtotal value of each cellar item
+                -   PASS: All criteria met.
+                    -   Cellar view with cellar items listed and update and remove item links are present:
+                    -   <img src="_documentation/testing/user-stories/US-C-1-02.png"/>
+            8.  The quantity on-hand field displays the current quantity of the item in the user's cellar and is editable; quantity can be updated
+                -   PASS: All criteria met.
+            9.  Update is confirmed
+                -   PASS: All criteria met.
+            10. The item can be removed from the Cellar
+                -   PASS: All criteria met.
+
+    -   #### **Story C-2** As a/an Logged In User I want to be able to view metrics of my wine library so that I can understand the make up of my wine collection.
+        -  #### *Acceptance Criteria*
+            1.  A cellar statistics panel is displayed to the user displaying the following information based on the wines in the user's cellar:
+                >- Cellar Value
+                >- Number of items in the cellar
+                >- Number of varietals in the cellar
+                >- A list of the different varietals represented in the cellar
+                -   PASS: All criteria met.
+                    -   The Cellar Statics panel is presented to the user with all infomation contained:
+                    -   <img src="_documentation/testing/user-stories/US-C-2-01.png"/>
+
+-   ### Administrator
+    -   #### **Story A-1** As an Administrator I want to be able to add and delete wine products in the wine product database so that I can provide access to their information throughout the website.
+        -  #### *Acceptance Criteria*
+            1.  A link to a wine product management option should be presented on the user menu dropdown for all users with editing rights or admin privileges.
+                -   PASS: All criteria met. The product management link is only present for admin
+            2.  The option should present the user with a method to add a new product
+                -   PASS: All criteria met. A product Add view is presented
+            3.  The method should present a form that allows the user to input all required and optional data for the product
+                -   Included fields for wine products (*required fields): *product name, vintage, brand, SKU, featured option, product image, product image url, has sizes option, *size, measure, price, *a full description, *country or state origin, region origin, appellation origin, *wine type, *varietal, *body, *style, ABV, taste field
+                -   PASS: All criteria met.
+                    -   The Product Add presents all of the correct fields:
+                    -   <img src="_documentation/testing/user-stories/US-A-1-01.png"/>
+            4.  Upon clicking, an Add Product submit button should inform the user the product data has been saved and redirect the user to the new product's detail view
+                -   PASS: All criteria met. User is redirected correctly with correct message
+            5.  Product information is added correctly
+                -   PASS: All criteria met. New product is added to the database correctly and displays all information submitted on the Add Product form
+            6.  A link to delete a wine product should be presented on the wine product details view for all users with editing rights or admin privileges
+                -   PASS: All criteria met. A product Delete link is presented only to admin on the product details view
+            7.  A confirmation method should be presented to the admin to confirm product deletion
+                -   FAIL/BUG: No confirmation presented, item is deleted instantaneously
+            8.  User is returned to the product category view when user confirms deletion
+                -   PASS: All criteria met.
+            9.  Message is displayed indicating the product was deleted successfully
+                -   PASS: All criteria met.
