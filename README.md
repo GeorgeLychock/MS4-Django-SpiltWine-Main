@@ -116,9 +116,9 @@ All Acceptance Criteria Results can be found in [TESTRM.md](TESTRM.md)
 
     -   #### **Story A-2** As an Administrator I want to be able to update wine products in the wine product database so that I can provide access to their information throughout the website.
         -  #### *Acceptance Criteria*
-            1.  A link to a wine product edit view should be presented on the wine product details view for all users with editing rights or admin privileges.
-            2.  Once at the product admin view, a message indicating what product is being edited should be present
-            3.  The wine product admin view should contain all the following fields (read only fields are indicated, otherwise all fields can be edited): product name, vintage, brand, SKU, featured option, product image, product image url, has sizes option, size, measure, price, a full description, country or state origin, region origin, appellation origin, wine type, varietal, body, style, ABV, taste field
+            1.  A link to a Product Update view should be presented on the wine product details view for all users with editing rights or admin privileges.
+            2.  Once at Product Update, a message indicating what product is being edited should be present
+            3.  The Product Update view should contain all the following fields (read only fields are indicated, otherwise all fields can be edited): product name, vintage, brand, SKU, featured option, product image, product image url, has sizes option, size, measure, price, a full description, country or state origin, region origin, appellation origin, wine type, varietal, body, style, ABV, taste field
             4.  Product information is updated correctly when I submit changes
             5.  User is returned to the product detail page when changes are submitted
             6.  Message is displayed indicating save was completed successfully

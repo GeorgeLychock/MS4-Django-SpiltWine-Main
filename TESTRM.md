@@ -317,13 +317,13 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate al
             7.  A list of saved cellar items is presented if items have been added to the user's cellar. The list displays the product image, name, vintage, SKU, price, quantity on-hand in cellar, and subtotal value of each cellar item
                 -   PASS: All criteria met.
                     -   Cellar view with cellar items listed and update and remove item links are present:
-                    -   <img src="_documentation/testing/user-stories/US-C-1-02.png"/>
+                    -   <img src="_documentation/testing/user-stories/US-C-1-03.png"/>
             8.  The quantity on-hand field displays the current quantity of the item in the user's cellar and is editable; quantity can be updated
                 -   PASS: All criteria met.
             9.  Update is confirmed
-                -   PASS: All criteria met.
+                -   PASS: All criteria met. User is presented with an update confirmation.
             10. The item can be removed from the Cellar
-                -   PASS: All criteria met.
+                -   PASS: All criteria met. User is presented with a removal confirmation.
 
     -   #### **Story C-2** As a/an Logged In User I want to be able to view metrics of my wine library so that I can understand the make up of my wine collection.
         -  #### *Acceptance Criteria*
@@ -359,4 +359,21 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate al
             8.  User is returned to the product category view when user confirms deletion
                 -   PASS: All criteria met.
             9.  Message is displayed indicating the product was deleted successfully
+                -   PASS: All criteria met.
+
+    -   #### **Story A-2** As an Administrator I want to be able to update wine products in the wine product database so that I can provide access to their information throughout the website.
+        -  #### *Acceptance Criteria*
+            1.  A link to a Product Update view should be presented on the wine product details view for all users with editing rights or admin privileges.
+                -   PASS: All criteria met. A product Edit link is presented only to admin on the product details view
+            2.  Once at Product Update, a message indicating what product is being edited should be present
+                -   PASS: All criteria met. Editing message is displayed]
+            3.  The Product Update view should contain all the following fields (read only fields are indicated, otherwise all fields can be edited): product name, vintage, brand, SKU, featured option, product image, product image url, has sizes option, size, measure, price, a full description, country or state origin, region origin, appellation origin, wine type, varietal, body, style, ABV, taste field
+                -   PASS: All criteria met.
+                    -   The Product Update presents all of the correct fields:
+                    -   <img src="_documentation/testing/user-stories/US-A-2-01.png"/>
+            4.  Product information is updated correctly when I submit changes
+                -   PASS: All criteria met.
+            5.  User is returned to the product detail page when changes are submitted
+                -   PASS: All criteria met.
+            6.  Message is displayed indicating save was completed successfully
                 -   PASS: All criteria met.
