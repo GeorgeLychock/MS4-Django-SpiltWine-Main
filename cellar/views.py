@@ -92,12 +92,17 @@ def update_cellar(request, item_id):
 @login_required
 def remove_from_cellar(request, item_id):
     """ Remove item from cellar """
-    """ from Code Institute, Django Module https://codeinstitute.net/global/ """
-    try:
-        cellar_item = get_object_or_404(CellarItem, pk=item_id)
-        cellar_item.delete()
 
+    cellar_item = get_object_or_404(CellarItem, pk=item_id)
+    item_data = get_object_or_404(Wine, pk=cellar_item.cellar_wine_pk.pk)
+
+    if cellar_item:
+        messages.success(request, f'Successfully removed {item_data.name} from your cellar.')
+        cellar_item.delete()
         return HttpResponse(status=200)
 
-    except Exception as e:
-            return HttpResponse(status=500)
+    else:
+        return HttpResponse(status=500)
+
+
+    
