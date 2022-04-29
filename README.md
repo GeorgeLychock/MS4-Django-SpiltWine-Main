@@ -152,6 +152,8 @@ All Acceptance Criteria Results can be found in [TESTRM.md](TESTRM.md)
 -   Include a weather indicator on the home page
 -   Allow users to view top 5 rated products
 -   Allow Users to choose an avatar from a pallet of avatars for their profile
+-   Create a product management view giving the admin options for creating/editing/deleting products
+-   Currently, when an admin deletes a wine from the database the JS redirects to the generic all wines listing. This should be changed when a product management view is available. That view should be sent a flag that then creates a confirm message that the wine has been successfully deleted from the db.
 
 # UX/UI
 -   ## UI

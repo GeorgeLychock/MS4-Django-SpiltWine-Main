@@ -1,3 +1,5 @@
+// Sort Selector and query counter from Code Institute, Django Module https://codeinstitute.net/global/
+
 let countrySelected = $('#id_default_country').val();
 if(!countrySelected) {
     $('#id_default_country').css('color', '#aab7c4');
