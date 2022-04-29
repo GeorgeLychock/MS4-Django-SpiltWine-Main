@@ -166,8 +166,7 @@
             {% if request.user.is_superuser %}
                 <small class="ml-3">
                     <a class="sw-link-text-03" href="{% url 'edit_wine' wine.pk %}">Edit</a> | 
-                    <a class="text-danger sw-link-text-03 sw-p-color-03" href="{% url 'delete_wine' wine.pk %}">Delete</a>
-                    <a class="remove-link text-danger float-right" id="remove_{{ wine.pk  }}"><small>Remove</small></a>
+                    <a class="remove-link text-danger sw-link-text-03 sw-p-color-03" id="remove_{{ wine.pk }}" name="{{ wine.name }}">Delete</a>
                 </small>
             {% else %}
             You are not logged in as an Admin at this time. 
@@ -188,11 +187,12 @@
     $('.remove-link').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
+        var itemName = $(this).attr('name');
         var url = `/products/delete/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken};
 
         //Confirm deletion and redirect. Currently redirects to the generic all wine view with no flag captured to trigger a message to the user that the wine has been deleted. This will change when a product management view is created.
-        var txt = "Are you sure you want to delete " + itemId + "?";
+        var txt = "Are you sure you want to delete " + itemName + "?";
         if (confirm(txt) == true) {
             $.post(url, data)
             .done(function() {
