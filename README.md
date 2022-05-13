@@ -14,9 +14,7 @@
     - [Requirements](#REQS)
     - [Backlog (Future Requirements)](#BACKLOG)
 - [UI/UX](#UXUI)
-    - [UI](#UI)
-        -   [Wireframes](#UIWF)
-    - [UX - Design](#DES)
+    - [Design](#DES)
         -   [Wireframes](#UXWF)
 - [Technical Background](#TECH)
 - [Testing](TESTRM.md)
@@ -52,7 +50,7 @@ Spilt Wine is an ecommerce website that sells wines, wine accessories, and culin
 All Acceptance Criteria Results can be found in [TESTRM.md](TESTRM.md)
 
 -   ### Visitor/Shopper
-    -   #### **Story V-1** As a Visitor/Shopper I want to be able to view a list of products so that I can select a product to purchase.
+    -   #### **Story V-1** As a Visitor/Shopper I want to be able to view various lists of products so that I can select a product to purchase.
         -  #### *Acceptance Criteria*
             1.  A list of product categories is presented
             2.  Category links present user with category product listings
@@ -124,7 +122,6 @@ All Acceptance Criteria Results can be found in [TESTRM.md](TESTRM.md)
             6.  Message is displayed indicating save was completed successfully
 
 
-
     -   #### **Story Template** As an Administrator I want to be able to add, update, and delete products in the product database so that I am able to access their information through the website.
         -  #### *Acceptance Criteria*
             1.  How do I get there?
@@ -140,48 +137,50 @@ All Acceptance Criteria Results can be found in [TESTRM.md](TESTRM.md)
 ## Requirements
 (Alignments to User Stories are in paratheses)
 -   Application must be responsive and fully functional to use on any device
--   Allow users to search products
--   Allow users to log in and log out of the app
--   Logging in provides a site admin with feature to build a product
--   Allow users to view details about the product including an image
--   Provide a logged in user or anonymous user with feature to buy a product
+-   Allow users to search for products
+-   Allow users to create an account and profile
+-   Provide a logged in user the ability to update their profile
+-   Allow a user with admin rights to log in to the app
+-   Logging in provides a site admin with a feature(s) to create, edit, or delete a product (A-1, A-2)
+-   Provide a logged in user or anonymous user with feature to add products to a cart and buy products
+-   Allow users to view details about the product including an image (V-2)
+-   Provide a logged in user the ability to add wine products to a personal virtual wine cellar (C-1)
+-   Provide a logged in user the ability to update or remove items from their cellar (C-1)
+-   Provide statistics on a user's cellar such as total value, # of cellar items, # of varietals represented in the cellar, a list of the varietals represented in the cellar (C-2)
+
 
 <a name="BACKLOG"></a>
 ## Future Requirements
-(Alignments to User Stories are in paratheses, if available)
--   Include a weather indicator on the home page
--   Allow users to view top 5 rated products
+(Alignments to User Stories are in paratheses, if available
 -   Allow Users to choose an avatar from a pallet of avatars for their profile
 -   Create a product management view giving the admin options for creating/editing/deleting products
 -   Currently, when an admin deletes a wine from the database the JS redirects to the generic all wines listing. This should be changed when a product management view is available. That view should be sent a flag that then creates a confirm message that the wine has been successfully deleted from the db.
 
+<a name="UXUI"></a>
 # UX/UI
--   ## UI
-    <a name="UI"></a>
-    -   ### Wireframes
-        <a name="UIWF"></a>
-        -   UI Map (Site Map aligned to data structures and functions) - [View](https://github.com/GeorgeLychock/MS3-Project-Python-uSpice/blob/master/_documentation/ui/Site-UI-Map-.jpg)
-    -   ### Sprints
-        -   UI Sprint Map - [View](https://github.com/GeorgeLychock/MS3-Project-Python-uSpice/blob/master/_documentation/ui/Site-UI-Sprints-.jpg)
-
-
--   ## UX - Design
+-   ## Design
     <a name="DES"></a>
     -   ### Wireframes
         <a name="UXWF"></a>
-        -   Home Page - Desktop and Tablet Wireframe - [View](_documentation/wireframes/spiltwine-wireframe-desktop-home.jpg)
-        -   Home Page - Mobile Wireframe - [View](_documentation/wireframes/spiltwine-wireframe-mobile-home.jpg)
-
+        -   Home App - Desktop and Tablet Wireframe - [View](_documentation/wireframes/spiltwine-desktop-home.jpg)
+        -   Home App - Mobile Shell Wireframe - [View](_documentation/wireframes/spiltwine-mobile-shell.jpg)
+        -   Profile App - Desktop and Tablet Wireframe - [View](_documentation/wireframes/spiltwine-profile.jpg)
+        -   Products App - All Products View - Desktop and Tablet Wireframe - [View](_documentation/wireframes/spiltwine-products-all.jpg)
+        -   Products App - All Wines View - Desktop and Tablet Wireframe - [View](_documentation/wireframes/spiltwine-products-wines.jpg)
+        -   Cellar App - Desktop and Tablet Wireframe - [View](_documentation/wireframes/spiltwine-cellar.jpg)
 
 <a name="TECH"></a>
 # Technical Background
-## Features and Logic
--   The app uses custom Javascript and localStorage for the add ingredient functionality on the Build Recipe and Edit Recipe pages
--   The app uses custom Javascript and localStorage for the nav click path arrows functionality
-## Sitemap, UI, and Data Structures
--   UI Sitemap  - [View](https://github.com/GeorgeLychock/MS3-Project-Python-uSpice/blob/master/_documentation/ui/Site-UI-Map-.jpg)
--   Sprints  - [View](https://github.com/GeorgeLychock/MS3-Project-Python-uSpice/blob/master/_documentation/ui/Site-UI-Sprints-.jpg)
--   Data Structures  - [View](https://github.com/GeorgeLychock/MS3-Project-Python-uSpice/blob/master/_documentation/ui/uspice-data-structures.jpg)
+## Code Base, Features, and APIs
+-   This project uses Python, the Django Framework, Javascript, HTML, and CSS
+-   The project is deployed through Heroku, see below. Static files are hosted on AWS S3.
+-   The Checkout app uses the Stripe API to process customer orders and credit card payments.
+-   Authentication is controlled via the allauth python project
+-   The cart, profile, and checkout apps' code is almost entirely from Code Institute's module "Full Stack Frameworks with Django". The largest change I made to these apps was to delete much of the product sizes code since my product array does not require it. I also made updates such as styling, changing the HTML amd CSS to Bootstrap 5.1 framework, and removing the reverse() methods from views rendering.
+-   The cellar app contains the most custom code of this project allowing users to create and update a personal list of wines with access to several metrics based on their collection.
+## Data
+-   Data Schema  - [View](_documentation/data/spiltwine-data-product-schema.jpg)
+-   Data Resource: All product data was manually mined from www.totalwine.com
 
 ## Languages Used
 

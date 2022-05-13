@@ -346,8 +346,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate al
             3.  The method should present a form that allows the user to input all required and optional data for the product
                 -   Included fields for wine products (*required fields): *product name, vintage, brand, SKU, featured option, product image, product image url, has sizes option, *size, measure, price, *a full description, *country or state origin, region origin, appellation origin, *wine type, *varietal, *body, *style, ABV, taste field
                 -   PASS: All criteria met.
-                    -   The Product Add presents all of the correct fields:
-                    -   <img src="_documentation/testing/user-stories/US-A-1-01.png"/>
+                    -   The Product Add presents all of the correct fields
             4.  Upon clicking, an Add Product submit button should inform the user the product data has been saved and redirect the user to the new product's detail view
                 -   PASS: All criteria met. User is redirected correctly with correct message
             5.  Product information is added correctly
@@ -355,22 +354,22 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate al
             6.  A link to delete a wine product should be presented on the wine product details view for all users with editing rights or admin privileges
                 -   PASS: All criteria met. A product Delete link is presented only to admin on the product details view
             7.  A confirmation method should be presented to the admin to confirm product deletion
-                -   FAIL/BUG: No confirmation presented, item is deleted instantaneously
+                -   PASS: Confirmation presented
             8.  User is returned to the product category view when user confirms deletion
                 -   PASS: All criteria met.
             9.  Message is displayed indicating the product was deleted successfully
-                -   PASS: All criteria met.
+                -   FAIL: No message is displayed after confirmation submit.
 
     -   #### **Story A-2** As an Administrator I want to be able to update wine products in the wine product database so that I can provide access to their information throughout the website.
         -  #### *Acceptance Criteria*
             1.  A link to a Product Update view should be presented on the wine product details view for all users with editing rights or admin privileges.
                 -   PASS: All criteria met. A product Edit link is presented only to admin on the product details view
             2.  Once at Product Update, a message indicating what product is being edited should be present
-                -   PASS: All criteria met. Editing message is displayed]
+                -   PASS: All criteria met. Editing message is displayed
+                -   <img src="_documentation/testing/user-stories/US-A-2-01.png"/>
             3.  The Product Update view should contain all the following fields (read only fields are indicated, otherwise all fields can be edited): product name, vintage, brand, SKU, featured option, product image, product image url, has sizes option, size, measure, price, a full description, country or state origin, region origin, appellation origin, wine type, varietal, body, style, ABV, taste field
                 -   PASS: All criteria met.
-                    -   The Product Update presents all of the correct fields:
-                    -   <img src="_documentation/testing/user-stories/US-A-2-01.png"/>
+                    -   The Product Update presents all of the fields correctly
             4.  Product information is updated correctly when I submit changes
                 -   PASS: All criteria met.
             5.  User is returned to the product detail page when changes are submitted
