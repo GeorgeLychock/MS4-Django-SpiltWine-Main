@@ -179,7 +179,8 @@ All Acceptance Criteria Results can be found in [TESTRM.md](TESTRM.md)
 -   The cart, profile, and checkout apps' code is almost entirely from Code Institute's module "Full Stack Frameworks with Django". The largest change I made to these apps was to delete much of the product sizes code since my product array does not require it. I also made updates such as styling, changing the HTML amd CSS to Bootstrap 5.1 framework, and removing the reverse() methods from views rendering.
 -   The cellar app contains the most custom code of this project allowing users to create and update a personal list of wines with access to several metrics based on their collection.
 ## Data
--   Data Schema  - [View](_documentation/data/spiltwine-data-product-schema.jpg)
+-   High Level Data Schema  - [View](_documentation/data/spiltwine-data-product-schema.jpg)
+-   Table Scheme  - [View](_documentation/data/data_schema.pdf)
 -   Data Resource: All product data was manually mined from www.totalwine.com
 
 ## Languages Used
@@ -204,12 +205,11 @@ All Acceptance Criteria Results can be found in [TESTRM.md](TESTRM.md)
     - GitHub is used to store the projects code after being pushed from Git.
 7. [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used for a few of the icons where I did not like the Bootstrap versions or BS did not have a suitable icon.
-9.  [draw.io](https://app.diagrams.net/)
+8.  [draw.io](https://app.diagrams.net/)
     - Wireframing tool
-10. [Inkscape](https://inkscape.org/)
-    - Drawing app used for logo design
-11. [Flaticons](https://www.flaticon.com/authors/flat-icons)
-    - Avatar images
+
+9.  [AWS S3](https://aws.amazon.com)
+    - Static File deployment
 
 ### Resources Used
 -   [MDN General Web Docs: ](https://developer.mozilla.org/) For semantic structure reference, arrays, localStorage, fetch.
@@ -220,19 +220,19 @@ https://www.djangoproject.com/
 -   [Field data types for Django Models](https://www.geeksforgeeks.org/django-model-data-types-and-fields-list/#:~:text=Basic%20model%20data%20types%20and%20fields%20list%20,raw%20binary%20data.%20%2021%20more%20rows%20)
 -   [Migrating Data using fixtures Django](https://www.bing.com/videos/search?q=creating+django+fixtures+from+csv&view=detail&mid=21A1F428ED88293C96F021A1F428ED88293C96F0&FORM=VIRE) Instructions on how to convert csv to fixture JSON and migrate to Django
 
-Django Tutorial https://www.geeksforgeeks.org/django-tutorial/?ref=gcse
+-   Django Tutorial https://www.geeksforgeeks.org/django-tutorial/?ref=gcse
 
-Django Project
--   [DjangoProject Queries Documentation](https://docs.djangoproject.com/en/4.0/topics/db/queries/)
--   https://docs.djangoproject.com/en/4.0/topics/db/models/#model-inheritance
+-   Django Project
+    -   [DjangoProject Queries Documentation](https://docs.djangoproject.com/en/4.0/topics/db/queries/)
+    -   https://docs.djangoproject.com/en/4.0/topics/db/models/#model-inheritance
 
-Primary Key Best Practices https://stackoverflow.com/questions/337503/whats-the-best-practice-for-primary-keys-in-tables#:~:text=Primary%20keys%20should%20be%20as%20small%20as%20necessary
+-   Primary Key Best Practices https://stackoverflow.com/questions/337503/whats-the-best-practice-for-primary-keys-in-tables#:~:text=Primary%20keys%20should%20be%20as%20small%20as%20necessary
 
-JSON Convertor https://www.convertcsv.com/csv-to-json.htm
+-   JSON Convertor https://www.convertcsv.com/csv-to-json.htm
 
-django-countries https://pypi.org/project/django-countries/#show-certain-countries-first
+-   django-countries https://pypi.org/project/django-countries/#show-certain-countries-first
 
-https://medium.com/swlh/how-to-style-your-django-forms-7e8463aae4fa
+-   Django Forms STyling: https://medium.com/swlh/how-to-style-your-django-forms-7e8463aae4fa
 
 #   Testing
 <a name="TESTING"></a>
@@ -242,12 +242,68 @@ https://medium.com/swlh/how-to-style-your-django-forms-7e8463aae4fa
 <a name="ISSUES"></a>
 -   [See Test ReadMe File](TESTRM.md)
 
+<a name="DPLY"></a>
+# Deployment
+-   ## Hosting
+    -   ### Heroku and Git
+
+        The project was deployed to Heroku hosting service:
+
+        [URL to Heroku Site](https://ms4-spiltwine.herokuapp.com/home/
+        All Python requirements used can be found in the requirements.txt file. Procfile can be be found in Git repo as well. Environmnt variables are stored in a secure uncommitted file in developement.
+
+        ### *CLOANING INFORMATION from CODE INSTITUTE README.md template from User Centric Module, edits have been made for changes in GH UI*
+        GitHub Pages
+        The project was deployed to GitHub Pages using the following steps...
+        1. Log in to GitHub and locate the [Project-Management-Dashboard---MS2 GitHub Repository](https://github.com/GeorgeLychock/MS4-Django-SpiltWine-Main)
+        2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+        3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+        4. Under "Source", click the dropdown called "None" and select "Master Branch".
+        5. The page will automatically refresh.
+        6. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
+
+        ### Forking the GitHub Repository
+
+        1. Log in to GitHub and locate the [Project-Management-Dashboard---MS2 GitHub Repository](https://github.com/GeorgeLychock/MS3-Project-Python-uSpice)
+        2. At the top of the Repository (not top of page) on the far right, locate the "Fork" Button. Sign in if needed.
+        3. You should now have a copy of the original repository in your GitHub account.
+
+        ### Making a Local Clone
+
+        1. Log in to GitHub and locate the [Project-Management-Dashboard---MS2 GitHub Repository](https://github.com/GeorgeLychock/MS3-Project-Python-uSpice)
+        2. On the right of the file listings box, click the "Code" button.
+        3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+        4. Open Git Bash
+        5. Change the current working directory to the location where you want the cloned directory to be made.
+        6. Type `git clone`, and then paste the URL you copied in Step 3.
+
+        ```
+        $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+        ```
+
+        7. Press Enter. Your local clone will be created.
+
+        ```
+        $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+        > Cloning into `CI-Clone`...
+        > remote: Counting objects: 10, done.
+        > remote: Compressing objects: 100% (8/8), done.
+        > remove: Total 10 (delta 1), reused 10 (delta 1)
+        > Unpacking objects: 100% (10/10), done.
+        ```
+
+        Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
+        Change your branch from 'master' to 'main'
+        Follow these intructions [Here](https://help.heroku.com/O0EXQZTA/how-do-i-switch-branches-from-master-to-main).
+
+    -   ### AWS
+        All static files are hosted on AWS S3. Files can be acquired from the administrator.
+
+
 <a name="CREDS"></a>
 # Credits
 ## Code Credits
--   Model class methods are borrowed from Code Institute code provided in the Bontique Ado Project for the Full Stack Software Developer curriculum.
--   html/css: Recreated the Home page using the Code Institute code provided in the Bontique Ado Project for the Full Stack Software Developer curriculum as a template. I changed the markup and styles for Bootstrap 5.1 and consolidated a number of the core BS styles into custom style groups. https://codeinstitute.net/global/
--   <!-- Cart Form from Code Institute, Django Module https://codeinstitute.net/global/ -->
--   RegEx input patterns from W3Schools - https://www.w3schools.com/tags/att_input_pattern.asp
--   Avatar Icons made by [Flaticon](https://www.flaticon.com/)
--   The localStorage check code in script.js is from [MDN - Using_the_Web_Storage_API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API). This code checks to make sure that the browser can support localStorage and has it turned on. Find code use indicated by "CODE REUSE - localStorage Check "
+-   Most Model class methods are reused from Code Institute code provided in the Bontique Ado Project for the Full Stack Software Developer curriculum.
+-   html/css: Recreated the Home page using the Code Institute code provided in the Bontique Ado Project for the Full Stack Software Developer curriculum as a base. I changed the markup and styles for Bootstrap 5.1 and consolidated a number of the core BS styles into custom style groups. https://codeinstitute.net/global/
+-   Cart Form from Code Institute, Django Module https://codeinstitute.net/global/
