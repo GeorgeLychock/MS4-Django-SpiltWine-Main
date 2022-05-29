@@ -8,10 +8,10 @@ def index(request):
     # controls the transparency of the header area
     style_switch = True
 
-    # messages.success(request, 'Welcome Home!')
-
     all_content = {
         'style_switch': style_switch,
     }
+
+
 
     return render(request, 'home/index.html', all_content)

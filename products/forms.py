@@ -17,12 +17,12 @@ class ProductForm(forms.ModelForm):
         widgets = {
             'name': TextInput(attrs={
                 'class': "form-control",
-                'placeholder': 'Name'
+                'placeholder': 'enter name'
                 }),
             'vintage': NumberInput(attrs={
                 'class': "sw-form-input-num",
                 "size": "4",
-                'placeholder': 'Vintage',
+                'placeholder': 'enter vintage',
                 'max': 2022,
                 'min': 1990
                 }),

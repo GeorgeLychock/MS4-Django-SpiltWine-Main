@@ -329,6 +329,10 @@ p {
   width: 100%;
 }
 
+.sw-tip-01 {
+  width: 30%;
+  font-size: .85rem;
+}
 
 /* Messages */
 .sw-flash-msg {
