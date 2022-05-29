@@ -74,6 +74,10 @@ Unless otherwise noted, all the following were tested and passed:
     -   Recipe name and image are active links that redirect all users to the Recipe Card page for the chosen recipe
     -   Tool tip is displayed when all users hover the recipe names and recipe images
 
+
+-   #### Product Management - Add Wine
+    -   Select Fields display first choice instead of "select..."
+    
 -   #### Secondary Pages - Rated Recipes
     -   Top 5 rated recipes are displayed providing information on each recipe for recipe name, description, image, date posted, rating, author, and available Actions: Submit Rating
     -   Submit Rating button redirects user to the Recipe Card for the choosen recipe
