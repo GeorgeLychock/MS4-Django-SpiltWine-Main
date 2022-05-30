@@ -35,6 +35,7 @@ Spilt Wine is an ecommerce website that sells wines, wine accessories, and culin
 >-  The custom app Cellar is the primary focus on my project although the base website is a fully functioning ecommerce site based on the curricullum mini project.
 >-  All user directed messages are displayed in a custom format, as opposed to Toasts, to have more control on position and to understand messages in Django and Python
 >-  Wine Accessories and Culinary products currently exist as placeholders, no product editing or sorting can be performed on products in those categories at present. All CRUD actions can be performed on wine products.
+>-  Image data was acquired from an online source that uses the webp file format. The webp file format does not work on browsers on iPhone6 and lower running iOS 12; all product images are currently in webp format, alt format would need to be created in order for images to properly display on older iPhones. Time constraints did not allow for the solution to be executed so it is added as a bug in the TESTRM.md file.
 
 
 <a name="US"></a>

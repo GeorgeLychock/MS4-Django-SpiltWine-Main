@@ -63,28 +63,32 @@ Unless otherwise noted, all the following were tested and passed:
 
 ### Main Header and Nav
 -   #### Home and Secondary Pages
-    -   uSpice Logo and Byline display correctly on the left column of all pages
-    -   Build recipes button redirects a logged in user to the Build Recipe page
-    -   Build recipes button redirects a visiting user to the Login Page
-    -   Rated Recipes button redirects all users to the Rated Recipes page
+    -   
 
-### Main Content Block
+### Main Content Blocks
 -   #### Home
-    -   Top 5 rated recipes are displayed providing information on each recipe for rating, recipe name, description, and image
-    -   Recipe name and image are active links that redirect all users to the Recipe Card page for the chosen recipe
-    -   Tool tip is displayed when all users hover the recipe names and recipe images
-
+    -   All Home page content displays clearly on all viewports
 
 -   #### Product Management - Add Wine
     -   Select Fields display first choice instead of "select..."
+        -   Displays input fields for recipe name, description, region, flavor profile, image url, image alt text, ingredient, and preparation
+    -   Hover tips are displayed for all required fields
+    -   Validates and displays feedback for recipe name field, required
+    -   Validates and displays feedback for image url field, required
+    -   Ingredients Input:
+        -   Input fields are presented for Ingredient Name (dropdown), quantity (numeric input), and measure (dropdown)
+        -   A button is presented to add a configured ingredient entry to the ingredients pallet
+        -   If an ingredient is not fully configured with name, quantity, and measure the user is alerted of an error
+            FAIL: not validation exists for the addition of the configured ingredient
+        -   Once an ingredient is configured and added to the pallet, the ingredient configuration is displayed in the pallet with a remove button
+        -   When the remove button is clicked, the indredient is removed
+    -   Upon Submit, user is informed of successful recipe submission
+    -   Upon Submit, user is redirected to saved recipe page
     
--   #### Secondary Pages - Rated Recipes
-    -   Top 5 rated recipes are displayed providing information on each recipe for recipe name, description, image, date posted, rating, author, and available Actions: Submit Rating
-    -   Submit Rating button redirects user to the Recipe Card for the choosen recipe
-    -   Recipe name is an active link that redirects all users to the Recipe Card page for the chosen recipe
-    -   Tool tip is displayed when all users hover the recipe names
+-   #### Secondary Pages - All Wines
+    -   
 
--   #### Secondary Pages - Register Page
+-   #### Secondary Pages - Authentication, Register
     -   Displays input fields for username, email address, password, user description, and avatar choice
     -   Hover tips are displayed for all required fields
     -   Validates and displays feedback for username field, required
@@ -95,7 +99,7 @@ Unless otherwise noted, all the following were tested and passed:
     -   Upon Submit, user is informed of successful registration
     -   Upon Submit, user is redirected to Profile page
 
--   #### Secondary Pages - Login Page
+-   #### Secondary Pages - Authentication, Login
     -   Displays input fields for username and password
     -   Hover tips are displayed for all required fields
     -   Validates and displays feedback for username field, required
@@ -118,37 +122,26 @@ Unless otherwise noted, all the following were tested and passed:
     -   Tool tip is displayed when all users hover the recipe names
     -   Non-Authenticated user do not have access to profile page
 
--   #### Secondary Pages - My Ratings Page - Logged In User Only
-    -   Displays Name of user's ratings being displayed
-    -   Displays all submitted ratings for logged in user displaying information on each recipe for recipe name, date posted, rating, and available Actions: Update Rating
-    -   Update Rating button redirects user to the Recipe Card for the choosen recipe
-    -   Recipe name is an active link that redirects user to the Recipe Card page for the chosen recipe
-    -   Tool tip is displayed when all users hover the recipe names
-    -   Non-Authenticated user do not have access to Rated Recipes page
-
--   #### Secondary Pages - Advanced Search Page (Search Results redirect Page)
+-   #### Secondary Pages - Search Results Page
     -   Displays term used for the search
     -   Displays all recipes matching submitted query displaying information on each recipe for recipe name, description, image, date posted, rating, author, and available Actions: Update Rating
     -   Update Rating button redirects user to the Recipe Card for the choosen recipe
     -   Recipe name is an active link that redirects user to the Recipe Card page for the chosen recipe
     -   Tool tip is displayed when all users hover the recipe names
 
--   #### Secondary Pages - Build Recipe
-    -   Displays input fields for recipe name, description, region, flavor profile, image url, image alt text, ingredient, and preparation
-    -   Hover tips are displayed for all required fields
-    -   Validates and displays feedback for recipe name field, required
-    -   Validates and displays feedback for image url field, required
-    -   Ingredients Input:
-        -   Input fields are presented for Ingredient Name (dropdown), quantity (numeric input), and measure (dropdown)
-        -   A button is presented to add a configured ingredient entry to the ingredients pallet
-        -   If an ingredient is not fully configured with name, quantity, and measure the user is alerted of an error
-            FAIL: not validation exists for the addition of the configured ingredient
-        -   Once an ingredient is configured and added to the pallet, the ingredient configuration is displayed in the pallet with a remove button
-        -   When the remove button is clicked, the indredient is removed
-    -   Upon Submit, user is informed of successful recipe submission
-    -   Upon Submit, user is redirected to saved recipe page
+-   #### Secondary Pages - Cart
+    -   Displays input fields for recipe name, d
 
--   #### Secondary Pages - Edit Recipe
+-   #### Secondary Pages - Cart, Checkout
+    -   Displays input fields for recipe name, d
+
+-   #### Secondary Pages - Wine Details
+    -   Displays input fields for recipe name, d
+
+-   #### Secondary Pages - Wine Details, Add to Cellar
+    -   Displays input fields for recipe name, d
+
+-   #### Secondary Pages - Wine Details, Edit/Delete
     -   Displays input fields for recipe name, description, region, flavor profile, image url, image alt text, ingredient, and preparation
     -   All previously saved data is displayed in the input fields
         FAIL Although all saved data is displayed, the app shows a duplicate input field for any saved Flavor options
@@ -156,6 +149,12 @@ Unless otherwise noted, all the following were tested and passed:
         -   Same as Build Recipe page
     -   Upon Submit, user is informed of successful recipe update
     -   Upon Submit, user is redirected to updated recipe page
+
+-   #### Secondary Pages - Cellar
+    -   Displays input fields f
+
+-   #### Secondary Pages - Cellar, Update/Remove
+    -   Displays input fields f
 
 ### Features Logic
 -   #### Quick Search
