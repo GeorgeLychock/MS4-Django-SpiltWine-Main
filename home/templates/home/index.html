@@ -11,7 +11,10 @@
 
 {% block content %}
 <div class="sw-index-flip">
-    <div class="text-center sw-index-title sw-b-color-04c"><h1 class="sw-index-title-font">Visualize Your Wine Collection</h1></div>
+    <div class="text-center sw-index-title sw-b-color-04c">
+        <h1 class="sw-index-title-font">Visualize Your Wine Collection</h1>
+        <p>Search, buy, and store your favorite wines.</p>
+    </div>
     <div class="my-3 sw-index-h4">
         <h4>
             <a href="{% url 'products' %}" class="btn btn-lg rounded-0 text-uppercase py-3 sw-btn-index-h4">View Our Products</a>
@@ -26,9 +29,42 @@
         <h4>
             <a href="{% url 'cellar' %}" class="btn btn-lg rounded-0 text-uppercase py-3 sw-btn-index-h4">Manage Your Cellar</a>
         </h4>
+        <div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <strong><i class="bi bi-info-square mr-2"></i></strong> Learn More
+            </button>
+        </div>
     </div>
 </div>
 {% endblock %}
 
 {% block aside %}
+{% endblock %}
+
+{% block modals %}
+<!-- Cellar Info Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">How Your Cellar Works</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <ul class="list-group">
+                <li class="list-group-item">The cellar is your personal virtual library of wines you have in your collection.</li>
+                <li class="list-group-item">Add a wine to your collection from any wine's detail page.</li>
+                <li class="list-group-item">You can adjust the quantity of a wine in the collection from the edit link.</li>
+                <li class="list-group-item">A wine will remain in the collection, even with a quantity of zero, until the wine is deleted from the collection.</li>
+                <li class="list-group-item">As you add wine to your cellar statistics about your cellar can be viewed in the Stats panel.</li>
+                <li class="list-group-item"><a href="{% url 'account_signup' %}" class="">Create an account</a> to start using your cellar today!</li>
+              </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

@@ -21,9 +21,19 @@
                 </span>
                 <span class="text-uppercase">Return to Wine Library</span>
             </a>
-            <h2 class="sw-logo-font my-2 sw-h-color-01">Your Cellar</h2>
-            <hr>
+            <div>
+                <div>
+                    <h2 class="float-start sw-logo-font my-2 sw-h-color-01">Your Cellar</h2>
+                </div>
+                <div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn float-end" data-bs-toggle="modal" data-bs-target="#cellarModal">
+                        <strong><i class="bi bi-info-square mr-2"></i></strong> Learn More
+                    </button>
+                </div>
+            </div>
         </div>
+        <hr>
     </div>
     <!-- cellar Table from Code Institute, Django Module https://codeinstitute.net/global/ -->
     <div class="row">
@@ -89,12 +99,6 @@
             </div>
             {% else %}
                 <p class="lead mb-5">Your cellar is empty. Add wines to your Cellar from the Wine Detail page. </p>
-                <a href="{% url 'wines' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                    <span class="icon">
-                        <i class="bi bi-chevron-left"></i>
-                    </span>
-                    <span class="text-uppercase">Return to Wine Library</span>
-                </a>
             {% endif %}
         </div>
     </div>
@@ -112,46 +116,55 @@
     {% if cellar_items %}
         <div class="row">
             <div class="col">
-                <p class="sw-p-color-02">Cellar Value: ${{ cellar_total|floatformat:2 }}</p>
+                <p class="sw-cellar-stats-title sw-p-color-02">Cellar Value: ${{ cellar_total|floatformat:2 }}</p>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <p class="sw-p-color-02"># of Cellar Items: {{ cellar_count }}</p>
+                <p class="sw-cellar-stats-title sw-p-color-02"># of Cellar Items: {{ cellar_count }}</p>
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <div>
-                    <div class="sw-p-color-02"># of Varietals in Your Cellar:</div>
-                    <div class="sw-p-color-03"><small> {{ cellar_varietal_count|length }} / 180</small></div>
-                    <div class="d-inline float-end sw-p-color-02"><strong><i class="bi bi-info-square mr-2"></i></strong></div>
+                    <div class="sw-cellar-stats-title sw-p-color-02"># of Varietals in Your Cellar:</div>
+                    <div class="sw-p-color-02"><small> {{ cellar_varietal_count|length }} / 184</small></div>
                 </div>
-                {% if cellar_varietal_count|length > 0 and cellar_varietal_count|length <= 44 %}
-                <div class="progress">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: {{ cellar_varietal_count|length }}%" aria-valuenow="{{ cellar_varietal_count|length }}" aria-valuemin="0"
-                        aria-valuemax="180">
+                <div>
+                    <div class="float-end">
+                        <!-- Button trigger cellar stats info modal -->
+                        <button type="button" class="btn p-0 m-0 ms-2" data-bs-toggle="modal" data-bs-target="#cellarStatsModal">
+                            <strong><i class="bi bi-info-square m-0 p-0 sw-p-color-02"></i></strong>
+                        </button>
                     </div>
-                </div>
-                {% elif cellar_varietal_count|length > 44 and cellar_varietal_count|length <= 89 %}
-                <div class="progress">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: {{ cellar_varietal_count|length }}%" aria-valuenow="{{ cellar_varietal_count|length }}" aria-valuemin="0"
-                        aria-valuemax="180">
+                    <!-- change display color of progress bar based on proress % -->
+                    {% if cellar_varietal_count|length > 0 and cellar_varietal_count|length <= 44 %}
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: {{ cellar_varietal_count|length }}%" aria-valuenow="{{ cellar_varietal_count|length }}" aria-valuemin="0"
+                            aria-valuemax="180">
+                        </div>
                     </div>
-                </div>
-                {% elif cellar_varietal_count|length > 89 and cellar_varietal_count|length <= 134 %}
-                <div class="progress">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: {{ cellar_varietal_count|length }}%" aria-valuenow="{{ cellar_varietal_count|length }}" aria-valuemin="0"
-                        aria-valuemax="180">
+                    {% elif cellar_varietal_count|length > 44 and cellar_varietal_count|length <= 89 %}
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: {{ cellar_varietal_count|length }}%" aria-valuenow="{{ cellar_varietal_count|length }}" aria-valuemin="0"
+                            aria-valuemax="180">
+                        </div>
                     </div>
-                </div>
-                {% else %}
-                <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: {{ cellar_varietal_count|length }}%" aria-valuenow="{{ cellar_varietal_count|length }}" aria-valuemin="0"
-                        aria-valuemax="180">
+                    {% elif cellar_varietal_count|length > 89 and cellar_varietal_count|length <= 134 %}
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: {{ cellar_varietal_count|length }}%" aria-valuenow="{{ cellar_varietal_count|length }}" aria-valuemin="0"
+                            aria-valuemax="180">
+                        </div>
                     </div>
+                    {% else %}
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: {{ cellar_varietal_count|length }}%" aria-valuenow="{{ cellar_varietal_count|length }}" aria-valuemin="0"
+                            aria-valuemax="180">
+                        </div>
+                    </div>
+                    {% endif %}
                 </div>
-                {% endif %}
+                <div class="sw-cellar-stats-title sw-p-color-02 mt-4">Names of Varietals in Your Cellar:</div>
                 <div class="sw-p-color-02">
                     {% for varietal_item in cellar_varietal_count %}
                         <small>{{ varietal_item }}</small>
@@ -170,6 +183,56 @@
         </div>
     {% endif %}
 </aside>
+{% endblock %}
+
+{% block modals %}
+<!-- Cellar Info Modal -->
+<div class="modal fade" id="cellarModal" tabindex="-1" aria-labelledby="cellarModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cellarModalLabel">How Your Cellar Works</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <ul class="list-group">
+                <li class="list-group-item">The cellar is your personal virtual library of wines you have in your collection.</li>
+                <li class="list-group-item">Add a wine to your collection from any wine's detail page.</li>
+                <li class="list-group-item">You can adjust the quantity of a wine in the collection from the edit link.</li>
+                <li class="list-group-item">A wine will remain in the collection, even with a quantity of zero, until the wine is deleted from the collection.</li>
+                <li class="list-group-item">As you add wine to your cellar statistics about your cellar can be viewed in the Stats panel.</li>
+              </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Cellar Stats Info Modal -->
+<div class="modal fade" id="cellarStatsModal" tabindex="-1" aria-labelledby="cellarStatsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cellarStatsModalLabel">How Your Cellar Works</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <ul class="list-group">
+                <li class="list-group-item">According to DeLong's Varietal Map there are 184 wine varietals in the world.</li>
+                <li class="list-group-item">See DeLong's website <a href="https://www.delongwine.com/" target="_blank">here.</a></li>
+              </ul>
+              <a href="https://www.delongwine.com/products/wine-grape-varietal-table">
+                <img class="mg-fluid mt-3 sw-card-img-cellar" src="{{ MEDIA_URL }}Wine-Grape-Varietal-Table_DeLong.png"
+                    alt="De Long's Varietal Map">
+            </a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
 
 {% block postloadjs %}

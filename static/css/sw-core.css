@@ -508,6 +508,12 @@ p {
   font-size: .8rem;
 }
 
+/* Cellar Stats Panel */
+.sw-cellar-stats-title {
+  font-weight: 600;
+  font-size: .9rem;
+}
+
 /* Footers */
 .sw-cr {
   text-align: center;
