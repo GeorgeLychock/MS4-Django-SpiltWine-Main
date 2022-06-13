@@ -278,6 +278,10 @@ p {
   font-size: 1.0rem;
 }
 
+.sw-font-size-115 {
+  font-size: 1.15rem;
+}
+
 .sw-font-size-150 {
   font-size: 1.5rem;
 }
@@ -357,6 +361,7 @@ p {
 /* Mobile User Apps Menu */
 .sw-apps-menu-mobile {
   font-size: .65rem;
+  margin-top: 40px;
 }
 
 .sw-apps-menu-mobile-item {
@@ -423,6 +428,7 @@ p {
 /* Index */
 .sw-index-flip {
   float: right;
+  margin-top: 70px;
 }
 
 .sw-index-title-switch {
