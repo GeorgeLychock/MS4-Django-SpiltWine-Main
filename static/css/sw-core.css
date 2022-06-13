@@ -425,6 +425,10 @@ p {
   float: right;
 }
 
+.sw-index-title-switch {
+  display: none;
+}
+
 .sw-index-h4 {
   text-align: right;
 }
@@ -598,6 +602,10 @@ p {
 
     .sw-index-flip {
       float: none;
+    }
+
+    .sw-index-title-switch {
+      display: block;
     }
 
     .sw-learn-more-btn {
