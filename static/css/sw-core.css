@@ -431,7 +431,6 @@ p {
 
 .sw-index-title {
   padding: 40px 0 20px 0;
-  height: 150px;
   width: 150px;
 }
 
@@ -441,6 +440,10 @@ p {
 
 .sw-btn-index-h4 {
   font-size: .75rem;
+}
+
+.sw-learn-more-btn {
+  margin-left: 70px;
 }
 
 /* Products */
@@ -582,6 +585,7 @@ p {
     /* Index */
     .sw-index-h4 {
       text-align: left;
+      margin: 10px 0;
     }
     
     .sw-btn-index-h4 {
@@ -594,6 +598,10 @@ p {
 
     .sw-index-flip {
       float: none;
+    }
+
+    .sw-learn-more-btn {
+      margin-left: 100px;
     }
 
   /* Product Cards */
