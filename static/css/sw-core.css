@@ -319,6 +319,14 @@ p {
   font-size: .75rem;
 }
 
+.sw-cellar-link {
+  padding: 5px 10px;
+}
+
+.sw-cart-link {
+  padding: 5px;
+}
+
 /* Spacers */
 .sw-spacer-100p {
   width: 100%;
@@ -379,7 +387,7 @@ p {
 
 /* Delivery Banner */
 .sw-db-container {
-  margin-top: 95px;
+  margin-top: 50px;
 }
 
 .sw-delivery-banner {

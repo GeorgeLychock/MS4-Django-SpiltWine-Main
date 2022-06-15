@@ -4,6 +4,11 @@
     <a href="{% url 'home' %}" class="d-md-none navbar-brand sw-main-logo-link">
         <h1 class="my-0 sw-logo-font sw-h-color-01">SpiltWine</h1>
     </a>
+    <div class="d-md-none sw-font-size-60">
+        {% include 'includes/user-menu.html' %}
+        {% include 'includes/cellar-link.html' %}
+        {% include 'includes/shopping-cart-link.html' %}
+    </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
         aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon sw-font-size-60"></span>
