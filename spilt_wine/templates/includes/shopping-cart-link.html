@@ -1,9 +1,11 @@
-<div class="float-end sw-cart-link">
+<div class="sw-cart-link">
     <a class="{% if grand_total %}sw-i-color-01 font-weight-bold
     {% else %}sw-i-color-02
-    {% endif %} nav-link p-0 ps-2" href="{% url 'cart' %}">
+    {% endif %} nav-link p-0 px-3" href="{% url 'cart' %}">
     <div class="text-center">
-        <div class="d-inline"><i class="bi bi-cart2 font-weight-bold sw-font-size-150"></i></div>
+        <div class="d-inline"><i class="bi {% if grand_total %}bi-cart-fill
+            {% else %}bi-cart3
+            {% endif %} font-weight-bold sw-font-size-150"></i></div>
         <!-- Mobile Display -->
         <div class="d-md-none">
             <p class="m-0">

@@ -4,10 +4,10 @@
     <a href="{% url 'home' %}" class="d-md-none navbar-brand sw-main-logo-link">
         <h1 class="my-0 sw-logo-font sw-h-color-01">SpiltWine</h1>
     </a>
-    <div class="d-md-none sw-font-size-60">
-        {% include 'includes/user-menu.html' %}
+    <div class="d-md-none sw-mobile-links sw-font-size-60">
         {% include 'includes/cellar-link.html' %}
         {% include 'includes/shopping-cart-link.html' %}
+        {% include 'includes/user-menu.html' %}
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
         aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,20 +19,22 @@
                 <a href="{% url 'home' %}" class="nav-link sw-nav-weight" role="button">Home</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle sw-nav-weight" href="#" id="mainNavDrop0" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                <a class="nav-link dropdown-toggle sw-nav-weight" href="#" id="mainNavDrop0" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     Products
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="mainNavDrop0">
                     <li><a href="{% url 'wines' %}" class="dropdown-item">Wines</a></li>
-                    <li><a href="{% url 'products' %}" class="dropdown-item">Wine Accessories <small><strong>Soon!</strong></small></a></li>
-                    <li><a href="{% url 'products' %}" class="dropdown-item">Culinary <small><strong>Soon!</strong></small></a></li>
+                    <li><a href="{% url 'products' %}" class="dropdown-item">Wine Accessories
+                            <small><strong>Soon!</strong></small></a></li>
+                    <li><a href="{% url 'products' %}" class="dropdown-item">Culinary
+                            <small><strong>Soon!</strong></small></a></li>
                     <li><a href="{% url 'products' %}" class="dropdown-item">All Products</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle sw-nav-weight" href="#" id="mainNavDrop1" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                <a class="nav-link dropdown-toggle sw-nav-weight" href="#" id="mainNavDrop1" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     Wines
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="mainNavDrop1">
@@ -43,8 +45,8 @@
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle sw-nav-weight" href="#" id="mainNavDrop2" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                <a class="nav-link dropdown-toggle sw-nav-weight" href="#" id="mainNavDrop2" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     Wine Accessories
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="mainNavDrop2">
@@ -55,8 +57,8 @@
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle sw-nav-weight" href="#" id="mainNavDrop3" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                <a class="nav-link dropdown-toggle sw-nav-weight" href="#" id="mainNavDrop3" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     Culinary
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="mainNavDrop3">

@@ -1,4 +1,9 @@
 <div class="sw-delivery-banner">
+    {% if not messages %}
+        {% if request.user.is_authenticated %}
+        <div class="sw-i-color-03 mb-0">Hello {{ request.user.username }}!</div>
+        {% endif %}
+    {% endif %}
     {% if messages %}
         {% for message in messages %}
             <div class="row sw-flash-msg-row">
