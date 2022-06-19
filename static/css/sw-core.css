@@ -256,6 +256,7 @@ p {
 .sw-b-color-05a {background-color: rgba(255, 255, 255, .65);}
 .sw-b-color-05b {background-image: linear-gradient(rgba(255, 255, 255, .25), rgba(255, 255, 255, 1));}
 .sw-b-color-06 {background-color: rgba(0,0,0, .05);}
+.sw-b-color-07 {background-color: rgba(0,0,0, .75);}
 
 /* Font Sizing */
 .sw-font-size-50 {
@@ -372,6 +373,11 @@ p {
   padding: 0 0 0 0;
 }
 
+.sw-username {
+  float: right;
+  margin-right: 20px;
+}
+
 /* Mobile User Apps Menu */
 .sw-apps-menu-mobile {
   font-size: .65rem;
@@ -403,9 +409,8 @@ p {
   min-height: 25px;
 }
 
-/* Desktop Side Bar */
-.sw-dt-sidebars {
-  min-height: 600px;
+/* Side Bars */
+.sw-sidebars {
   max-height: fit-content;
   border: solid 1px whitesmoke;
   border-radius: 5px;
@@ -479,8 +484,13 @@ p {
 .sw-product-title {
   border-bottom: #8b0000 1px solid;
 }
+
 .sw-product-img {
   width: 200px;
+}
+
+.sw-card {
+  min-height: 140px;
 }
 
 .sw-card-col {
@@ -510,6 +520,7 @@ p {
 .sw-card-name {
   min-height: 3rem;
   line-height: .9;
+  font-weight: 600;
 }
 
 .sw-card-des {
@@ -524,6 +535,11 @@ p {
   font-size: .6rem;
   font-style: italic;
   min-height: 2rem;
+}
+
+/* Featured Column */
+.sw-featured-name {
+  font-size: .6rem;
 }
 
 /* Wine Detail */
@@ -564,7 +580,7 @@ p {
     .sw-b-color-nav {background-color: none;}
 
     .sw-logo-font {
-      font-size: 2.5rem;
+      font-size: 2.0rem;
     }
 
     .nav-link i {
@@ -598,7 +614,15 @@ p {
     }
 
     .sw-db-container {
-      margin-top: 135px;
+      margin-top: 165px;
+    }
+
+    /* Featured Column */
+    .sw-sidebars {
+      min-height: 600px;
+    }
+    .sw-featured-name {
+      font-size: .9rem;
     }
 
     .sw-font-size-100 {
@@ -617,8 +641,21 @@ p {
       font-family: 'Noto Sans', sans-serif;
       }
 
+    .sw-logo-font {
+      font-size: 2.5rem;
+    }
+
+    .sw-username {
+      float: right;
+      margin-right: 60px;
+    }
+
     .sw-cellar-link {
       padding: 5px 12px;
+    }
+
+    .sw-db-container {
+      margin-top: 145px;
     }
 
     /* Index */

@@ -110,7 +110,7 @@
 {% endblock %}
 
 {% block aside %}
-<aside class="col-12 col-md-3 order-1 order-md-3 sw-dt-sidebars sw-b-color-02 ">
+<aside class="col-12 col-md-3 order-1 order-md-3 sw-sidebars sw-b-color-02 ">
     <!-- SpiltWine Featured Items -->
     <div class="row py-2">
         <div class="col text-center sw-h-color-02">
@@ -122,59 +122,76 @@
             {% endif %}
         </div>
     </div>
-
     <div class="row p-md-1 pb-2">
         {% for f in featured %}
-        <div class="col-12">
-            <div class="card mb-3" style="max-width: 540px;">
+        <div class="col-6 col-md-12">
+            <div class="card mb-3 sw-card">
                 <div class="row g-0">
-                  <div class="col-4">
-                    {% if f.image %}
-                    <a href="{% url 'wine_detail' f.pk %}">
-                        <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}{{ f.image }}"
-                            alt="{{ f.name }}">
-                    </a>
-                    {% else %}
-                    <a href="{% url 'wine_detail' f.pk %}">
-                        <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}cab_grapes.jpg" alt="{{ f.name }}">
-                    </a>
-                    {% endif %}
-                  </div>
-                  <div class="col-8">
-                    <div class="card-header p-0 px-1 px-md-2 text-center sw-font-size-60">
-                        {% if f.varietal %}
-                        <div class="">
-                            <small class=""><i class="mr-1"></i>{{ f.varietal.friendly_name }}</small>
+                    <div class="col-12">
+                        <div class="card-header p-0 px-1 px-md-2 text-center sw-font-size-60">
+                            {% if f.varietal %}
+                            <div class="">
+                                <small class=""><i class="mr-1"></i>{{ f.varietal.friendly_name }}</small>
+                            </div>
+                            {% else %}
+                            <div class="">
+                                <small class=""><i class="mr-1"></i>Varietal not Specified</small>
+                            </div>
+                            {% endif %}
                         </div>
+                    </div>
+                    <div class="col-4">
+                        {% if f.image %}
+                        <a href="{% url 'wine_detail' f.pk %}">
+                            <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}{{ f.image }}"
+                                alt="{{ f.name }}">
+                        </a>
                         {% else %}
-                        <div class="">
-                            <small class=""><i class="mr-1"></i>Varietal not Specified</small>
-                        </div>
+                        <a href="{% url 'wine_detail' f.pk %}">
+                            <img class="card-img-top img-fluid mt-3 sw-card-img" src="{{ MEDIA_URL }}cab_grapes.jpg"
+                                alt="{{ f.name }}">
+                        </a>
                         {% endif %}
                     </div>
-                    <div class="card-body">
+                    <div class="col-8">
                         <div class="card-title pb-0 ps-2 text-start">
-                            <h6 class="mb-0 sw-font-size-60">{{ f.name }}</h6>
+                            <a class="text-decoration-none" href="{% url 'wine_detail' f.pk %}">
+                                <h6 class="mb-0 pt-2 sw-featured-name">{{ f.name }}</h6>
+                            </a>
+                            <p class="mb-0 text-left font-weight-bold text-danger sw-font-size-75">${{ f.price }}</p>
                         </div>
-                        <p class="car-text mb-0 text-left font-weight-bold text-danger">${{ f.price }}</p>
-                        {% if f.country_state %}
-                            <div class="sw-font-size-60">{{ f.country_state.friendly_name }}</div>
-                        {% endif %}
-                        {% if f.region %}
-                            <div class="sw-font-size-60">{{ f.region.friendly_name }}</div>
-                        {% endif %}
-                        {% if f.appellation %}
-                            <div class="sw-font-size-60">{{ f.appellation.friendly_name }}</div>
+                        {% if f.description %}
+                        <div class="d-none d-md-block sw-card-des">
+                            <p class="sw-font-size-60 text-start">{{ f.description|truncatewords:10 }}</p>
+                        </div>
                         {% endif %}
                     </div>
-                  </div>
+                    <div class="col-12">
+                        <div class="card-body p-0 px-2 sw-font-size-50">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    {% if f.country_state %}
+                                    <div class="">{{ f.country_state.friendly_name }}</div>
+                                    {% endif %}
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    {% if f.region %}
+                                    <div class="sw-font-size-60">{{ f.region.friendly_name }}</div>
+                                    {% endif %}
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    {% if f.appellation %}
+                                    <div class="sw-font-size-60">{{ f.appellation.friendly_name }}</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
         </div>
         {% endfor %}
     </div>
-
     <!-- Back to Top Button from Code Institute, Django Module https://codeinstitute.net/global/ -->
     <div class="sw-btt-button shadow-sm rounded-0 border border-black">
         <a class="sw-btt-link d-flex h-100">

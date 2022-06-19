@@ -1,13 +1,13 @@
 <div class="sw-delivery-banner">
     {% if not messages %}
         {% if request.user.is_authenticated %}
-        <div class="sw-i-color-03 mb-0">Hello {{ request.user.username }}!</div>
+        <div class="mb-0 float-end sw-username sw-i-color-03"><strong>Hello {{ request.user.username }}!</strong></div>
         {% endif %}
     {% endif %}
     {% if messages %}
         {% for message in messages %}
             <div class="row sw-flash-msg-row">
-                <h6 class="sw-flash-msg sw-h-color-04">{{ message }}</h6>
+                <h6 class="sw-flash-msg sw-h-color-03">{{ message }}</h6>
             </div>
         {% endfor %}
     {% endif %}
