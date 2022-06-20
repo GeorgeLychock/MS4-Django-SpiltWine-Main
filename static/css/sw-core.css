@@ -369,7 +369,7 @@ p {
 
 .sw-logo-font {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .sw-user-menu {
@@ -402,7 +402,11 @@ p {
 
 /* Delivery Banner */
 .sw-db-container {
-  margin-top: 120px;
+  margin-top: 125px;
+}
+
+.sw-db-container2 {
+  margin-top: 95px;
 }
 
 .sw-delivery-banner {

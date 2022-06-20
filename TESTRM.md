@@ -118,31 +118,53 @@ Unless otherwise noted, all the following were tested and passed:
     -   Wine name is hotlinked to the wine detail page
 
 -   #### Secondary Pages - Cart
-    -   Displays input fields for recipe name, d
+    -   If Cart is empty a message is displayed and a link is provided to keep shopping
+    -   All items added to the Cart are present, for anonymous and authenticated in users
+    -   Image, Name, size, SKU, Price. Quantity, and Subtotl are presented for each item
+    -   And edit and a remove link are present.
+    -   Edit link updates the quantity of the item in the cart abd adjusts totals
+    -   Remove link removes the item from the cart and adjusts totals
+    -   Correct Cart total is displayed
+    -   Shipping charges, if applicable, are displayed
+    -   A message is displayed if the free shipping threshold is not yet met
+    -   Grand Total is correct
+    -   Keep Shopping link is presented and redirects user to the All Wines view
+    -   A link to complete the purchase via a secure method is presented
 
 -   #### Secondary Pages - Cart, Checkout
-    -   Displays input fields for recipe name, d
+    -   The Check Out page is presented with all required Stripe fields
+    -   A message indicating the amount about to be charged is presented
+    -   A link back to the Cart is presented
+    -   An Order Summary is presented
+        -   INCOMPLETE: Styles for the checkout view and Order Summary are not completed
 
 -   #### Secondary Pages - Wine Details
-    -   Displays input fields for recipe name, d
+    -   Full details on the wine product are presented to the user
+    -   Indication that the wine product is a fetaured wine is present
+    -   Option to add the product to the cart is presented, with quantity input
+    -   Add to Cellar option is presented to authenticated users; a login option is presented to anonymous users
+    -   Option to access admin actions is presented
+    -   Admin actions are presented to authenticated users; a login option is presented to anonymous users
 
 -   #### Secondary Pages - Wine Details, Add to Cellar
-    -   Displays input fields for recipe name, d
+    -   Displays a product card and presents user with an option to adjust the quantity of the product to be added to the Cellar
+    -   Submit button updates the Cellar, confirms update was successful, and redirects user to their Cellar
 
 -   #### Secondary Pages - Wine Details, Edit/Delete
-    -   Displays input fields for recipe name, description, region, flavor profile, image url, image alt text, ingredient, and preparation
-    -   All previously saved data is displayed in the input fields
-        FAIL Although all saved data is displayed, the app shows a duplicate input field for any saved Flavor options
-    -   Ingredients Input:
-        -   Same as Build Recipe page
-    -   Upon Submit, user is informed of successful recipe update
-    -   Upon Submit, user is redirected to updated recipe page
+    -   Edit option redirects user to the product update form
+    -   Delete option presents user with a confirmation box
 
 -   #### Secondary Pages - Cellar
-    -   Displays input fields f
+    -   Displays a listing of wines added by the user
+    -   Displays all wine product info according to user story
+    -   Displays a link to return to the All Wines view
+    -   Displays a link to present more information about the Cellar
 
 -   #### Secondary Pages - Cellar, Update/Remove
-    -   Displays input fields f
+    -   Provides user with a method to update the quantity of a cellar item
+    -   Update action correctly updates the database and displays the updated list
+    -   Remove link correctly removes item from the user cellar
+    -   Setting the quantity of a Cellar item to zero does not remove it from the Cellar list
 
 ### Messaging
 -   #### Home and Secondary Pages
@@ -163,6 +185,7 @@ Unless otherwise noted, all the following were tested and passed:
 -   Do not get the email context in the CLI when order is successfully completed.
         CI video shows POST to checkout/wh, dev shows just checkout/
 -   Varietal sorting in the sorting dropdowns on category views is working in DEV but not on deployed app in Heroku
+-   Gray background on the product card footer does not extend to the bottom of the card on mobile viewport
 
 #### FIXED
 -   webp file format does not work on browsers on iPhone6 and lower running iOS 12; all product images are currently in webp format, alt format would need to be created

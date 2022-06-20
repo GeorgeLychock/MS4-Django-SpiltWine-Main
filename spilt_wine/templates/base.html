@@ -94,7 +94,7 @@
             </div>
         </header>
         <!-- Delivery Banner -->
-        <div class="container-fluid sw-db-container">
+        <div class="container-fluid {% if style_switch%}sw-db-container{% else %}sw-db-container2{% endif %}">
             <div class="row">
                 <div class="col">
                     {% include 'includes/delivery-banner.html' %}
