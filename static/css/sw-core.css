@@ -568,7 +568,7 @@ p {
 
 /* Footers */
 .sw-footer {
-  margin-top: 40px;
+  margin-top: 140px;
 }
 
 .sw-cr {
@@ -581,6 +581,16 @@ p {
   @media (max-width: 374px) {
     .sw-db-container {
       margin-top: 140px;
+    }
+  }
+
+  @media (min-width: 500px) and (max-width: 767px) {
+    body {
+      background: url('/media/home-page-image-spiltwine.jpg') no-repeat right center fixed;
+    }
+
+    .sw-mobile-links {
+      margin-left: 180px;
     }
   }
 
