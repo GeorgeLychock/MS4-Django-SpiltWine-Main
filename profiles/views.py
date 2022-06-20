@@ -11,6 +11,8 @@ from checkout.models import Order
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
+    """ template_flag determines if base template should display the minor, sidebar column. Value of '0' does not display minor column """
+    template_flag = 0
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -29,7 +31,8 @@ def profile(request):
         'profile': profile,
         'form': form,
         'orders': orders,
-        'on_profile_page': True
+        'on_profile_page': True,
+        'template_flag': template_flag,
     }
 
     return render(request, template, context)

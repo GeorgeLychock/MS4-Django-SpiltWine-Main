@@ -283,6 +283,10 @@ p {
   font-size: 1.15rem;
 }
 
+.sw-font-size-125 {
+  font-size: 1.25rem;
+}
+
 .sw-font-size-150 {
   font-size: 1.5rem;
 }
@@ -306,6 +310,10 @@ p {
 }
 
 /* Links and Buttons */
+.sw-no-decor {
+  text-decoration: none;
+}
+
 .sw-link-text-01 {
   text-decoration: none;
   font-size: .65rem;
@@ -346,11 +354,6 @@ p {
 /* Sizing */
 .sw-img-100p {
   width: 100%;
-}
-
-.sw-tip-01 {
-  width: 30%;
-  font-size: .85rem;
 }
 
 /* Messages */
@@ -444,6 +447,11 @@ p {
   padding-top: 5px;
 }
 
+/* Profile */
+.sw-tip-01 {
+  font-size: .85rem;
+}
+
 /* Index */
 .sw-index-flip {
   float: right;
@@ -473,7 +481,7 @@ p {
 }
 
 .sw-learn-more-btn {
-  margin-left: 70px;
+  float: left;
 }
 
 /* Products */

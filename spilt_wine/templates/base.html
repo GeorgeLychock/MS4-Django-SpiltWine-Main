@@ -113,7 +113,8 @@
                         </div>
                     </nav>
                     <!-- Main Content -->
-                    <section id="main_content" class="col {% if template_flag == 1 %}col-md-11{% else %}col-lg-8{% endif %} order-2 mt-2">
+                    <!-- Determine if the minor column is displayed or not and order after the minor column on mobile views -->
+                    <section id="main_content" class="col {% if template_flag == 0 %}col-md-11{% else %}col-lg-8{% endif %} order-2 mt-2">
                         {% block content %}
                         {% endblock %}
                     </section>

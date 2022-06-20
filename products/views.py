@@ -18,7 +18,8 @@ def all_products(request):
     query = None
     query_term = None
     featured = []
-    template_flag = 1
+    """ template_flag determines if base template should display the minor, sidebar column. Value of '0' does not display minor column """
+    template_flag = 0
 
     # wine_accessories = WineAccessories.objects.all()
     # culinary = Culinary.objects.all()
@@ -174,7 +175,7 @@ def add_wine(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
-            messages.success(request, 'Successfully added your wine!')
+            messages.success(request, f'Successfully added {product.name}!')
             return redirect('wine_detail', product.pk)
         else:
             messages.error(request, 'Failed to add your wine. Please ensure the form is valid.')
@@ -201,7 +202,7 @@ def edit_wine(request, product_id):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated product!')
+            messages.success(request, f'Successfully updated {product.name}!')
             return redirect('wine_detail', product.pk)
         else:
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')

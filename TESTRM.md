@@ -26,16 +26,14 @@ Followed test writing guidelines from the following resources:
 ## Usability Testing
 Unless otherwise noted, all the following was tested and passed:
 -   Web page content should be correct without any spelling or grammatical errors
--   Tool tip text should be present upon hovering recipe name and image links and Action buttons.
 -   Enough space should be provided between field labels, columns, rows, and error messages.
 -   All the buttons should be in a standard format and size.
 -   Check for broken links and images.
 -   Confirmation message should be displayed for any kind of update and delete operation.
--   **Not Completed Perform Peer Review
+-   **Not Completed: Perform Peer Review
 -   Scroll bar should appear only if required.
 -   If there is an error message on submit, the information filled by the user should remain.
--   All fields (Textbox, dropdown, radio button, etc) and buttons should be accessible by keyboard shortcuts and the user should be able to perform all operations by using keyboard.
-    -   FAIL: Tab sequence and :focus styles need to be applied across the app
+-   All fields (Textbox, dropdown, radio button, etc) and buttons should be accessible by keyboard shortcuts and the user should be able to perform all operations by using keyboard.   
 
 <a name="TESTFUNCTIONALITY"></a>
 ## Functionality Testing
@@ -43,91 +41,81 @@ Unless otherwise noted, all the following were tested and passed:
 ### General
 -   All images and icons render correctly
 -   All buttons and active links show pointer on hover
+    -   FAIL: The Settings icon has no action applied
 -   Mandatory fields validate correctly, display message
--   Save and Delete functions fire a confirmation and/or message
-    -   Delete button displays confirmation message to user
-        FAIL: no confirmation message is present
+    -   FAIL: Several fields on the Add Product view do not display an error message if not input correctly, although the form does validate correctly and there is a visual indication what fields are required (with an *)
+-   Save, Add, Update, and Delete functions fire a confirmation and/or message
 
-### Navigation Bar
+### Navigation Bar, Menu Items, User Links
 -   #### Home
-    -   Quick Search field is present
-    -   Quick Search presents a dropdown of search terms
-    -   Quick Search Submit button redirects user to Search page
-    -   Advanced Search link is present, redirects user to Search page
+    -   A site Search field is present on all page views.
+    -   The Search submit button redirects user to Search results page displaying a listing of valid search items
+    -   A user profile icon is present displaying links to register, login, and if logged as an admin, the Add Product link
+    -   A cart link is displayed; the cart icon is an outline if there are no items in the cart, the icon changes color to green and is filled if items are present in the cart
+    -   A nav bar is present offering dropdown links to Products, Wines, Wine Accessories, and Culinary product pages
+        -   INCOMPLETE: Wine Accessories and Culinary links are placeholders and rediect back to the main Products page
+    -   The Wines dropdown presents links to Varietals, By Country/State, By Price, and All Wines pages
+        -   Links correctly redirect user to pages displaying products sorted as indicated
+    -   A Cellar link is present to the user
+        -   The Cellar link redirects a logged in user to their personal Cellar; if not logged in, redirects to the Sign In page.
+    -   A Setting icon is presented to the user
+        -   INCOMPLETE: The Setting icon performs no action at this time
+    -   The Main content area presents the user with links to view all products, view all wines, and the Cellar
+    -   A link to Learn More is present and opens a modal giving the user information as to what the Cellar is and how to use it.
 
 -   #### Secondary Pages
-    -   Home button is present for all secondary pages, redirects user to home page
-    -   Page (View) Title is present
-    -   Click Path arrow buttons are present on all secondary pages
-        FAIL: Click path buttons currently do not correctly redirect user to previous pages/views on all pages
-
-### Main Header and Nav
--   #### Home and Secondary Pages
-    -   
+    -   User Profile, cart, Cellar, and all nav bar links are present on all secondary pages
+    -   Main logo is alway present and redirects user back to the Home page whem selected
 
 ### Main Content Blocks
 -   #### Home
     -   All Home page content displays clearly on all viewports
+        -   On mobile viewports the background image is floated left to create a better user ecperience for access to the links and for title/subtitle readability
 
--   #### Product Management - Add Wine
+-   #### Add Wine Product
     -   Select Fields display first choice instead of "select..."
-        -   Displays input fields for recipe name, description, region, flavor profile, image url, image alt text, ingredient, and preparation
-    -   Hover tips are displayed for all required fields
-    -   Validates and displays feedback for recipe name field, required
-    -   Validates and displays feedback for image url field, required
-    -   Ingredients Input:
-        -   Input fields are presented for Ingredient Name (dropdown), quantity (numeric input), and measure (dropdown)
-        -   A button is presented to add a configured ingredient entry to the ingredients pallet
-        -   If an ingredient is not fully configured with name, quantity, and measure the user is alerted of an error
-            FAIL: not validation exists for the addition of the configured ingredient
-        -   Once an ingredient is configured and added to the pallet, the ingredient configuration is displayed in the pallet with a remove button
-        -   When the remove button is clicked, the indredient is removed
-    -   Upon Submit, user is informed of successful recipe submission
-    -   Upon Submit, user is redirected to saved recipe page
+        -   FAIL: Several fields display the first option in select fields instead of "select..."
+    -   Displays all input fields according to user story
+    -   Required fields are indicated with an "*"
+    -   Upon Submit, user is informed of successful product submission
+    -   Upon Submit, user is redirected to the new product's detail page
+    -   Non-Authenticated users and users without correct permissions do not have access to Add Wine Product page
     
 -   #### Secondary Pages - All Wines
-    -   
+    -   A wine product count is displayed in the main content header displaying the number of wines on display
+    -   A Sort By dropdown is presented allowing the user to sort the current listing by Price (low and high), Name (A to Z and Z to A), Country (A to X and Z to A), and Varietal  (A to X and Z to A)
+        -   FAIL: Sort By Varietal works in Dev but not when deployed to Heroku
+    -   Product image and product name on the product cards are hot-linked to the product's detail page
+    -   A Featured Wines sidebar is present displaying all wines marked as Featured in the database
 
 -   #### Secondary Pages - Authentication, Register
-    -   Displays input fields for username, email address, password, user description, and avatar choice
-    -   Hover tips are displayed for all required fields
-    -   Validates and displays feedback for username field, required
-    -   Validates and displays feedback for email field, required
-    -   Validates and displays feedback for password field, required
-    -   A description text field is presented, not required
-    -   An avatar pallet is display for user to choose a custom avatar from
+    -   Displays input fields for username, email address, and password
+    -   Validates for username field, required
+    -   Validates for email field, required
+    -   Validates for password and password confirm fields, required
     -   Upon Submit, user is informed of successful registration
-    -   Upon Submit, user is redirected to Profile page
+    -   Upon Submit, user is redirected to an email confirmation page informing theuser to verify their email address from their email Inbox
+    -   Email is correctly sent to user and the verify email link correctly sets the email to 'verified' in the database
 
 -   #### Secondary Pages - Authentication, Login
     -   Displays input fields for username and password
-    -   Hover tips are displayed for all required fields
-    -   Validates and displays feedback for username field, required
-    -   Validates and displays feedback for password field, required
+    -   Validates for username field, required
+    -   Validates for password field, required
     -   Upon Submit, user is informed of successful login
     -   If user cannot be authenticated, user is informed of error, presented refreshed login page
-    -   Upon Submit, user is redirected to Profile page
+    -   Upon Submit, and successful authentication, user is redirected to Profile page
 
 -   #### Secondary Pages - Profile Page - Logged In User Only
     -   Displays Name of user's profile being displayed
-    -   User's description is displayed
-    -   User's avatar is displayed
+    -   All user information defined in the user story is present
     -   Welcome message appears when a user logs in
-    -   Displays all submitted recipes for logged in user displaying information on each recipe for recipe name, description, image, date posted, rating, and available Actions: Update Rating, Delete, Edit
-    -   Update Rating button redirects user to the Recipe Card for the choosen recipe
-    -   Delete button displays confirmation message to user
-        FAIL: no confirmation message is present
-    -   Upon Confirmation, Delete button deletes the recipe form the DB and redirects user to the user Profile page
-    -   Recipe name is an active link that redirects user to the Recipe Card page for the chosen recipe
-    -   Tool tip is displayed when all users hover the recipe names
-    -   Non-Authenticated user do not have access to profile page
+    -   Displays all user orders in an Order History section
+    -   Non-Authenticated users do not have access to profile page
 
--   #### Secondary Pages - Search Results Page
+-   #### Secondary Pages - Search Results Page (Products page with search summary at top)
     -   Displays term used for the search
-    -   Displays all recipes matching submitted query displaying information on each recipe for recipe name, description, image, date posted, rating, author, and available Actions: Update Rating
-    -   Update Rating button redirects user to the Recipe Card for the choosen recipe
-    -   Recipe name is an active link that redirects user to the Recipe Card page for the chosen recipe
-    -   Tool tip is displayed when all users hover the recipe names
+    -   Displays all wines matching submitted query displaying name, varietal, region, price
+    -   Wine name is hotlinked to the wine detail page
 
 -   #### Secondary Pages - Cart
     -   Displays input fields for recipe name, d
@@ -156,13 +144,11 @@ Unless otherwise noted, all the following were tested and passed:
 -   #### Secondary Pages - Cellar, Update/Remove
     -   Displays input fields f
 
-### Features Logic
--   #### Quick Search
-    -   Term choosen produces a redirect to the Search Results page displaying recipes that match the quick search term
--   #### Click Path Arrows
-    -   Arrows are presented in the Nav bar section on all pages other than the Home page
-    -   The left and right arrows redirect user to the previous page visited based on the current click path index; left redirects down a page, right redirects up a page, if available.
-
+### Messaging
+-   #### Home and Secondary Pages
+    -   If a user is logged in, a username greeting should appear if no other messages are present
+    -   A valid, helpful message is displayed to confirm all submit actions across the site
+    -   Messages clear once another action is taken or a redirect is performed
 
 <a name="BUGS"></a>
 ## Bugs / Fixes
@@ -176,10 +162,11 @@ Unless otherwise noted, all the following were tested and passed:
 -   The custom clearable file input function does not work; 
 -   Do not get the email context in the CLI when order is successfully completed.
         CI video shows POST to checkout/wh, dev shows just checkout/
--   webp file format does not work on browsers on iPhone6 and lower running iOS 12; all product images are currently in webp format, alt format would need to be created
 -   Varietal sorting in the sorting dropdowns on category views is working in DEV but not on deployed app in Heroku
 
 #### FIXED
+-   webp file format does not work on browsers on iPhone6 and lower running iOS 12; all product images are currently in webp format, alt format would need to be created
+    -   FIXED: Converted all images to png format
 -   Redirect errors with use of reverse and args:
     -   The following code is the instruction does not work in the current Django:
 
