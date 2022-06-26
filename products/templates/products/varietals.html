@@ -12,34 +12,36 @@
             <h2 class="logo-font">Wine Grape Varietals</h2>
         </div>
     </div>
-    <div class="row mt-4">
-        <div class="col-3 fs-4">Varietal<hr></div>
-        <div class="col-6 fs-4">Description<hr></div>
-        <div class="col-3 fs-4">Resources<hr></div>
+    <div class="row mt-4 sw-varietal-header">
+        <div class="col-6 col-md-2">Varietal<hr></div>
+        <div class="d-none d-md-inline col-5">Description<hr></div>
+        <div class="col-6 col-md-5">Resources<hr></div>
     </div>
     {% for varietal in varietals %}
     <div class="row mt-3">
-        <div class="col-3 sw-h-color-03">{{ varietal.friendly_name }}</div>
-        <div class="col-6 sw-varietal-des sw-p-color-blk">
+        <div class="col-6 col-md-2 sw-h-color-03">
+            <a class="text-decoration-none" href="{% url 'wines' %}?varietal={{ varietal.name }}">{{ varietal.friendly_name }}</a>
+        </div>
+        <div class="d-none d-md-inline col-5 sw-varietal-des sw-p-color-blk">
             {{ varietal.description }}
         </div>
-        <div class="col-1 sw-font-size-85">
+        <div class="col-2 text-center sw-font-size-85">
+            <a href="{% url 'wines' %}?varietal={{ varietal.name }}">
+                Shop
+            </a>
+        </div>
+        <div class="col-2 col-md-1 text-center sw-font-size-85">
             <a href="{{ varietal.wiki_url }}" target="_blank">
                 Wiki
             </a>
         </div>
         {% if varietal.alt_url_1 %}
-        <div class="col-1">
+        <div class="col-2 text-center sw-font-size-85">
             <a href="{{ varietal.alt_url_1 }}" target="_blank">
                 Total Wine&#174; Guide
             </a>
         </div>
         {% endif %}
-        <div class="col-1">
-            <a href="{% url 'wines' %}?varietal={{ varietal.name }}">
-                Shop
-            </a>
-        </div>
     </div>
     {% endfor %}
 </div>

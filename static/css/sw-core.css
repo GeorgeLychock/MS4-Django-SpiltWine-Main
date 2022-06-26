@@ -406,7 +406,7 @@ p {
 }
 
 .sw-db-container2 {
-  margin-top: 95px;
+  margin-top: 105px;
 }
 
 .sw-delivery-banner {
@@ -564,7 +564,15 @@ p {
   font-size: .8rem;
 }
 
+.sw-varietal-header {
+  font-size: 1rem;
+}
+
 /* Cellar Stats Panel */
+.sw-cellar-head {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
 .sw-cellar-stats-title {
   font-weight: 600;
   font-size: .9rem;
@@ -643,8 +651,13 @@ p {
     .sw-sidebars {
       min-height: 600px;
     }
+
     .sw-featured-name {
       font-size: .9rem;
+    }
+
+    .sw-db-container2 {
+      margin-top: 150px;
     }
 
     .sw-font-size-100 {

@@ -14,24 +14,41 @@
 <div class="overlay"></div>
 <div class="container mb-2">
     <div class="row">
-        <div class="col">
+        <div class="col-6">
             <a href="{% url 'wines' %}" class="btn rounded-0 btn-sm p-0">
                 <span class="icon">
                     <i class="bi bi-chevron-left"></i>
                 </span>
-                <span class="text-uppercase">Wine Library</span>
+                <span class="text-uppercase sw-font-size-60">Wine Library</span>
             </a>
-            <div>
-                <div>
-                    <h2 class="float-start sw-logo-font my-2 sw-h-color-01">Your Cellar</h2>
-                </div>
-                <div>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn float-end sw-font-size-85" data-bs-toggle="modal" data-bs-target="#cellarModal">
-                        <strong><i class="bi bi-info-square mr-2 sw-font-size-85"></i></strong> Learn More
-                    </button>
-                </div>
-            </div>
+        </div>
+        <!-- Mobile Cellar Stats link -->
+        <div class="d-md-none col-6">
+            <a href="{% url 'cellar_stats' %}" class="btn rounded-0 btn-sm p-0 float-end">
+                <span class="text-uppercase sw-font-size-60">Cellar Stats</span>
+                <span class="icon">
+                    <i class="bi bi-chevron-right"></i>
+                </span>
+            </a>
+        </div>
+        <div class="d-none d-md-block col-6">
+            <!-- Button triggers Learn More modal -->
+            <button type="button" class="btn float-end sw-font-size-85" data-bs-toggle="modal"
+            data-bs-target="#cellarModal">
+            <strong><i class="bi bi-info-square mr-2 sw-font-size-85"></i></strong> Learn More
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-7">
+            <h2 class="sw-logo-font my-2 sw-h-color-01">Your Cellar</h2>
+        </div>
+        <div class="d-md-none col-5">
+            <!-- Button triggers Learn More modal -->
+            <button type="button" class="btn p-0 sw-font-size-60" data-bs-toggle="modal"
+            data-bs-target="#cellarModal">
+            <strong><i class="bi bi-info-square mr-2 sw-font-size-60"></i></strong> Learn More
+            </button>
         </div>
         <hr>
     </div>
@@ -106,11 +123,12 @@
 {% endblock %}
 
 {% block aside %}
+<!-- Desktop and Tablet Cellar Stats region -->
 <aside class="d-none d-md-block col col-md-3 sw-dt-sidebars sw-b-color-02 ">
-    <!-- SpiltWine Featured Items -->
     <div class="row py-2">
         <div class="col text-center sw-h-color-02">
-            <h5>Your Cellar Stats</h5>
+            <h5 class="sw-cellar-head">Your Cellar Stats</h5>
+            <hr>
         </div>
     </div>
     {% if cellar_items %}

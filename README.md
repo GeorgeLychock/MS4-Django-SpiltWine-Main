@@ -155,7 +155,8 @@ All Acceptance Criteria Results can be found in [TESTRM.md](TESTRM.md)
 (Alignments to User Stories are in paratheses, if available
 -   Allow Users to choose an avatar from a pallet of avatars for their profile
 -   Create a product management view giving the admin options for creating/editing/deleting products
--   Currently, when an admin deletes a wine from the database the JS redirects to the generic all wines listing. This should be changed when a product management view is available. That view should be sent a flag that then creates a confirm message that the wine has been successfully deleted from the db.
+-   Currently, when an admin deletes a wine from the database the JS redirects to the generic all wines listing. This should be changed when a product management view is available. That view should be sent a flag that creates a confirm message that the wine has been successfully deleted from the db.
+-   The Varietals names should link to a varietals details page, currently it redirects to a sorted shop view
 
 <a name="UXUI"></a>
 # UX/UI

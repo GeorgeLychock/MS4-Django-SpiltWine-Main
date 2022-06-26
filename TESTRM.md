@@ -159,12 +159,19 @@ Unless otherwise noted, all the following were tested and passed:
     -   Displays all wine product info according to user story
     -   Displays a link to return to the All Wines view
     -   Displays a link to present more information about the Cellar
+    -   Displays a statistics panel on desktop and tablet viewports
+    -   Displays a method to view statistic on mobile viewports
 
 -   #### Secondary Pages - Cellar, Update/Remove
     -   Provides user with a method to update the quantity of a cellar item
     -   Update action correctly updates the database and displays the updated list
     -   Remove link correctly removes item from the user cellar
     -   Setting the quantity of a Cellar item to zero does not remove it from the Cellar list
+
+-   #### Secondary Pages - Varietals
+    -   Displays a listing of wine grape varietals along with a description (only displayed in desktop and tablet viewports due to space constraints on mobile)
+    -   Provides links to informational resources for each varietal
+    -   Provides a link to shop wines that are made from the varietal
 
 ### Messaging
 -   #### Home and Secondary Pages
@@ -192,10 +199,8 @@ Unless otherwise noted, all the following were tested and passed:
     -   FIXED: Converted all images to png format
 -   Redirect errors with use of reverse and args:
     -   The following code is the instruction does not work in the current Django:
-
             return redirect(reverse('checkout_success', args=[order.order_number]))
     -   replaced with:
-    
             return redirect('checkout_success', order_number=order.order_number)
 
 

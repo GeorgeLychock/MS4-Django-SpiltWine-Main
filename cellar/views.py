@@ -105,4 +105,8 @@ def remove_from_cellar(request, item_id):
         return HttpResponse(status=500)
 
 
-    
+@login_required
+def cellar_stats(request):
+    """ View stats of the user's cellar """
+
+    return render(request, 'cellar/cellar_stats.html')

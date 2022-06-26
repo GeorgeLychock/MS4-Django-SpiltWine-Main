@@ -114,6 +114,7 @@ def all_wines(request):
             if varietal:
                 varietals = Varietal.objects.all()
                 wines = wines.filter(varietal__name=varietal)
+                featured = featured.filter(varietal__name=varietal)
                 sortkey = 'name'
                 sort = varietals.filter(name=varietal)
                 sort = sort[0].friendly_name
@@ -156,9 +157,11 @@ def varietals(request):
     varietals = Varietal.objects.all()
     sortkey = 'name'
     varietals = varietals.order_by(sortkey)
+    template_flag = 0
 
     varietal_content = {
         'varietals': varietals,
+        'template_flag': template_flag,
     }
 
     return render(request, 'products/varietals.html', varietal_content)
