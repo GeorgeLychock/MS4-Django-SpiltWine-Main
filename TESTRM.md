@@ -1,7 +1,7 @@
 # George Lychock - MS4 Project: Unknown
 ### Salem State University Fullstack Software Developer Certificate
 #### MS4 Django Spilt Wine
--   [View Live Dev Site]()
+-   [View Live Dev Site](https://ms4-spiltwine.herokuapp.com/)
 
 <hr>
 
@@ -11,9 +11,9 @@
 
 -   [Usability](#TESTUSABILITY)
 -   [Functionality](#TESTFUNCTIONALITY)
--   [User Stories](#TESTSTORIES)
--   [Validation](#TESTVALID)
 -   [Bugs and Fixes](#BUGS)
+-   [Validation](#TESTVALID)
+-   [User Stories](#TESTSTORIES)
 
 # Testing
 Followed test writing guidelines from the following resources:
@@ -37,7 +37,9 @@ Unless otherwise noted, all the following was tested and passed:
 
 <a name="TESTFUNCTIONALITY"></a>
 ## Functionality Testing
+
 Unless otherwise noted, all the following were tested and passed:
+
 ### General
 -   All images and icons render correctly
 -   All buttons and active links show pointer on hover
@@ -196,7 +198,7 @@ Unless otherwise noted, all the following were tested and passed:
 
 #### FIXED
 -   webp file format does not work on browsers on iPhone6 and lower running iOS 12; all product images are currently in webp format, alt format would need to be created
-    -   FIXED: Converted all images to png format
+    -   FIXED: Converted all images to png format and reloaded to AWS, changed all urls in both Dev and Heroku DBs
 -   Redirect errors with use of reverse and args:
     -   The following code is the instruction does not work in the current Django:
             return redirect(reverse('checkout_success', args=[order.order_number]))
@@ -213,7 +215,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate al
 -   [W3C Markup Validator (Nu)](https://validator.w3.org/nu/)
     -   index.html, ERRORS
         -   The duplicate error is from the duplication of code for the desktop/tablet and mobile views, no real error
-            -   <img src="_documentation/testing/screenshots/index-html.png" />
+            -   <img src="_documentation/testing/val/screenshots/index-html.png" />
     -   register.html, NO ERRORS
         -   <img src="_documentation/testing/screenshots/register-html.png" />
     -   login.html, NO ERRORS
@@ -247,6 +249,32 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate al
         -   Click Path Arrow Functions: storeClickPath(path), updateCurrentIndex(direction), buildBannerButton(direction)
             -   <img src="_documentation/testing/screenshots/script-js-02.png" />
 -   All Python functions were verified for PEP8 compliance at [pep8online.com](http://pep8online.com/)
+    -   Base Project App
+        -   urls.py: PASS
+    -   Cart
+        -   views.py: FAIL, lines 28, 32 exceed char line limit
+        -   urls.py: PASS
+        -   contexts.py: PASS
+    -   Cellar
+        -   views.py: FAIL, lines 80, 105 exceed char line limit
+        -   urls.py: PASS
+        -   models.py: PASS
+        -   contexts.py: PASS
+    -   Home
+        -   views.py: PASS
+    -   Products
+        -   views.py: FAIL, lines 40, 190, 219 exceed char line limit
+        -   urls.py: PASS
+        -   models.py: PASS
+        -   forms.py: FAIL, line 6 exceeds char line limit
+        -   contexts.py: PASS
+    -   Profiles
+        -   views.py: PASS
+        -   urls.py: PASS
+        -   models.py: PASS
+        -   forms.py: FAIL, line 43 exceeds char line limit
+        -   contexts.py: PASS
+
 
 <a name="TESTSTORIES"></a>
 ## User Story Testing

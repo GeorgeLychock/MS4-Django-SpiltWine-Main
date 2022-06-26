@@ -4,9 +4,11 @@ from django.shortcuts import get_object_or_404
 from .models import CellarItem
 from products.models import Wine
 
+
 def cellar_contents(request):
-    """ Create the cellar context so cellar data are avaiable across all apps """
-    
+    """ Create the cellar context so
+        cellar data are avaiable across all apps """
+
     cellar_items = []
     cellar_total = 0
     cellar_count = 0
@@ -22,7 +24,7 @@ def cellar_contents(request):
             varietal_count.append(product.varietal.friendly_name)
 
         # UPDATE NEEDED: need to catch error if price isn't given
-        if item.quantity_onhand != None:
+        if item.quantity_onhand is not None:
             cellar_total += item.quantity_onhand * product.price
             cellar_count += item.quantity_onhand
 
@@ -31,7 +33,7 @@ def cellar_contents(request):
             'quantity': item.quantity_onhand,
             'product': product,
         })
-    
+
     cellar_contents = {
         'cellar_items': cellar_items,
         'cellar_total': cellar_total,

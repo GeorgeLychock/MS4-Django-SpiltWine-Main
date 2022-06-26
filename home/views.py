@@ -12,6 +12,4 @@ def index(request):
         'style_switch': style_switch,
     }
 
-
-
     return render(request, 'home/index.html', all_content)

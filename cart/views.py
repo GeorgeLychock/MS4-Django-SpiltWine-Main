@@ -14,7 +14,8 @@ def view_cart(request):
 
 def add_to_cart(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
-    """ from Code Institute, Django Module https://codeinstitute.net/global/ """
+    """ from Code Institute, Django Module
+     https://codeinstitute.net/global/ """
 
     product = get_object_or_404(Wine, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -23,17 +24,20 @@ def add_to_cart(request, item_id):
 
     if item_id in list(cart.keys()):
         cart[item_id] += quantity
-        messages.success(request, f'Cart Updated! {product.name}Quantity changed to {cart[item_id]}')
+        messages.success(request,
+                         f'Cart Updated! {product.name}Quantity changed to {cart[item_id]}')
     else:
         cart[item_id] = quantity
-        messages.success(request, f'Added {product.name} to your cart! Click the cart icon to view.')
+        messages.success(request,
+                         f'Added {product.name} to your cart! Click the cart icon to view.')
     request.session['cart'] = cart
     return redirect(redirect_url)
 
 
 def update_cart(request, item_id):
     """ Update the cart item parameters """
-    """ from Code Institute, Django Module https://codeinstitute.net/global/ """
+    """ from Code Institute, Django Module """
+    """ https://codeinstitute.net/global/ """
 
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
@@ -49,7 +53,8 @@ def update_cart(request, item_id):
 
 def remove_from_cart(request, item_id):
     """ Remove item from cart """
-    """ from Code Institute, Django Module https://codeinstitute.net/global/ """
+    """ from Code Institute, Django Module """
+    """ https://codeinstitute.net/global/ """
     try:
         cart = request.session.get('cart', {})
         cart.pop(item_id)

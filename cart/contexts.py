@@ -3,10 +3,13 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Wine
 
+
 def cart_contents(request):
-    """ Create the shopping cart context so cart total, and shipping costs are avaiable across all apps """
-    """ from Code Institute, Django Module https://codeinstitute.net/global/ """
-    
+    """ Create the shopping cart context so cart total,
+     and shipping costs are avaiable across all apps """
+    """ from Code Institute, Django Module
+    https://codeinstitute.net/global/ """
+
     cart_items = []
     total = 0
     product_count = 0
@@ -28,9 +31,9 @@ def cart_contents(request):
     else:
         delivery = 0
         free_delivery_delta = 0
-    
+
     grand_total = delivery + total
-    
+
     context = {
         'cart_items': cart_items,
         'total': total,

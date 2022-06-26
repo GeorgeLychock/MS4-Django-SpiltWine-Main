@@ -17,14 +17,16 @@ def view_cellar(request):
 
 @login_required
 def add_to_cellar(request, item_id):
-    """ Add a wine to user's cellar, if one already exists, redirect to update """
-    
+    """ Add a wine to user's cellar,
+    if one already exists, redirect to update """
+
     form = ItemForm()
     wine = get_object_or_404(Wine, pk=item_id)
     user_id = request.user.pk
 
     # Check if cellar item already exists
-    cellar = CellarItem.objects.filter(user_id=user_id).filter(cellar_wine_pk=wine.pk)
+    cellar = CellarItem.objects.filter(
+                                user_id=user_id).filter(cellar_wine_pk=wine.pk)
 
     if cellar:
         return redirect('update_cellar', cellar[0].pk)
@@ -49,7 +51,7 @@ def add_to_cellar(request, item_id):
             new_cellar_item.save()
 
             return redirect('cellar')
-        
+
     template = 'cellar/add_to_cellar.html'
     context = {
         'form': form,
@@ -70,14 +72,16 @@ def update_cellar(request, item_id):
         form = ItemForm(request.POST, instance=cellar_item)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Successfully updated quantity for {wine.name}')
+            messages.success(request,
+                             f'Successfully updated quantity for {wine.name}')
             return redirect('cellar')
         else:
-            messages.error(request, 'Failed to update cellar item. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to update cellar item. Please ensure the form is valid.')
     else:
         form = ItemForm(instance=cellar_item)
-        messages.info(request, f'This item is already in your cellar. Edit {wine.name}')
-
+        messages.info(request,
+                      f'This item is already in your cellar. Edit {wine.name}')
 
     template = 'cellar/update_cellar.html'
     context = {
@@ -97,7 +101,8 @@ def remove_from_cellar(request, item_id):
     item_data = get_object_or_404(Wine, pk=cellar_item.cellar_wine_pk.pk)
 
     if cellar_item:
-        messages.success(request, f'Successfully removed {item_data.name} from your cellar.')
+        messages.success(request,
+                         f'Successfully removed {item_data.name} from your cellar.')
         cellar_item.delete()
         return HttpResponse(status=200)
 

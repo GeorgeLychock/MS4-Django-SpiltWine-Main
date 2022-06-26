@@ -18,7 +18,9 @@ def all_products(request):
     query = None
     query_term = None
     featured = []
-    """ template_flag determines if base template should display the minor, sidebar column. Value of '0' does not display minor column """
+    """ template_flag determines if base template should
+        display the minor, sidebar column. Value of '0'
+        does not display minor column """
     template_flag = 0
 
     # wine_accessories = WineAccessories.objects.all()
@@ -41,11 +43,12 @@ def all_products(request):
 
             query_term = str.title(query)
 
-    # Will only display the first 4 items for each category for now, until a slider utility is added
+    # Will only display the first 4 items for each
+    # category for now, until a slider utility is added
     wines = wines.filter(featured=True)[:4]
     culinary = culinary[:4]
     wine_accessory = wine_accessory[:4]
-    
+
     all_content = {
         'wines': wines,
         'culinary': culinary,
@@ -75,7 +78,8 @@ def all_wines(request):
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
-            # sorting by name, direction. From Code Institute, https://codeinstitute.net/global/
+            # sorting by name, direction. From Code Institute,
+            # https://codeinstitute.net/global/
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 wines = wines.annotate(lower_name=Lower('name'))
@@ -89,7 +93,7 @@ def all_wines(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             wines = wines.order_by(sortkey)
-        
+
         if 'country_state' in request.GET:
             countries = CountryState.objects.all()
             country = request.GET['country_state']
@@ -104,7 +108,7 @@ def all_wines(request):
                 sortkey = 'name'
                 sort = countries.filter(name=country)
                 sort = sort[0].friendly_name
-                
+
             wines = wines.order_by(sortkey)
             sorter_toggle = True
 
@@ -118,10 +122,10 @@ def all_wines(request):
                 sortkey = 'name'
                 sort = varietals.filter(name=varietal)
                 sort = sort[0].friendly_name
-                
+
             wines = wines.order_by(sortkey)
             sorter_toggle = True
-    
+
     current_sorting = f'{sort}_{direction}'
     sorting = str.title(sort)
 
@@ -166,6 +170,7 @@ def varietals(request):
 
     return render(request, 'products/varietals.html', varietal_content)
 
+
 @login_required
 def add_wine(request):
     """ Add a wine to the store """
@@ -181,16 +186,18 @@ def add_wine(request):
             messages.success(request, f'Successfully added {product.name}!')
             return redirect('wine_detail', product.pk)
         else:
-            messages.error(request, 'Failed to add your wine. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to add your wine. Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_wine.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_wine(request, product_id):
@@ -208,7 +215,8 @@ def edit_wine(request, product_id):
             messages.success(request, f'Successfully updated {product.name}!')
             return redirect('wine_detail', product.pk)
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to update product. Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'CAUTION! You are editing {product.name}.')
@@ -220,6 +228,7 @@ def edit_wine(request, product_id):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def delete_wine(request, product_id):
