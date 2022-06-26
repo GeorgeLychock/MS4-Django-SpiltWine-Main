@@ -214,40 +214,30 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate al
 
 -   [W3C Markup Validator (Nu)](https://validator.w3.org/nu/)
     -   index.html, ERRORS
-        -   The duplicate error is from the duplication of code for the desktop/tablet and mobile views, no real error
-            -   <img src="_documentation/testing/val/screenshots/index-html.png" />
-    -   register.html, NO ERRORS
-        -   <img src="_documentation/testing/screenshots/register-html.png" />
-    -   login.html, NO ERRORS
-        -   <img src="_documentation/testing/screenshots/login-html.png" />
-    -   recipe.html, NO ERRORS
-        -   <img src="_documentation/testing/screenshots/recipe-html.png" />
-    -   build_recipe.html, Testing Not Complete
-        -   Results TK
-    -   edit_recipe.html, Testing Not Complete
-        -   Results TK
-    -   profile.html, Testing Not Complete
-        -   Results TK
-    -   rated_recipes.html, Testing Not Complete
-        -   Results TK
-    -   recipe_ratings.html, Testing Not Complete
-        -   Results TK
-    -   search.html, Testing Not Complete
-        -   Results TK
+        -   The duplicate ID errors are from the duplication of code for the desktop/tablet and mobile views, no real error
+        -   Ignoring the header error for the article element. More work needs to be done on proper semantics for this site
+    -   products.html, ERRORS
+        -   Same errors as reported on index.html
+    -   wines.html, ERRORS
+        -   Removed script type designation in js links
+        -   Otherwise, same errors as reported on index.html
+    -   varietals.html, ERRORS
+        -   Same errors as reported on index.html
+    -   profiles.html, ERRORS
+        -   Same errors as reported on index.html
+    -   cart.html, ERRORS
+        -   Removed script type designation in js links
+        -   Otherwise, same errors as reported on index.html
+    -   cellar.html, ERRORS
+        -   Same errors as reported on index.html
+
 
 -   [W3C CSS Validator (Jigsaw)](https://jigsaw.w3.org/css-validator/#validate_by_uri+with_options)
     -   style.css, NO ERRORS
-    -   <img src="_documentation/testing/screenshots/style-css.png" />
 -   [Lighthouse](https://developers.google.com/web/tools/lighthouse)
     -   Testing and results TK
--   [JSHint](https://jshint.com/) was used to check Javascript function logic and syntax. The following were errors captured during testing that have not been addressed:
-    -   script.js functions
-        -   Common Functions: confirmDeleteRecipe(), ratingConfirm(), getLocalStorageArray(lsName), clearLocalStorage(lsName)
-            -   <img src="_documentation/testing/screenshots/script-js-01.png" />
-        -   Ingredient Functions: addIngredient(), removeIngredient(iID), buildIngredientForm(i)
-            -   <img src="_documentation/testing/screenshots/script-js-02.png" />
-        -   Click Path Arrow Functions: storeClickPath(path), updateCurrentIndex(direction), buildBannerButton(direction)
-            -   <img src="_documentation/testing/screenshots/script-js-02.png" />
+-   [JSHint](https://jshint.com/) was used to check Javascript function logic and syntax.
+    -   All js files passed.
 -   All Python functions were verified for PEP8 compliance at [pep8online.com](http://pep8online.com/)
     -   Base Project App
         -   urls.py: PASS
