@@ -5,7 +5,7 @@
 
 <hr>
 
-<h1 align="center"><img src="_documentation/montage.png" /></h1>
+<h1 align="center"><img src="_documentation/wireframes/montage-all.png" /></h1>
 
 ## Table of Contents
 

@@ -231,11 +231,19 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate al
     -   cellar.html, ERRORS
         -   Same errors as reported on index.html
 
-
 -   [W3C CSS Validator (Jigsaw)](https://jigsaw.w3.org/css-validator/#validate_by_uri+with_options)
     -   style.css, NO ERRORS
+
 -   [Lighthouse](https://developers.google.com/web/tools/lighthouse)
-    -   Testing and results TK
+    -   Partial Testing, remaining results TK
+        -   home.html:
+            -   <img src="_documentation/testing/val/screenshots/lighthouse-home.png" width="250"/>
+        -   cellar.html:
+            -   <img src="_documentation/testing/val/screenshots/lighthouse-cellar.png" width="250"/>
+        -   wines.html:
+            -   <img src="_documentation/testing/val/screenshots/lighthouse-wines.png" width="250"/>
+
+    
 -   [JSHint](https://jshint.com/) was used to check Javascript function logic and syntax.
     -   All js files passed.
 -   All Python functions were verified for PEP8 compliance at [pep8online.com](http://pep8online.com/)
